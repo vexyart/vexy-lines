@@ -315,6 +315,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Vexy Lines Run">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        macOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -402,6 +430,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Vexy Lines Run">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        macOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -467,11 +523,19 @@
 <li><a href="https://help.vexy.art/">Vexy Lines help</a></li>
 </ul>
 <h2 id="vexy-lines-run"><a href="https://vexy.dev/vexy-lines-run/">Vexy Lines Run</a><a class="headerlink" href="#vexy-lines-run" title="Permanent link">&para;</a></h2>
-<p>Vexy Lines Run is a small desktop app that serves as an unofficial add-on to Vexy Lines. With the <code>vexy-lines-cli</code> app, you can: </p>
+<p>Vexy Lines Run is a small desktop app that serves as an unofficial add-on to Vexy Lines. With the <code>vexy-lines-run</code> app, you can: </p>
 <ul>
 <li>Export multiple .lines files as SVG, PNG, JPG</li>
 <li>Apply one Vexy Lines style to multiple images or a video, and export the result as SVG, PNG, JPG, MP4</li>
 </ul>
+<h3 id="macos">macOS<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h3>
+<p>Open Terminal, paste, press Enter:</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-LsSf<span class="w"> </span>https://astral.sh/uv/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.local/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>uvx<span class="w"> </span>--python<span class="w"> </span><span class="m">3</span>.12<span class="w"> </span>vexy-lines-run
+</code></pre></div>
+<h3 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h3>
+<p>Open Command Prompt, paste, press Enter:</p>
+<div class="highlight"><pre><span></span><code>powershell -ExecutionPolicy ByPass -c <span class="s2">&quot;irm https://astral.sh/uv/install.ps1 | iex; $env:Path = \&quot;</span>$HOME\.local\bin;$HOME\AppData\Roaming\uv;$env:Path\<span class="s2">&quot;; uvx --python 3.12 vexy-lines-run&quot;</span>
+</code></pre></div>
 <h2 id="vexy-lines-api"><a href="https://vexy.dev/vexy-lines-apy/">Vexy Lines API</a><a class="headerlink" href="#vexy-lines-api" title="Permanent link">&para;</a></h2>
 <p>A pythonic wrapper for the Vexy Lines MCP API with additional functionality. </p>
 <h2 id="vexy-lines-climcp"><a href="https://vexy.dev/vexy-lines-cli/">Vexy Lines CLI/MCP</a><a class="headerlink" href="#vexy-lines-climcp" title="Permanent link">&para;</a></h2>

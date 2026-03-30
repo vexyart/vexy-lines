@@ -19,10 +19,26 @@ Each method responds to the light and dark areas of your source image differentl
 
 ## [Vexy Lines Run](https://vexy.dev/vexy-lines-run/)
 
-Vexy Lines Run is a small desktop app that serves as an unofficial add-on to Vexy Lines. With the `vexy-lines-cli` app, you can: 
+Vexy Lines Run is a small desktop app that serves as an unofficial add-on to Vexy Lines. With the `vexy-lines-run` app, you can: 
 
 - Export multiple .lines files as SVG, PNG, JPG
 - Apply one Vexy Lines style to multiple images or a video, and export the result as SVG, PNG, JPG, MP4
+
+### macOS
+
+Open Terminal, paste, press Enter:
+
+```sh
+curl -LsSf https://astral.sh/uv/install.sh | sh && export PATH="$HOME/.local/bin:$PATH" && uvx --python 3.12 vexy-lines-run
+```
+
+### Windows
+
+Open Command Prompt, paste, press Enter:
+
+```bat
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex; $env:Path = \"$HOME\.local\bin;$HOME\AppData\Roaming\uv;$env:Path\"; uvx --python 3.12 vexy-lines-run"
+```
 
 ## [Vexy Lines API](https://vexy.dev/vexy-lines-apy/)
 
