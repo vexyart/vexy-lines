@@ -29,7 +29,7 @@ Vexy Lines Run is a small desktop app that serves as an unofficial add-on to Vex
 Open Terminal, paste, press Enter:
 
 ```sh
-curl -LsSf https://astral.sh/uv/install.sh | sh && export PATH="$HOME/.local/bin:$PATH" && uvx --python 3.12 vexy-lines-run
+curl -LsSf https://astral.sh/uv/install.sh | sh && "$HOME/.local/bin/uvx" --python 3.12 vexy-lines-run
 ```
 
 ### Windows
