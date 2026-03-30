@@ -1,0 +1,29 @@
+site_name: "vexy-lines"
+site_description: "Vexy Lines for developers"
+theme:
+  custom_dir: overrides
+  name: materialx
+  features:
+    - content.code.copy
+    - navigation.sections
+  palette:
+    - scheme: slate
+      primary: orange
+      toggle:
+        icon: material/brightness-7
+        name: Light mode
+    - scheme: default
+      primary: orange
+      toggle:
+        icon: material/brightness-4
+        name: Dark mode
+docs_dir: src_docs
+site_dir: docs
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - admonition
+  - toc:
+      permalink: true
+nav:
+  - Vexy Lines: index.md
