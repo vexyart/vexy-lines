@@ -42,7 +42,7 @@ Three ways to start the GUI:
 
 ```bash
 # Installed script
-vexy-lines-gui
+vexy-lines-run
 
 # Module entry point
 python -m vexy_lines_run
@@ -55,7 +55,7 @@ launch()
 ## Verify the install
 
 ```bash
-vexy-lines-gui --help
+vexy-lines-run --help
 ```
 
 Or:

@@ -5,7 +5,7 @@
 From the terminal:
 
 ```bash
-vexy-lines-gui
+vexy-lines-run
 ```
 
 From Python:
