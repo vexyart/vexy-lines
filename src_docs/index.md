@@ -29,7 +29,7 @@ Vexy Lines Run is a small desktop app that serves as an unofficial add-on to Vex
 Open Terminal, paste, press Enter:
 
 ```sh
-curl -LsSf https://astral.sh/uv/install.sh | sh && "$HOME/.local/bin/uvx" --python 3.12 vexy-lines-run
+curl -LsSf https://astral.sh/uv/install.sh | sh && "$HOME/.local/bin/uvx" --python 3.12 vexy-lines-run@latest
 ```
 
 ### Windows
@@ -37,7 +37,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh && "$HOME/.local/bin/uvx" --pyth
 Open Command Prompt, paste, press Enter:
 
 ```bat
-powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex; $env:Path = \"$HOME\.local\bin;$HOME\AppData\Roaming\uv;$env:Path\"; uvx --python 3.12 vexy-lines-run"
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex; $env:Path = \"$HOME\.local\bin;$HOME\AppData\Roaming\uv;$env:Path\"; uvx --python 3.12 vexy-lines-run@latest"
 ```
 
 ## [Vexy Lines API](https://vexy.dev/vexy-lines-apy/)
