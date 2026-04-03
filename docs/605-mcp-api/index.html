@@ -1,0 +1,3836 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The complete guide to Vexy Lines vector art">
+      
+      
+      
+      
+        <link rel="prev" href="../604-python-parser/">
+      
+      
+        <link rel="next" href="../606-style-engine/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-materialx-10.1.1">
+    
+    
+      
+        <title>Controlling Vexy Lines via API - Vexy Lines Manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.b72b68c2.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.204eaadb.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo" data-mx-topbar="glass">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="toc" type="checkbox" id="__toc" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <label class="md-overlay" for="__toc"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#controlling-vexy-lines-via-api" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+<div class="vexy-top-nav" style="width: 100%;">
+  <script src="https://i.vexy.art/vl/webcode/vexy-lines-menu.js"></script>
+  <vexy-lines-menu></vexy-lines-menu>
+</div>
+
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Vexy Lines Manual" class="md-header__button md-logo" aria-label="Vexy Lines Manual" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Vexy Lines Manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Controlling Vexy Lines via API
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.25 2a8.25 8.25 0 0 1 6.34 13.53l5.69 5.69a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215l-5.69-5.69A8.25 8.25 0 1 1 10.25 2M3.5 10.25a6.75 6.75 0 1 0 13.5 0 6.75 6.75 0 0 0-13.5 0"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.25 2a8.25 8.25 0 0 1 6.34 13.53l5.69 5.69a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215l-5.69-5.69A8.25 8.25 0 1 1 10.25 2M3.5 10.25a6.75 6.75 0 1 0 13.5 0 6.75 6.75 0 0 0-13.5 0"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Vexy Lines Manual" class="md-nav__button md-logo" aria-label="Vexy Lines Manual" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Vexy Lines Manual
+  </label>
+  
+  <ul class="md-nav__list">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Front Matter
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Front Matter
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../001-toc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Table of Contents
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../002-tldr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The One-Page Manual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../003-intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    What Is Vexy Lines?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 1: Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 1: Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../101-part1-tldr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started in Five Minutes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../102-installing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Download, Install, Activate
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../103-workspace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Workspace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../104-navigating/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zoom, Pan, and Navigate
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../105-new-document/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creating a New Document
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../106-first-fill/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Your First Fill
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../107-adjusting-fills/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tuning Your Artwork
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../108-basic-masks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hiding and Revealing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../109-layers-groups/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organising Your Work
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../110-exporting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Your Art Out
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../111-saving/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Save, Backup, Recover
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../112-refresh-controls/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Controlling When Vexy Recalculates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 2: The Fill Parade
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 2: The Fill Parade
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../201-part2-tldr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Twelve Ways to See
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../202-linear/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linear: The Engraver's Line
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../203-wave/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wave: Rivers of Line
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../204-circular/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Circular: Concentric Rings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../205-spiral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spiral: The Continuous Wind
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../206-radial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Radial: Exploding Rays
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../207-halftone/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Halftone: Dots and Shapes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../208-trace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trace: Finding Edges
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../209-wireframe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wireframe: Dimensional Lattice
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../210-scribble/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scribble: Controlled Chaos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../211-fractal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fractal: Space-Filling Curves
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../212-text/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Text: Painting with Letters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../213-handmade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Handmade: Your Strokes, Your Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../214-combining-fills/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Combining Fills: The Art of the Stack
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 3: Properties and Controls
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 3: Properties and Controls
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../301-part3-tldr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Control Surface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../302-colour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colour: Static and Dynamic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../303-stroke-thickness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stroke Thickness: Weight from Light
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../304-image-threshold/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Image Threshold: Choosing What Matters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../305-interval-spacing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interval and Spacing: Density Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../306-angle-rotation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Angle and Rotation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../307-randomisation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Randomisation and Organic Feel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../308-smoothing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Smoothing and Curve Quality
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../309-dash-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashes, Gaps, and Overlap Cuts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../310-emboss/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emboss and Bas-Relief
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../311-clones-overlap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clones and Overlap Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../312-document-settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Document and Canvas Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 4: Masks, Meshes, and Composition
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 4: Masks, Meshes, and Composition
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../401-part4-tldr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Composing Complex Artwork
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../402-brush-mask/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Painting Masks with the Brush
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../403-shape-masks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rectangle, Ellipse, and Freeform Masks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../404-refining-masks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Editing Mask Paths
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../405-mesh-warping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mesh Warping: Bending Fills in 3D
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../406-hidden-strokes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hidden Strokes Removal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../407-groups-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Groups: Source Images and Inheritance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../408-layer-ordering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Layer Order and Stacking Strategy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../409-composition-recipes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Composition Recipes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../410-cloning-strategies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cloning for Coordinated Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 5: Creative Workflows
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 5: Creative Workflows
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../501-part5-tldr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    From Tool to Craft
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../502-portrait-engraving/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portrait Engraving
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../503-landscape-illustration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Landscape and Nature
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../504-screen-printing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preparing for Screen Printing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../505-tattoo-design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tattoo Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../506-laser-cutting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Laser Cutting and CNC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../507-botanical-illustration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Botanical Illustration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../508-comics-graphics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comics and Graphic Novels
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../509-guilloche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guilloche and Ornamental Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../510-style-libraries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Building a Style Library
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../511-print-preparation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preparing Files for Print
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../512-gallery-recipes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gallery of Techniques
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 6: Power Tools
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 6: Power Tools
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../601-part6-tldr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beyond the GUI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../602-cli-basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Command Line Tool
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../603-cli-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Batch Export and Style Transfer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../604-python-parser/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reading .lines Files with Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Controlling Vexy Lines via API
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Controlling Vexy Lines via API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc">
+      
+        <li class="md-nav__item">
+  <a href="#installing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-mcpclient" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The MCPClient
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-25-tools-grouped" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The 25 Tools, Grouped
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The 25 Tools, Grouped">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#document-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Document Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#structure-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fill-parameter-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fill Parameter Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visual Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coordinates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coordinates
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Code Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Code Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#open-a-document-and-list-its-fills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open a Document and List Its Fills
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-a-linear-fill-and-configure-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add a Linear Fill and Configure It
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-parameters-on-an-existing-fill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Parameters on an Existing Fill
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-document-from-scratch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create a New Document from Scratch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-the-current-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Export the Current Document
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#undo-and-redo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Undo and Redo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Handling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-use-the-api-vs-the-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Use the API vs. the CLI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Further Reading
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../606-style-engine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Style Transfer and Interpolation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../607-video-processing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Video to Vector Video
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../608-ai-workflows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI-Assisted Workflows (Claude + MCP)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../609-performance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance and Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../610-shortcuts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keyboard Shortcuts Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../611-file-format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The .lines File Format
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../612-glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc">
+      
+        <li class="md-nav__item">
+  <a href="#installing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-mcpclient" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The MCPClient
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-25-tools-grouped" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The 25 Tools, Grouped
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The 25 Tools, Grouped">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#document-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Document Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#structure-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fill-parameter-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fill Parameter Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visual Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coordinates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coordinates
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Code Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Code Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#open-a-document-and-list-its-fills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open a Document and List Its Fills
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-a-linear-fill-and-configure-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add a Linear Fill and Configure It
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-parameters-on-an-existing-fill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Parameters on an Existing Fill
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-document-from-scratch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create a New Document from Scratch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-the-current-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Export the Current Document
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#undo-and-redo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Undo and Redo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Handling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-use-the-api-vs-the-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Use the API vs. the CLI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Further Reading
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+<h1 id="controlling-vexy-lines-via-api">Controlling Vexy Lines via API<a class="headerlink" href="#controlling-vexy-lines-via-api" title="Permanent link">&para;</a></h1>
+<p>The parser from <a href="../604-python-parser/">Reading .lines Files with Python</a> reads files. The API writes reality. It talks to a running Vexy Lines instance and tells it what to do: open a document, add a fill, change a parameter, render, export. Anything you can do with the mouse in the GUI, you can do with a line of Python through the API.</p>
+<p>The package is called <code>vexy-lines-apy</code>. It wraps the 25 tools in the Vexy Lines MCP server into a clean Python interface. You do not need to understand JSON-RPC, TCP sockets, or any protocol detail. You write Python. The package handles the plumbing.</p>
+<hr />
+<h2 id="installing">Installing<a class="headerlink" href="#installing" title="Permanent link">&para;</a></h2>
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>pip install vexy-lines-apy
+</code></pre></div>
+<p>This installs <code>vexy-lines-apy</code> and its dependency <code>vexy-lines-py</code> (the parser). You need Python 3.10 or newer.</p>
+<hr />
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>The API talks to the Vexy Lines application over a local network connection. Two things must be true:</p>
+<ol>
+<li><strong>The Vexy Lines app must be running.</strong> Launch it normally. The app starts its MCP server automatically --- no configuration needed.</li>
+<li><strong>Nothing else is using port 47384.</strong> This is the port the app listens on. In practice, conflicts are extremely rare.</li>
+</ol>
+<p>To test the connection from a terminal:</p>
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>python -c &quot;from vexy_lines_apy import MCPClient; c = MCPClient(); c.connect(); print(c.get_status()); c.disconnect()&quot;
+</code></pre></div>
+<p>If you see status information, the connection works.</p>
+<hr />
+<h2 id="the-mcpclient">The MCPClient<a class="headerlink" href="#the-mcpclient" title="Permanent link">&para;</a></h2>
+<p>All API interaction goes through the <code>MCPClient</code> class. The recommended pattern uses Python's <code>with</code> statement, which automatically connects and disconnects:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">vexy_lines_apy</span><span class="w"> </span><span class="kn">import</span> <span class="n">MCPClient</span>
+
+<span class="k">with</span> <span class="n">MCPClient</span><span class="p">()</span> <span class="k">as</span> <span class="n">vl</span><span class="p">:</span>
+    <span class="n">info</span> <span class="o">=</span> <span class="n">vl</span><span class="o">.</span><span class="n">get_document_info</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Document: </span><span class="si">{</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;caption&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Canvas:   </span><span class="si">{</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;width&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> x </span><span class="si">{</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;height&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> px&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>When the <code>with</code> block ends, the connection closes cleanly. If something goes wrong inside the block, the connection still closes. This is the safest way to use the client.</p>
+<p>You can also connect manually:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">vexy_lines_apy</span><span class="w"> </span><span class="kn">import</span> <span class="n">MCPClient</span>
+
+<span class="n">vl</span> <span class="o">=</span> <span class="n">MCPClient</span><span class="p">()</span>
+<span class="n">vl</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<span class="c1"># ... do things ...</span>
+<span class="n">vl</span><span class="o">.</span><span class="n">disconnect</span><span class="p">()</span>
+</code></pre></div>
+<p>But the <code>with</code> pattern is preferred because it never leaves a connection open by accident.</p>
+<hr />
+<h2 id="the-25-tools-grouped">The 25 Tools, Grouped<a class="headerlink" href="#the-25-tools-grouped" title="Permanent link">&para;</a></h2>
+<p>The MCP API offers 25 tools organised into five groups. Each tool maps to a method on <code>MCPClient</code>.</p>
+<h3 id="document-tools">Document Tools<a class="headerlink" href="#document-tools" title="Permanent link">&para;</a></h3>
+<p>Manage files and exports.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>What It Does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>new_document(width, height, dpi)</code></td>
+<td>Create a blank document</td>
+</tr>
+<tr>
+<td><code>open_document(path)</code></td>
+<td>Open a <code>.lines</code> file</td>
+</tr>
+<tr>
+<td><code>save_document()</code></td>
+<td>Save the current document</td>
+</tr>
+<tr>
+<td><code>export_document(path, format)</code></td>
+<td>Export to SVG, PDF, PNG, or JPG</td>
+</tr>
+<tr>
+<td><code>get_document_info()</code></td>
+<td>Return metadata (caption, size, DPI, version)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="structure-tools">Structure Tools<a class="headerlink" href="#structure-tools" title="Permanent link">&para;</a></h3>
+<p>Navigate and modify the layer tree.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>What It Does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>get_tree()</code></td>
+<td>Return the full layer hierarchy</td>
+</tr>
+<tr>
+<td><code>add_group(name)</code></td>
+<td>Create a new group</td>
+</tr>
+<tr>
+<td><code>add_layer(name)</code></td>
+<td>Create a new layer in the current group</td>
+</tr>
+<tr>
+<td><code>add_fill(fill_type)</code></td>
+<td>Add a fill to the current layer</td>
+</tr>
+<tr>
+<td><code>delete_element(element_id)</code></td>
+<td>Remove a group, layer, or fill by ID</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fill-parameter-tools">Fill Parameter Tools<a class="headerlink" href="#fill-parameter-tools" title="Permanent link">&para;</a></h3>
+<p>Read and write fill settings.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>What It Does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>get_fill_params(fill_id)</code></td>
+<td>Return all parameters for a fill</td>
+</tr>
+<tr>
+<td><code>set_fill_params(fill_id, params)</code></td>
+<td>Update one or more parameters</td>
+</tr>
+</tbody>
+</table>
+<h3 id="visual-tools">Visual Tools<a class="headerlink" href="#visual-tools" title="Permanent link">&para;</a></h3>
+<p>Control what the document looks like beyond fill parameters.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>What It Does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>set_source_image(path)</code></td>
+<td>Set the source image for the current group</td>
+</tr>
+<tr>
+<td><code>set_caption(text)</code></td>
+<td>Set the document's title</td>
+</tr>
+<tr>
+<td><code>set_visibility(element_id, visible)</code></td>
+<td>Show or hide a group, layer, or fill</td>
+</tr>
+<tr>
+<td><code>set_mask(layer_id, mask_data)</code></td>
+<td>Set a layer's mask</td>
+</tr>
+<tr>
+<td><code>set_transform(element_id, transform)</code></td>
+<td>Apply position, rotation, scale</td>
+</tr>
+<tr>
+<td><code>set_warp(element_id, warp_type, params)</code></td>
+<td>Apply mesh warping</td>
+</tr>
+</tbody>
+</table>
+<h3 id="control-tools">Control Tools<a class="headerlink" href="#control-tools" title="Permanent link">&para;</a></h3>
+<p>Rendering and editing operations.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>What It Does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>render()</code></td>
+<td>Trigger a full render</td>
+</tr>
+<tr>
+<td><code>get_status()</code></td>
+<td>Check app status and connection health</td>
+</tr>
+<tr>
+<td><code>undo()</code></td>
+<td>Undo the last operation</td>
+</tr>
+<tr>
+<td><code>redo()</code></td>
+<td>Redo the last undone operation</td>
+</tr>
+<tr>
+<td><code>get_selection()</code></td>
+<td>Return the currently selected element</td>
+</tr>
+<tr>
+<td><code>set_selection(element_id)</code></td>
+<td>Select an element by ID</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="coordinates">Coordinates<a class="headerlink" href="#coordinates" title="Permanent link">&para;</a></h2>
+<p>All coordinates are in <strong>pixels at the document's DPI</strong>, with the origin at the <strong>top-left corner</strong> of the canvas. If your document is 2400 x 3200 pixels at 300 DPI, then:</p>
+<ul>
+<li><code>(0, 0)</code> is the top-left corner.</li>
+<li><code>(2400, 3200)</code> is the bottom-right corner.</li>
+<li><code>(1200, 1600)</code> is the center.</li>
+</ul>
+<p>When setting transforms or warp parameters, positions use this coordinate system.</p>
+<hr />
+<h2 id="code-examples">Code Examples<a class="headerlink" href="#code-examples" title="Permanent link">&para;</a></h2>
+<h3 id="open-a-document-and-list-its-fills">Open a Document and List Its Fills<a class="headerlink" href="#open-a-document-and-list-its-fills" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">vexy_lines_apy</span><span class="w"> </span><span class="kn">import</span> <span class="n">MCPClient</span>
+
+<span class="k">with</span> <span class="n">MCPClient</span><span class="p">()</span> <span class="k">as</span> <span class="n">vl</span><span class="p">:</span>
+    <span class="n">vl</span><span class="o">.</span><span class="n">open_document</span><span class="p">(</span><span class="s2">&quot;/Users/you/Documents/portrait.lines&quot;</span><span class="p">)</span>
+    <span class="n">tree</span> <span class="o">=</span> <span class="n">vl</span><span class="o">.</span><span class="n">get_tree</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">tree</span><span class="p">[</span><span class="s2">&quot;groups&quot;</span><span class="p">]:</span>
+        <span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="n">group</span><span class="p">[</span><span class="s2">&quot;layers&quot;</span><span class="p">]:</span>
+            <span class="k">for</span> <span class="n">fill</span> <span class="ow">in</span> <span class="n">layer</span><span class="p">[</span><span class="s2">&quot;fills&quot;</span><span class="p">]:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">fill</span><span class="p">[</span><span class="s1">&#39;fill_type&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> (id: </span><span class="si">{</span><span class="n">fill</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="add-a-linear-fill-and-configure-it">Add a Linear Fill and Configure It<a class="headerlink" href="#add-a-linear-fill-and-configure-it" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">vexy_lines_apy</span><span class="w"> </span><span class="kn">import</span> <span class="n">MCPClient</span>
+
+<span class="k">with</span> <span class="n">MCPClient</span><span class="p">()</span> <span class="k">as</span> <span class="n">vl</span><span class="p">:</span>
+    <span class="n">vl</span><span class="o">.</span><span class="n">open_document</span><span class="p">(</span><span class="s2">&quot;/Users/you/Documents/portrait.lines&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Add a Linear fill to the current layer</span>
+    <span class="n">fill_id</span> <span class="o">=</span> <span class="n">vl</span><span class="o">.</span><span class="n">add_fill</span><span class="p">(</span><span class="s2">&quot;linear&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Set its parameters</span>
+    <span class="n">vl</span><span class="o">.</span><span class="n">set_fill_params</span><span class="p">(</span><span class="n">fill_id</span><span class="p">,</span> <span class="p">{</span>
+        <span class="s2">&quot;interval&quot;</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
+        <span class="s2">&quot;angle&quot;</span><span class="p">:</span> <span class="mi">45</span><span class="p">,</span>
+        <span class="s2">&quot;randomization&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;smoothing&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+        <span class="s2">&quot;stroke_thickness_mode&quot;</span><span class="p">:</span> <span class="s2">&quot;linear&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+
+    <span class="c1"># Render to see the result</span>
+    <span class="n">vl</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Added Linear fill (id: </span><span class="si">{</span><span class="n">fill_id</span><span class="si">}</span><span class="s2">) at 45°, 1.0mm interval.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="change-parameters-on-an-existing-fill">Change Parameters on an Existing Fill<a class="headerlink" href="#change-parameters-on-an-existing-fill" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">vexy_lines_apy</span><span class="w"> </span><span class="kn">import</span> <span class="n">MCPClient</span>
+
+<span class="k">with</span> <span class="n">MCPClient</span><span class="p">()</span> <span class="k">as</span> <span class="n">vl</span><span class="p">:</span>
+    <span class="n">vl</span><span class="o">.</span><span class="n">open_document</span><span class="p">(</span><span class="s2">&quot;/Users/you/Documents/portrait.lines&quot;</span><span class="p">)</span>
+    <span class="n">tree</span> <span class="o">=</span> <span class="n">vl</span><span class="o">.</span><span class="n">get_tree</span><span class="p">()</span>
+
+    <span class="c1"># Find the first Linear fill</span>
+    <span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">tree</span><span class="p">[</span><span class="s2">&quot;groups&quot;</span><span class="p">]:</span>
+        <span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="n">group</span><span class="p">[</span><span class="s2">&quot;layers&quot;</span><span class="p">]:</span>
+            <span class="k">for</span> <span class="n">fill</span> <span class="ow">in</span> <span class="n">layer</span><span class="p">[</span><span class="s2">&quot;fills&quot;</span><span class="p">]:</span>
+                <span class="k">if</span> <span class="n">fill</span><span class="p">[</span><span class="s2">&quot;fill_type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;linear&quot;</span><span class="p">:</span>
+                    <span class="c1"># Double the interval</span>
+                    <span class="n">params</span> <span class="o">=</span> <span class="n">vl</span><span class="o">.</span><span class="n">get_fill_params</span><span class="p">(</span><span class="n">fill</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+                    <span class="n">new_interval</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="s2">&quot;interval&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span>
+                    <span class="n">vl</span><span class="o">.</span><span class="n">set_fill_params</span><span class="p">(</span><span class="n">fill</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">],</span> <span class="p">{</span><span class="s2">&quot;interval&quot;</span><span class="p">:</span> <span class="n">new_interval</span><span class="p">})</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Changed interval from </span><span class="si">{</span><span class="n">params</span><span class="p">[</span><span class="s1">&#39;interval&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> to </span><span class="si">{</span><span class="n">new_interval</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                    <span class="k">break</span>
+
+    <span class="n">vl</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="create-a-new-document-from-scratch">Create a New Document from Scratch<a class="headerlink" href="#create-a-new-document-from-scratch" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">vexy_lines_apy</span><span class="w"> </span><span class="kn">import</span> <span class="n">MCPClient</span>
+
+<span class="k">with</span> <span class="n">MCPClient</span><span class="p">()</span> <span class="k">as</span> <span class="n">vl</span><span class="p">:</span>
+    <span class="c1"># Create a 3000x2000 canvas at 300 DPI</span>
+    <span class="n">vl</span><span class="o">.</span><span class="n">new_document</span><span class="p">(</span><span class="mi">3000</span><span class="p">,</span> <span class="mi">2000</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+    <span class="n">vl</span><span class="o">.</span><span class="n">set_caption</span><span class="p">(</span><span class="s2">&quot;Automated Composition&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Set a source image</span>
+    <span class="n">vl</span><span class="o">.</span><span class="n">set_source_image</span><span class="p">(</span><span class="s2">&quot;/Users/you/Photos/landscape.jpg&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Add a group and layer</span>
+    <span class="n">vl</span><span class="o">.</span><span class="n">add_group</span><span class="p">(</span><span class="s2">&quot;Main&quot;</span><span class="p">)</span>
+    <span class="n">vl</span><span class="o">.</span><span class="n">add_layer</span><span class="p">(</span><span class="s2">&quot;Engraving&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Add a Linear fill</span>
+    <span class="n">fill_id</span> <span class="o">=</span> <span class="n">vl</span><span class="o">.</span><span class="n">add_fill</span><span class="p">(</span><span class="s2">&quot;linear&quot;</span><span class="p">)</span>
+    <span class="n">vl</span><span class="o">.</span><span class="n">set_fill_params</span><span class="p">(</span><span class="n">fill_id</span><span class="p">,</span> <span class="p">{</span>
+        <span class="s2">&quot;interval&quot;</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">,</span>
+        <span class="s2">&quot;angle&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+        <span class="s2">&quot;smoothing&quot;</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span>
+    <span class="p">})</span>
+
+    <span class="c1"># Render and export</span>
+    <span class="n">vl</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
+    <span class="n">vl</span><span class="o">.</span><span class="n">export_document</span><span class="p">(</span><span class="s2">&quot;/Users/you/Documents/output.svg&quot;</span><span class="p">,</span> <span class="s2">&quot;svg&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Document created and exported.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="export-the-current-document">Export the Current Document<a class="headerlink" href="#export-the-current-document" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">vexy_lines_apy</span><span class="w"> </span><span class="kn">import</span> <span class="n">MCPClient</span>
+
+<span class="k">with</span> <span class="n">MCPClient</span><span class="p">()</span> <span class="k">as</span> <span class="n">vl</span><span class="p">:</span>
+    <span class="n">vl</span><span class="o">.</span><span class="n">export_document</span><span class="p">(</span><span class="s2">&quot;/Users/you/Desktop/final.pdf&quot;</span><span class="p">,</span> <span class="s2">&quot;pdf&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Exported to PDF.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="undo-and-redo">Undo and Redo<a class="headerlink" href="#undo-and-redo" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">vexy_lines_apy</span><span class="w"> </span><span class="kn">import</span> <span class="n">MCPClient</span>
+
+<span class="k">with</span> <span class="n">MCPClient</span><span class="p">()</span> <span class="k">as</span> <span class="n">vl</span><span class="p">:</span>
+    <span class="n">vl</span><span class="o">.</span><span class="n">open_document</span><span class="p">(</span><span class="s2">&quot;/Users/you/Documents/portrait.lines&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Make a change</span>
+    <span class="n">tree</span> <span class="o">=</span> <span class="n">vl</span><span class="o">.</span><span class="n">get_tree</span><span class="p">()</span>
+    <span class="n">first_fill</span> <span class="o">=</span> <span class="n">tree</span><span class="p">[</span><span class="s2">&quot;groups&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;layers&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;fills&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">vl</span><span class="o">.</span><span class="n">set_fill_params</span><span class="p">(</span><span class="n">first_fill</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">],</span> <span class="p">{</span><span class="s2">&quot;angle&quot;</span><span class="p">:</span> <span class="mi">90</span><span class="p">})</span>
+    <span class="n">vl</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Changed angle to 90°&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Undo it</span>
+    <span class="n">vl</span><span class="o">.</span><span class="n">undo</span><span class="p">()</span>
+    <span class="n">vl</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Undone.&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Redo it</span>
+    <span class="n">vl</span><span class="o">.</span><span class="n">redo</span><span class="p">()</span>
+    <span class="n">vl</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Redone.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="error-handling">Error Handling<a class="headerlink" href="#error-handling" title="Permanent link">&para;</a></h2>
+<p>API calls can fail. The connection might drop, the app might be busy, or you might pass an invalid parameter. The package raises <code>MCPError</code> exceptions with descriptive messages.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">vexy_lines_apy</span><span class="w"> </span><span class="kn">import</span> <span class="n">MCPClient</span><span class="p">,</span> <span class="n">MCPError</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="k">with</span> <span class="n">MCPClient</span><span class="p">()</span> <span class="k">as</span> <span class="n">vl</span><span class="p">:</span>
+        <span class="n">vl</span><span class="o">.</span><span class="n">open_document</span><span class="p">(</span><span class="s2">&quot;/nonexistent/path.lines&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="n">MCPError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;API error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Common errors:</p>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>Cause</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Connection refused</code></td>
+<td>App not running</td>
+<td>Launch Vexy Lines</td>
+</tr>
+<tr>
+<td><code>Document not found</code></td>
+<td>Invalid file path</td>
+<td>Check the path</td>
+</tr>
+<tr>
+<td><code>Invalid fill type</code></td>
+<td>Unrecognised fill type name</td>
+<td>Use one of: <code>linear</code>, <code>wave</code>, <code>circular</code>, <code>spiral</code>, <code>radial</code>, <code>halftone</code>, <code>trace</code>, <code>wireframe</code>, <code>scribble</code>, <code>fractal</code>, <code>text</code>, <code>handmade</code></td>
+</tr>
+<tr>
+<td><code>Invalid parameter</code></td>
+<td>Parameter name or value not valid for the fill type</td>
+<td>Check the fill's parameter list</td>
+</tr>
+<tr>
+<td><code>Render timeout</code></td>
+<td>Document too complex to render in time</td>
+<td>Simplify or increase timeout</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="when-to-use-the-api-vs-the-cli">When to Use the API vs. the CLI<a class="headerlink" href="#when-to-use-the-api-vs-the-cli" title="Permanent link">&para;</a></h2>
+<p>The CLI (<a href="../602-cli-basics/">The Command Line Tool</a>) and the API both talk to the running app. The difference is in how you talk to <em>them</em>:</p>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>One-off tasks: export a file, check status</td>
+<td>CLI</td>
+</tr>
+<tr>
+<td>Batch export of a folder</td>
+<td>CLI (<code>export</code> command)</td>
+</tr>
+<tr>
+<td>Custom logic: "for each file, if it has a Spiral fill, change the interval"</td>
+<td>API (Python script)</td>
+</tr>
+<tr>
+<td>Integration with other tools or pipelines</td>
+<td>API</td>
+</tr>
+<tr>
+<td>Style transfer with standard settings</td>
+<td>CLI (<code>style-transfer</code> command)</td>
+</tr>
+<tr>
+<td>Style transfer with custom logic per file</td>
+<td>API (style engine)</td>
+</tr>
+</tbody>
+</table>
+<p>The API gives you the full power of a programming language --- loops, conditions, variables, error handling. The CLI gives you the convenience of a single typed command. Use whichever fits the job.</p>
+<hr />
+<h2 id="further-reading">Further Reading<a class="headerlink" href="#further-reading" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../606-style-engine/">Style Transfer and Interpolation</a> --- the style engine built on top of the API.</li>
+<li><a href="../608-ai-workflows/">AI-Assisted Workflows</a> --- using the MCP API through an AI assistant.</li>
+<li><a href="../611-file-format/">The .lines File Format</a> --- understanding what the API reads and writes.</li>
+</ul>
+<hr />
+<p><em>Previous: <a href="../604-python-parser/">Reading .lines Files with Python</a> | Next: <a href="../606-style-engine/">Style Transfer and Interpolation</a></em></p>
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+          <div class="md-top" data-md-component="top" hidden>
+  <div class="md-top__center">
+    <button type="button" class="md-top__button md-top__button--main" data-md-action="top">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+      <span>Back to top</span>
+    </button>
+    
+      
+      
+      <label class="md-top__button md-top__side md-top__side--nav" for="__drawer" >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m0 14H9V6h11Z"/></svg>
+      </label>
+    
+    
+      
+      
+      <label class="md-top__button md-top__side md-top__side--toc" for="__toc" >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m-5 14H4V6h11Z"/></svg>
+      </label>
+    
+  </div>
+</div>
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://jaywhj.github.io/mkdocs-materialx/" target="_blank" rel="noopener">
+      MaterialX
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "navigation.sections", "navigation.expand"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e3ad5d0a.min.js"></script>
+      
+    
+  </body>
+</html>

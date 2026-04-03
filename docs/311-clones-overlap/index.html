@@ -1,0 +1,3843 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The complete guide to Vexy Lines vector art">
+      
+      
+      
+      
+        <link rel="prev" href="../310-emboss/">
+      
+      
+        <link rel="next" href="../312-document-settings/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-materialx-10.1.1">
+    
+    
+      
+        <title>Clones and Overlap Control - Vexy Lines Manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.b72b68c2.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.204eaadb.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo" data-mx-topbar="glass">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="toc" type="checkbox" id="__toc" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <label class="md-overlay" for="__toc"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#clones-and-overlap-control" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+<div class="vexy-top-nav" style="width: 100%;">
+  <script src="https://i.vexy.art/vl/webcode/vexy-lines-menu.js"></script>
+  <vexy-lines-menu></vexy-lines-menu>
+</div>
+
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Vexy Lines Manual" class="md-header__button md-logo" aria-label="Vexy Lines Manual" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Vexy Lines Manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Clones and Overlap Control
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.25 2a8.25 8.25 0 0 1 6.34 13.53l5.69 5.69a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215l-5.69-5.69A8.25 8.25 0 1 1 10.25 2M3.5 10.25a6.75 6.75 0 1 0 13.5 0 6.75 6.75 0 0 0-13.5 0"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.25 2a8.25 8.25 0 0 1 6.34 13.53l5.69 5.69a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215l-5.69-5.69A8.25 8.25 0 1 1 10.25 2M3.5 10.25a6.75 6.75 0 1 0 13.5 0 6.75 6.75 0 0 0-13.5 0"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Vexy Lines Manual" class="md-nav__button md-logo" aria-label="Vexy Lines Manual" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Vexy Lines Manual
+  </label>
+  
+  <ul class="md-nav__list">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Front Matter
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Front Matter
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../001-toc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Table of Contents
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../002-tldr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The One-Page Manual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../003-intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    What Is Vexy Lines?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 1: Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 1: Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../101-part1-tldr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started in Five Minutes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../102-installing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Download, Install, Activate
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../103-workspace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Workspace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../104-navigating/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zoom, Pan, and Navigate
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../105-new-document/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creating a New Document
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../106-first-fill/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Your First Fill
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../107-adjusting-fills/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tuning Your Artwork
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../108-basic-masks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hiding and Revealing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../109-layers-groups/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organising Your Work
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../110-exporting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Your Art Out
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../111-saving/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Save, Backup, Recover
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../112-refresh-controls/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Controlling When Vexy Recalculates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 2: The Fill Parade
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 2: The Fill Parade
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../201-part2-tldr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Twelve Ways to See
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../202-linear/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linear: The Engraver's Line
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../203-wave/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wave: Rivers of Line
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../204-circular/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Circular: Concentric Rings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../205-spiral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spiral: The Continuous Wind
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../206-radial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Radial: Exploding Rays
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../207-halftone/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Halftone: Dots and Shapes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../208-trace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trace: Finding Edges
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../209-wireframe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wireframe: Dimensional Lattice
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../210-scribble/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scribble: Controlled Chaos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../211-fractal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fractal: Space-Filling Curves
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../212-text/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Text: Painting with Letters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../213-handmade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Handmade: Your Strokes, Your Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../214-combining-fills/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Combining Fills: The Art of the Stack
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 3: Properties and Controls
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 3: Properties and Controls
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../301-part3-tldr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Control Surface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../302-colour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colour: Static and Dynamic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../303-stroke-thickness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stroke Thickness: Weight from Light
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../304-image-threshold/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Image Threshold: Choosing What Matters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../305-interval-spacing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interval and Spacing: Density Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../306-angle-rotation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Angle and Rotation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../307-randomisation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Randomisation and Organic Feel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../308-smoothing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Smoothing and Curve Quality
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../309-dash-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashes, Gaps, and Overlap Cuts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../310-emboss/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emboss and Bas-Relief
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clones and Overlap Control
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clones and Overlap Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc">
+      
+        <li class="md-nav__item">
+  <a href="#clones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Clones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-a-clone-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What a Clone Is
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-clone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating a Clone
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-inherited" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Is Inherited
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-clone-instead-of-duplicate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Clone Instead of Duplicate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-cases-for-clones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Cases for Clones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overlap-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overlap Control
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overlap Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-three-checkboxes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Three Checkboxes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-cutting-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Cutting Works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-four-orientation-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Four Orientation Modes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-a-weave-step-by-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building a Weave: Step by Step
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building a Weave: Step by Step">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-the-first-fill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Create the First Fill
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-set-up-dashes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Set Up Dashes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-enable-overlap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Enable Overlap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-create-the-second-fill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Create the Second Fill
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-offset-the-dashes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Offset the Dashes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-enable-overlap-on-the-second-fill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: Enable Overlap on the Second Fill
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-7-refresh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 7: Refresh
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-8-refine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 8: Refine
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-overlap-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Overlap Techniques
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Overlap Techniques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#three-fill-weave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Three-Fill Weave
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selective-cutting-no-weave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selective Cutting (No Weave)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cutting-with-different-fill-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cutting with Different Fill Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clones-and-overlap-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clones and Overlap Together
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-overlap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting Overlap
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Further Reading
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../312-document-settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Document and Canvas Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 4: Masks, Meshes, and Composition
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 4: Masks, Meshes, and Composition
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../401-part4-tldr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Composing Complex Artwork
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../402-brush-mask/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Painting Masks with the Brush
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../403-shape-masks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rectangle, Ellipse, and Freeform Masks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../404-refining-masks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Editing Mask Paths
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../405-mesh-warping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mesh Warping: Bending Fills in 3D
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../406-hidden-strokes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hidden Strokes Removal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../407-groups-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Groups: Source Images and Inheritance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../408-layer-ordering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Layer Order and Stacking Strategy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../409-composition-recipes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Composition Recipes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../410-cloning-strategies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cloning for Coordinated Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 5: Creative Workflows
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 5: Creative Workflows
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../501-part5-tldr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    From Tool to Craft
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../502-portrait-engraving/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portrait Engraving
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../503-landscape-illustration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Landscape and Nature
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../504-screen-printing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preparing for Screen Printing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../505-tattoo-design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tattoo Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../506-laser-cutting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Laser Cutting and CNC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../507-botanical-illustration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Botanical Illustration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../508-comics-graphics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comics and Graphic Novels
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../509-guilloche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guilloche and Ornamental Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../510-style-libraries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Building a Style Library
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../511-print-preparation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preparing Files for Print
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../512-gallery-recipes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gallery of Techniques
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 6: Power Tools
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 6: Power Tools
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../601-part6-tldr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beyond the GUI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../602-cli-basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Command Line Tool
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../603-cli-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Batch Export and Style Transfer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../604-python-parser/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reading .lines Files with Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../605-mcp-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Controlling Vexy Lines via API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../606-style-engine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Style Transfer and Interpolation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../607-video-processing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Video to Vector Video
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../608-ai-workflows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI-Assisted Workflows (Claude + MCP)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../609-performance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance and Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../610-shortcuts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keyboard Shortcuts Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../611-file-format/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The .lines File Format
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../612-glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc">
+      
+        <li class="md-nav__item">
+  <a href="#clones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Clones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-a-clone-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What a Clone Is
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-clone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating a Clone
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-inherited" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Is Inherited
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-clone-instead-of-duplicate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Clone Instead of Duplicate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-cases-for-clones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Cases for Clones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overlap-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overlap Control
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overlap Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-three-checkboxes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Three Checkboxes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-cutting-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Cutting Works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-four-orientation-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Four Orientation Modes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-a-weave-step-by-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building a Weave: Step by Step
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building a Weave: Step by Step">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-the-first-fill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Create the First Fill
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-set-up-dashes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Set Up Dashes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-enable-overlap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Enable Overlap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-create-the-second-fill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Create the Second Fill
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-offset-the-dashes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Offset the Dashes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-enable-overlap-on-the-second-fill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: Enable Overlap on the Second Fill
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-7-refresh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 7: Refresh
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-8-refine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 8: Refine
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-overlap-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Overlap Techniques
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Overlap Techniques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#three-fill-weave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Three-Fill Weave
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selective-cutting-no-weave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selective Cutting (No Weave)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cutting-with-different-fill-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cutting with Different Fill Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clones-and-overlap-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clones and Overlap Together
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-overlap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting Overlap
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Further Reading
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+<h1 id="clones-and-overlap-control">Clones and Overlap Control<a class="headerlink" href="#clones-and-overlap-control" title="Permanent link">&para;</a></h1>
+<p>Most fills in Vexy Lines are independent. Each one reads the source image, generates strokes, and renders them without regard for what other fills are doing. Clones and Overlap Control break that independence. Clones create linked copies that inherit structural parameters from a parent while allowing independent colour and weight. Overlap Control choreographs how fills interact at their crossing points — who covers whom, who cuts whom, and who weaves with whom. Together, they turn a stack of flat layers into a coordinated system.</p>
+<h2 id="clones">Clones<a class="headerlink" href="#clones" title="Permanent link">&para;</a></h2>
+<h3 id="what-a-clone-is">What a Clone Is<a class="headerlink" href="#what-a-clone-is" title="Permanent link">&para;</a></h3>
+<p>A clone is a new fill that inherits its parent's fill type, angle, and interval. Change the parent's angle from 0° to 15° and the clone's angle follows. Change the parent's interval from 2 mm to 1.5 mm and the clone tightens. The structural skeleton of the two fills stays synchronised.</p>
+<p>But the clone's colour, stroke thickness, and other visual parameters are independent. You can make the parent black and the clone red. You can make the parent thick and the clone thin. The fills share geometry but diverge in appearance.</p>
+<h3 id="creating-a-clone">Creating a Clone<a class="headerlink" href="#creating-a-clone" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Select a fill in the Layers Panel.</li>
+<li>Click the <strong>Clone</strong> button in the Properties Panel (or use the context menu: right-click &gt; Clone Fill).</li>
+<li>A new fill appears above the original, linked to it.</li>
+</ol>
+<p>The clone appears in the Layers Panel with a link icon indicating its parent relationship. The parent fill shows no special indicator — it does not "know" it has children.</p>
+<h3 id="what-is-inherited">What Is Inherited<a class="headerlink" href="#what-is-inherited" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Inherited?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fill type</td>
+<td>Yes</td>
+<td>Clone is always the same algorithm as parent</td>
+</tr>
+<tr>
+<td>Angle</td>
+<td>Yes</td>
+<td>Changes with parent</td>
+</tr>
+<tr>
+<td>Interval</td>
+<td>Yes</td>
+<td>Changes with parent</td>
+</tr>
+<tr>
+<td>Colour</td>
+<td>No</td>
+<td>Independent — this is the main reason to clone</td>
+</tr>
+<tr>
+<td>Stroke Thickness (mode, min, max)</td>
+<td>No</td>
+<td>Independent</td>
+</tr>
+<tr>
+<td>Image Threshold</td>
+<td>No</td>
+<td>Independent</td>
+</tr>
+<tr>
+<td>Smoothing</td>
+<td>No</td>
+<td>Independent</td>
+</tr>
+<tr>
+<td>Randomisation</td>
+<td>No</td>
+<td>Independent</td>
+</tr>
+<tr>
+<td>Shift</td>
+<td>No</td>
+<td>Independent</td>
+</tr>
+<tr>
+<td>Dash patterns</td>
+<td>No</td>
+<td>Independent</td>
+</tr>
+<tr>
+<td>Emboss</td>
+<td>No</td>
+<td>Independent</td>
+</tr>
+<tr>
+<td>Mask</td>
+<td>No</td>
+<td>Independent — clone can have its own mask</td>
+</tr>
+</tbody>
+</table>
+<h3 id="why-clone-instead-of-duplicate">Why Clone Instead of Duplicate<a class="headerlink" href="#why-clone-instead-of-duplicate" title="Permanent link">&para;</a></h3>
+<p>Duplicating a fill (Cmd+D / Ctrl+D) creates an independent copy. Change the original's angle and the duplicate stays put. You have two unrelated fills that happened to start with the same values.</p>
+<p>Cloning creates a live link. Change the parent's angle and the clone follows. This is essential when you want two fills that always share their geometric structure — same line direction, same spacing — but differ in colour or weight. If you later decide the angle should be 20° instead of 15°, you change it once on the parent and the clone updates automatically.</p>
+<h3 id="use-cases-for-clones">Use Cases for Clones<a class="headerlink" href="#use-cases-for-clones" title="Permanent link">&para;</a></h3>
+<p><strong>Tonal separation with coordinated geometry:</strong>
+Create a parent fill covering the shadow range (threshold 0–100) in black with heavy thickness. Clone it. Set the clone's threshold to 100–200 (midtones), colour to dark grey, thickness to medium. Clone again. Set the second clone's threshold to 200–255 (highlights), colour to light grey, thickness to thin. Three fills, three tonal bands, all sharing the same angle and interval so the lines align perfectly. Change the parent's angle and all three bands rotate together.</p>
+<p><strong>Multi-colour hatching:</strong>
+Parent fill in blue, clone in red, second clone in gold. Each fill has its own mask exposing different regions of the image. The geometry is synchronised — lines are parallel and evenly spaced across all three — but each region gets its own colour. Useful for heraldic designs, flag illustrations, and colour-separated screen prints.</p>
+<p><strong>Highlight and shadow pair:</strong>
+Parent fill in a medium tone covering the full threshold range. Clone it. Set the clone to cover only the highlights (threshold 180–255) in a lighter colour with thinner strokes. The clone's strokes are a lighter, finer version of the parent's, perfectly aligned, producing a two-tone rendering.</p>
+<h2 id="overlap-control">Overlap Control<a class="headerlink" href="#overlap-control" title="Permanent link">&para;</a></h2>
+<h3 id="the-three-checkboxes">The Three Checkboxes<a class="headerlink" href="#the-three-checkboxes" title="Permanent link">&para;</a></h3>
+<p>Every fill in Vexy Lines has two overlap checkboxes:</p>
+<ol>
+<li><strong>Can cut other fills</strong> — when enabled, this fill's strokes interrupt (remove segments from) the strokes of other fills that have "Can be cut" enabled.</li>
+<li><strong>Can be cut by other fills</strong> — when enabled, other fills that have "Can cut" enabled will interrupt this fill's strokes.</li>
+</ol>
+<p>The third state — both enabled — creates mutual cutting, which is the basis for weaving effects.</p>
+<table>
+<thead>
+<tr>
+<th>This Fill</th>
+<th>Other Fill</th>
+<th>Interaction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Can cut: On, Can be cut: Off</td>
+<td>Can cut: Off, Can be cut: On</td>
+<td>This fill dominates. Its strokes are uninterrupted. The other fill's strokes are cut where they cross.</td>
+</tr>
+<tr>
+<td>Can cut: Off, Can be cut: On</td>
+<td>Can cut: On, Can be cut: Off</td>
+<td>The other fill dominates. Same relationship, reversed.</td>
+</tr>
+<tr>
+<td>Can cut: On, Can be cut: On</td>
+<td>Can cut: On, Can be cut: On</td>
+<td>Mutual cutting. Both fills interrupt each other. Combined with dash offsets, this produces weaving.</td>
+</tr>
+<tr>
+<td>Can cut: Off, Can be cut: Off</td>
+<td>Any</td>
+<td>No interaction. Both fills render independently. This is the default.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="how-cutting-works">How Cutting Works<a class="headerlink" href="#how-cutting-works" title="Permanent link">&para;</a></h3>
+<p>When Fill A cuts Fill B:</p>
+<ol>
+<li>Vexy Lines identifies every point where Fill A's strokes cross Fill B's strokes.</li>
+<li>At each crossing point, Fill B's stroke is interrupted — a segment is removed.</li>
+<li>The length of the removed segment is determined by Fill A's dash and gap pattern. If Fill A has no dash pattern (continuous strokes), the cut is continuous along the crossing — Fill B is interrupted for the entire width of Fill A's stroke at that point.</li>
+<li>If Fill A has a dash pattern, the cuts occur only where Fill A's dashes fall. Where Fill A's gaps fall, Fill B's strokes remain intact.</li>
+</ol>
+<p>The visual result: Fill A appears to pass over Fill B. Fill B's strokes disappear behind Fill A's strokes at every crossing.</p>
+<h3 id="the-four-orientation-modes">The Four Orientation Modes<a class="headerlink" href="#the-four-orientation-modes" title="Permanent link">&para;</a></h3>
+<p>The <strong>Cut Orientation</strong> dropdown controls the axis along which cuts are calculated:</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Behaviour</th>
+<th>When to Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Auto</strong></td>
+<td>Vexy Lines determines the cut direction based on the angle difference between the two fills.</td>
+<td>Default. Works for most perpendicular or near-perpendicular fill pairs.</td>
+</tr>
+<tr>
+<td><strong>Horizontal</strong></td>
+<td>Cuts are calculated only along the horizontal axis.</td>
+<td>When two fills have similar angles and Auto produces incorrect cuts.</td>
+</tr>
+<tr>
+<td><strong>Vertical</strong></td>
+<td>Cuts are calculated only along the vertical axis.</td>
+<td>Same as Horizontal but for vertically-oriented fill pairs.</td>
+</tr>
+<tr>
+<td><strong>Both</strong></td>
+<td>Cuts are calculated along both axes simultaneously.</td>
+<td>When you want maximum cutting at every possible crossing point. Can produce excessive fragmentation on complex fills.</td>
+</tr>
+</tbody>
+</table>
+<p>For the standard cross-hatching scenario (two fills at perpendicular angles), Auto is correct. Switch to a specific mode only when the automatic detection produces results you do not want.</p>
+<h2 id="building-a-weave-step-by-step">Building a Weave: Step by Step<a class="headerlink" href="#building-a-weave-step-by-step" title="Permanent link">&para;</a></h2>
+<p>Weaving is the most visually complex overlap effect. It requires two fills that mutually cut each other, with offset dash patterns that create alternating over-under illusions. Here is the complete process:</p>
+<h3 id="step-1-create-the-first-fill">Step 1: Create the First Fill<a class="headerlink" href="#step-1-create-the-first-fill" title="Permanent link">&para;</a></h3>
+<p>Add a Linear fill at 0° (horizontal). Set Interval to 2.0 mm, Thickness Linear mode with Min 0.3 mm and Max 1.2 mm. Set Colour to dark red (#8B2500).</p>
+<h3 id="step-2-set-up-dashes">Step 2: Set Up Dashes<a class="headerlink" href="#step-2-set-up-dashes" title="Permanent link">&para;</a></h3>
+<p>Set Dash Length to 4 mm and Gap Length to 4 mm. The stroke is now a repeating pattern: 4 mm visible, 4 mm invisible.</p>
+<h3 id="step-3-enable-overlap">Step 3: Enable Overlap<a class="headerlink" href="#step-3-enable-overlap" title="Permanent link">&para;</a></h3>
+<p>Check both "Can cut other fills" and "Can be cut by other fills."</p>
+<h3 id="step-4-create-the-second-fill">Step 4: Create the Second Fill<a class="headerlink" href="#step-4-create-the-second-fill" title="Permanent link">&para;</a></h3>
+<p>Clone the first fill (it inherits the angle and interval). Change the clone's Angle to 90° (vertical). Change its Colour to dark blue (#1A3A6A).</p>
+<p>Note: Because angle is an inherited parameter, changing the clone's angle will break the inheritance for that parameter. This is expected — you want the two fills at different angles.</p>
+<p>Alternatively, create a new independent fill at 90° with the same interval and dash values. The clone approach is faster but not required.</p>
+<h3 id="step-5-offset-the-dashes">Step 5: Offset the Dashes<a class="headerlink" href="#step-5-offset-the-dashes" title="Permanent link">&para;</a></h3>
+<p>On the second fill, set Shift X or Shift Y to 4 mm (equal to the dash length). This offsets the second fill's dash pattern so its dashes begin where the first fill's gaps are, and vice versa.</p>
+<h3 id="step-6-enable-overlap-on-the-second-fill">Step 6: Enable Overlap on the Second Fill<a class="headerlink" href="#step-6-enable-overlap-on-the-second-fill" title="Permanent link">&para;</a></h3>
+<p>Check both "Can cut other fills" and "Can be cut by other fills" on the second fill as well.</p>
+<h3 id="step-7-refresh">Step 7: Refresh<a class="headerlink" href="#step-7-refresh" title="Permanent link">&para;</a></h3>
+<p>Refresh All. At each intersection of the two fills:</p>
+<ul>
+<li>Where the first fill's dash is present and the second fill's gap falls, the first fill is visible — it appears to pass over.</li>
+<li>Where the first fill's gap falls and the second fill's dash is present, the second fill is visible — it appears to pass over.</li>
+<li>The alternation creates the woven illusion.</li>
+</ul>
+<h3 id="step-8-refine">Step 8: Refine<a class="headerlink" href="#step-8-refine" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Tighten the weave:</strong> Reduce Interval to 1.5 mm and Dash/Gap to 3 mm each.</li>
+<li><strong>Loosen the weave:</strong> Increase Interval to 3 mm and Dash/Gap to 6 mm each.</li>
+<li><strong>Change the weave angle:</strong> Set fills to 30° and 120° for a diamond pattern.</li>
+<li><strong>Add emboss:</strong> Enable <a href="../310-emboss/">Emboss</a> on one or both fills with Rise 15–25 to make the threads appear raised.</li>
+</ul>
+<h2 id="advanced-overlap-techniques">Advanced Overlap Techniques<a class="headerlink" href="#advanced-overlap-techniques" title="Permanent link">&para;</a></h2>
+<h3 id="three-fill-weave">Three-Fill Weave<a class="headerlink" href="#three-fill-weave" title="Permanent link">&para;</a></h3>
+<p>Add a third fill at 60° (between the 0° and 120° fills in a three-angle composition). Enable overlap on all three. Offset each fill's dash pattern by one-third of the dash length. The result is a triaxial weave — three sets of threads interleaving, like a woven basket.</p>
+<p>This is complex to set up and visually dense. Use wide intervals (3+ mm) and short dashes (2–3 mm) to keep the pattern legible.</p>
+<h3 id="selective-cutting-no-weave">Selective Cutting (No Weave)<a class="headerlink" href="#selective-cutting-no-weave" title="Permanent link">&para;</a></h3>
+<p>Not every overlap interaction needs to be mutual. Enable "Can cut" on a Trace fill (contour outlines) and "Can be cut" on a Linear fill (background hatching). The contour lines will interrupt the hatching wherever they cross, creating a clear separation between outlined regions and hatched background — like a technical drawing where the subject's outline is always visible above the shading.</p>
+<h3 id="cutting-with-different-fill-types">Cutting with Different Fill Types<a class="headerlink" href="#cutting-with-different-fill-types" title="Permanent link">&para;</a></h3>
+<p>The overlap system works between any two fill types, not just Linear pairs. A Halftone fill can cut a Wave fill. A Radial fill can cut a Circular fill. The visual results range from elegant to chaotic depending on the fill combination. Experiment — but start with two Linear fills to understand the mechanics before adding complexity.</p>
+<h2 id="clones-and-overlap-together">Clones and Overlap Together<a class="headerlink" href="#clones-and-overlap-together" title="Permanent link">&para;</a></h2>
+<p>Clones and overlap are natural partners. A common workflow:</p>
+<ol>
+<li>Create a parent fill with your desired geometry.</li>
+<li>Clone it twice, producing three fills with synchronised angle and interval.</li>
+<li>Set each fill to a different colour and threshold range (shadow, midtone, highlight).</li>
+<li>Enable overlap between the shadow and midtone fills so the shadow fill appears to pass over the midtone fill in the darkest regions.</li>
+<li>The result: a tonal rendering where the visual layering reflects the tonal depth — darker fills are literally on top of lighter fills.</li>
+</ol>
+<h2 id="troubleshooting-overlap">Troubleshooting Overlap<a class="headerlink" href="#troubleshooting-overlap" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Cause</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No cutting visible</td>
+<td>Overlap checkboxes not set on both fills</td>
+<td>Enable "Can cut" on the cutting fill AND "Can be cut" on the victim fill</td>
+</tr>
+<tr>
+<td>Cuts in wrong direction</td>
+<td>Auto orientation chose incorrectly</td>
+<td>Switch to Horizontal, Vertical, or Both manually</td>
+</tr>
+<tr>
+<td>Weave looks like a grid with holes, not over-under</td>
+<td>Dash offsets not applied</td>
+<td>Shift one fill by exactly the dash length</td>
+</tr>
+<tr>
+<td>Excessive fragmentation</td>
+<td>"Both" orientation on dense fills</td>
+<td>Switch to Auto or a single axis</td>
+</tr>
+<tr>
+<td>Embossed fills have cut artefacts</td>
+<td>Emboss offset strokes also being cut</td>
+<td>Reduce Emboss Rise or widen Interval</td>
+</tr>
+</tbody>
+</table>
+<h2 id="further-reading">Further Reading<a class="headerlink" href="#further-reading" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../309-dash-patterns/">Dashes, Gaps, and Overlap Cuts</a> — dash patterns are the cutting mechanism within overlap interactions.</li>
+<li><a href="../306-angle-rotation/">Angle and Rotation</a> — the angle difference between fills determines the weave geometry.</li>
+<li><a href="../310-emboss/">Emboss and Bas-Relief</a> — adding depth to woven fills.</li>
+<li><a href="../301-part3-tldr/">The Control Surface</a> — the full parameter map.</li>
+</ul>
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+          <div class="md-top" data-md-component="top" hidden>
+  <div class="md-top__center">
+    <button type="button" class="md-top__button md-top__button--main" data-md-action="top">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+      <span>Back to top</span>
+    </button>
+    
+      
+      
+      <label class="md-top__button md-top__side md-top__side--nav" for="__drawer" >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m0 14H9V6h11Z"/></svg>
+      </label>
+    
+    
+      
+      
+      <label class="md-top__button md-top__side md-top__side--toc" for="__toc" >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m-5 14H4V6h11Z"/></svg>
+      </label>
+    
+  </div>
+</div>
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://jaywhj.github.io/mkdocs-materialx/" target="_blank" rel="noopener">
+      MaterialX
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "navigation.sections", "navigation.expand"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e3ad5d0a.min.js"></script>
+      
+    
+  </body>
+</html>

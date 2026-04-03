@@ -1,0 +1,3871 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The complete guide to Vexy Lines vector art">
+      
+      
+      
+      
+        <link rel="prev" href="../610-shortcuts/">
+      
+      
+        <link rel="next" href="../612-glossary/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-materialx-10.1.1">
+    
+    
+      
+        <title>The .lines File Format - Vexy Lines Manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.b72b68c2.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.204eaadb.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo" data-mx-topbar="glass">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="toc" type="checkbox" id="__toc" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <label class="md-overlay" for="__toc"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-lines-file-format" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+<div class="vexy-top-nav" style="width: 100%;">
+  <script src="https://i.vexy.art/vl/webcode/vexy-lines-menu.js"></script>
+  <vexy-lines-menu></vexy-lines-menu>
+</div>
+
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Vexy Lines Manual" class="md-header__button md-logo" aria-label="Vexy Lines Manual" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Vexy Lines Manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              The .lines File Format
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.25 2a8.25 8.25 0 0 1 6.34 13.53l5.69 5.69a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215l-5.69-5.69A8.25 8.25 0 1 1 10.25 2M3.5 10.25a6.75 6.75 0 1 0 13.5 0 6.75 6.75 0 0 0-13.5 0"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.25 2a8.25 8.25 0 0 1 6.34 13.53l5.69 5.69a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215l-5.69-5.69A8.25 8.25 0 1 1 10.25 2M3.5 10.25a6.75 6.75 0 1 0 13.5 0 6.75 6.75 0 0 0-13.5 0"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Vexy Lines Manual" class="md-nav__button md-logo" aria-label="Vexy Lines Manual" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Vexy Lines Manual
+  </label>
+  
+  <ul class="md-nav__list">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Front Matter
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Front Matter
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../001-toc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Table of Contents
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../002-tldr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The One-Page Manual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../003-intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    What Is Vexy Lines?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 1: Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 1: Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../101-part1-tldr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started in Five Minutes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../102-installing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Download, Install, Activate
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../103-workspace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Workspace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../104-navigating/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zoom, Pan, and Navigate
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../105-new-document/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creating a New Document
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../106-first-fill/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Your First Fill
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../107-adjusting-fills/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tuning Your Artwork
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../108-basic-masks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hiding and Revealing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../109-layers-groups/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organising Your Work
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../110-exporting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Your Art Out
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../111-saving/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Save, Backup, Recover
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../112-refresh-controls/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Controlling When Vexy Recalculates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 2: The Fill Parade
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 2: The Fill Parade
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../201-part2-tldr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Twelve Ways to See
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../202-linear/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linear: The Engraver's Line
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../203-wave/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wave: Rivers of Line
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../204-circular/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Circular: Concentric Rings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../205-spiral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spiral: The Continuous Wind
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../206-radial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Radial: Exploding Rays
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../207-halftone/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Halftone: Dots and Shapes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../208-trace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trace: Finding Edges
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../209-wireframe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wireframe: Dimensional Lattice
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../210-scribble/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scribble: Controlled Chaos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../211-fractal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fractal: Space-Filling Curves
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../212-text/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Text: Painting with Letters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../213-handmade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Handmade: Your Strokes, Your Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../214-combining-fills/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Combining Fills: The Art of the Stack
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 3: Properties and Controls
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 3: Properties and Controls
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../301-part3-tldr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Control Surface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../302-colour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colour: Static and Dynamic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../303-stroke-thickness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stroke Thickness: Weight from Light
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../304-image-threshold/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Image Threshold: Choosing What Matters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../305-interval-spacing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interval and Spacing: Density Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../306-angle-rotation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Angle and Rotation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../307-randomisation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Randomisation and Organic Feel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../308-smoothing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Smoothing and Curve Quality
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../309-dash-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashes, Gaps, and Overlap Cuts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../310-emboss/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emboss and Bas-Relief
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../311-clones-overlap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clones and Overlap Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../312-document-settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Document and Canvas Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 4: Masks, Meshes, and Composition
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 4: Masks, Meshes, and Composition
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../401-part4-tldr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Composing Complex Artwork
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../402-brush-mask/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Painting Masks with the Brush
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../403-shape-masks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rectangle, Ellipse, and Freeform Masks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../404-refining-masks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Editing Mask Paths
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../405-mesh-warping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mesh Warping: Bending Fills in 3D
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../406-hidden-strokes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hidden Strokes Removal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../407-groups-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Groups: Source Images and Inheritance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../408-layer-ordering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Layer Order and Stacking Strategy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../409-composition-recipes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Composition Recipes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../410-cloning-strategies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cloning for Coordinated Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 5: Creative Workflows
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 5: Creative Workflows
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../501-part5-tldr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    From Tool to Craft
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../502-portrait-engraving/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portrait Engraving
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../503-landscape-illustration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Landscape and Nature
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../504-screen-printing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preparing for Screen Printing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../505-tattoo-design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tattoo Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../506-laser-cutting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Laser Cutting and CNC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../507-botanical-illustration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Botanical Illustration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../508-comics-graphics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comics and Graphic Novels
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../509-guilloche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guilloche and Ornamental Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../510-style-libraries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Building a Style Library
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../511-print-preparation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preparing Files for Print
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../512-gallery-recipes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gallery of Techniques
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 6: Power Tools
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 6: Power Tools
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../601-part6-tldr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beyond the GUI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../602-cli-basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Command Line Tool
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../603-cli-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Batch Export and Style Transfer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../604-python-parser/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reading .lines Files with Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../605-mcp-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Controlling Vexy Lines via API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../606-style-engine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Style Transfer and Interpolation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../607-video-processing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Video to Vector Video
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../608-ai-workflows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI-Assisted Workflows (Claude + MCP)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../609-performance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance and Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../610-shortcuts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keyboard Shortcuts Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The .lines File Format
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The .lines File Format
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc">
+      
+        <li class="md-nav__item">
+  <a href="#file-structure-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File Structure Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File Structure Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#project-root-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        &lt;Project&gt; Root Element
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#document-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        &lt;Document&gt; Element
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objects-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        &lt;Objects&gt; Element
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-layer-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Layer Tree
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Layer Tree">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#groups-lrsection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Groups: &lt;LrSection&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layers-freemesh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layers: &lt;FreeMesh&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fill-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fill Elements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fill Elements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fill-type-tag-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fill Type Tag Mapping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-fill-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Fill Attributes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#colour-format-aarrggbb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Colour Format: #AARRGGBB
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source-image-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Source Image Encoding
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Source Image Encoding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decoding-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decoding Steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encoding-steps-if-writing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Encoding Steps (if writing)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preview-image-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preview Image Encoding
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mesh-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mesh Data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clone-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clone References
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-complete-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A Complete Example
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editing-files-by-hand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editing Files by Hand
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Further Reading
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../612-glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc">
+      
+        <li class="md-nav__item">
+  <a href="#file-structure-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File Structure Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File Structure Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#project-root-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        &lt;Project&gt; Root Element
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#document-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        &lt;Document&gt; Element
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objects-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        &lt;Objects&gt; Element
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-layer-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Layer Tree
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Layer Tree">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#groups-lrsection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Groups: &lt;LrSection&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layers-freemesh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layers: &lt;FreeMesh&gt;
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fill-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fill Elements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fill Elements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fill-type-tag-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fill Type Tag Mapping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-fill-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Fill Attributes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#colour-format-aarrggbb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Colour Format: #AARRGGBB
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source-image-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Source Image Encoding
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Source Image Encoding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decoding-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decoding Steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encoding-steps-if-writing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Encoding Steps (if writing)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preview-image-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preview Image Encoding
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mesh-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mesh Data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clone-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clone References
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-complete-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A Complete Example
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editing-files-by-hand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editing Files by Hand
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Further Reading
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+<h1 id="the-lines-file-format">The .lines File Format<a class="headerlink" href="#the-lines-file-format" title="Permanent link">&para;</a></h1>
+<p>Open a <code>.lines</code> file in a text editor and you will find XML. Not especially pretty XML --- the source image alone is a wall of base64 characters that can run for megabytes --- but XML nonetheless. Every group, every layer, every fill, every parameter, every embedded image is encoded in a structured hierarchy that you can read, search, and (carefully) edit by hand.</p>
+<p>This article is a reference for the technically curious. You do not need any of this information to use Vexy Lines. But if you want to build tools that read or write <code>.lines</code> files, debug a corrupted document, or simply understand what the parser from <a href="../604-python-parser/">Reading .lines Files with Python</a> is actually parsing, this is the map.</p>
+<hr />
+<h2 id="file-structure-overview">File Structure Overview<a class="headerlink" href="#file-structure-overview" title="Permanent link">&para;</a></h2>
+<p>A <code>.lines</code> file is a plain-text XML document. The top-level structure:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;Project</span><span class="w"> </span><span class="na">caption=</span><span class="s">&quot;My Artwork&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;4.2&quot;</span><span class="w"> </span><span class="na">dpi=</span><span class="s">&quot;300&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Document</span><span class="w"> </span><span class="na">width=</span><span class="s">&quot;2400&quot;</span><span class="w"> </span><span class="na">height=</span><span class="s">&quot;3200&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Objects&gt;</span>
+<span class="w">      </span><span class="cm">&lt;!-- Layer tree goes here --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/Objects&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/Document&gt;</span>
+<span class="w">  </span><span class="nt">&lt;SourceImage&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- Base64-encoded source photograph --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/SourceImage&gt;</span>
+<span class="w">  </span><span class="nt">&lt;PreviewImage&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- Base64-encoded preview thumbnail --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/PreviewImage&gt;</span>
+<span class="nt">&lt;/Project&gt;</span>
+</code></pre></div>
+<h3 id="project-root-element"><code>&lt;Project&gt;</code> Root Element<a class="headerlink" href="#project-root-element" title="Permanent link">&para;</a></h3>
+<p>The root element. Its attributes store document-level metadata.</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>caption</code></td>
+<td>String</td>
+<td>The document's title, shown in the title bar</td>
+</tr>
+<tr>
+<td><code>version</code></td>
+<td>String</td>
+<td>File format version (e.g., "4.2")</td>
+</tr>
+<tr>
+<td><code>dpi</code></td>
+<td>Integer</td>
+<td>Dots per inch. Determines the physical size of the canvas.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="document-element"><code>&lt;Document&gt;</code> Element<a class="headerlink" href="#document-element" title="Permanent link">&para;</a></h3>
+<p>Contains the canvas dimensions and the layer tree.</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>width</code></td>
+<td>Integer</td>
+<td>Canvas width in pixels</td>
+</tr>
+<tr>
+<td><code>height</code></td>
+<td>Integer</td>
+<td>Canvas height in pixels</td>
+</tr>
+</tbody>
+</table>
+<h3 id="objects-element"><code>&lt;Objects&gt;</code> Element<a class="headerlink" href="#objects-element" title="Permanent link">&para;</a></h3>
+<p>The root of the layer tree. Contains a flat or nested sequence of groups (<code>&lt;LrSection&gt;</code>) and layers (<code>&lt;FreeMesh&gt;</code>).</p>
+<hr />
+<h2 id="the-layer-tree">The Layer Tree<a class="headerlink" href="#the-layer-tree" title="Permanent link">&para;</a></h2>
+<p>The <code>&lt;Objects&gt;</code> element contains the document's layer hierarchy. Two element types build this tree:</p>
+<h3 id="groups-lrsection">Groups: <code>&lt;LrSection&gt;</code><a class="headerlink" href="#groups-lrsection" title="Permanent link">&para;</a></h3>
+<p>A group is a folder that contains layers and other groups.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;LrSection</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Background&quot;</span><span class="w"> </span><span class="na">visible=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- Layers and subgroups go here --&gt;</span>
+<span class="nt">&lt;/LrSection&gt;</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>String</td>
+<td>Group name, shown in the Layers Panel</td>
+</tr>
+<tr>
+<td><code>visible</code></td>
+<td><code>0</code> or <code>1</code></td>
+<td>Whether the group is visible</td>
+</tr>
+</tbody>
+</table>
+<p>Groups can nest inside other groups to any depth.</p>
+<h3 id="layers-freemesh">Layers: <code>&lt;FreeMesh&gt;</code><a class="headerlink" href="#layers-freemesh" title="Permanent link">&para;</a></h3>
+<p>A layer contains one or more fills. Each fill is a child element whose tag name identifies the fill type.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;FreeMesh</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Engraving&quot;</span><span class="w"> </span><span class="na">visible=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;LinearStrokesTmpl</span><span class="w"> </span><span class="na">interval=</span><span class="s">&quot;0.8&quot;</span><span class="w"> </span><span class="na">angle=</span><span class="s">&quot;15&quot;</span><span class="w"> </span><span class="na">randomization=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="na">smoothing=</span><span class="s">&quot;30&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;LinearStrokesTmpl</span><span class="w"> </span><span class="na">interval=</span><span class="s">&quot;1.2&quot;</span><span class="w"> </span><span class="na">angle=</span><span class="s">&quot;75&quot;</span><span class="w"> </span><span class="na">randomization=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="na">smoothing=</span><span class="s">&quot;30&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/FreeMesh&gt;</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>String</td>
+<td>Layer name</td>
+</tr>
+<tr>
+<td><code>visible</code></td>
+<td><code>0</code> or <code>1</code></td>
+<td>Whether the layer is visible</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="fill-elements">Fill Elements<a class="headerlink" href="#fill-elements" title="Permanent link">&para;</a></h2>
+<p>Each fill type has its own XML tag. The tag name determines the algorithm. All fill parameters are stored as XML attributes on the fill element.</p>
+<h3 id="fill-type-tag-mapping">Fill Type Tag Mapping<a class="headerlink" href="#fill-type-tag-mapping" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>XML Tag</th>
+<th>Fill Type</th>
+<th>GUI Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>LinearStrokesTmpl</code></td>
+<td>Linear</td>
+<td>Linear</td>
+</tr>
+<tr>
+<td><code>SigmoidStrokesTmpl</code></td>
+<td>Sigmoid / Wave</td>
+<td>Wave</td>
+</tr>
+<tr>
+<td><code>CircleStrokesTmpl</code></td>
+<td>Circle</td>
+<td>Circular</td>
+</tr>
+<tr>
+<td><code>RadialStrokesTmpl</code></td>
+<td>Radial</td>
+<td>Radial</td>
+</tr>
+<tr>
+<td><code>SpiralStrokesTmpl</code></td>
+<td>Spiral</td>
+<td>Spiral</td>
+</tr>
+<tr>
+<td><code>ScribbleStrokesTmpl</code></td>
+<td>Scribble</td>
+<td>Scribble</td>
+</tr>
+<tr>
+<td><code>HalftoneStrokesTmpl</code></td>
+<td>Halftone</td>
+<td>Halftone</td>
+</tr>
+<tr>
+<td><code>FreeCurveStrokesTmpl</code></td>
+<td>Free Curve</td>
+<td>Handmade / Trace</td>
+</tr>
+<tr>
+<td><code>PeanoStrokesTmpl</code></td>
+<td>Peano</td>
+<td>Fractal</td>
+</tr>
+<tr>
+<td><code>TracedAreaTmpl</code></td>
+<td>Traced Area</td>
+<td>Trace (area)</td>
+</tr>
+<tr>
+<td><code>SourceStrokes</code></td>
+<td>Source</td>
+<td>Source Strokes</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>FreeCurveStrokesTmpl</code> tag serves double duty: it covers both the Handmade fill (user-drawn strokes) and the Trace fill (edge-detected contours), distinguished by internal attributes.</p>
+<h3 id="common-fill-attributes">Common Fill Attributes<a class="headerlink" href="#common-fill-attributes" title="Permanent link">&para;</a></h3>
+<p>Most fill elements share a common set of attributes:</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>interval</code></td>
+<td>Float</td>
+<td>Spacing between strokes, in mm</td>
+</tr>
+<tr>
+<td><code>angle</code></td>
+<td>Float</td>
+<td>Rotation of the fill pattern, in degrees</td>
+</tr>
+<tr>
+<td><code>randomization</code></td>
+<td>Float</td>
+<td>Random displacement of strokes (0--100)</td>
+</tr>
+<tr>
+<td><code>smoothing</code></td>
+<td>Float</td>
+<td>Smoothing applied to stroke thickness transitions</td>
+</tr>
+<tr>
+<td><code>shift</code></td>
+<td>Float</td>
+<td>Perpendicular offset of the pattern origin, in mm</td>
+</tr>
+<tr>
+<td><code>color</code></td>
+<td>String</td>
+<td>Stroke colour in <code>#AARRGGBB</code> format</td>
+</tr>
+<tr>
+<td><code>strokeThicknessMode</code></td>
+<td>String</td>
+<td>Thickness mapping: <code>"linear"</code>, <code>"thick"</code>, or <code>"thin"</code></td>
+</tr>
+<tr>
+<td><code>multiplier</code></td>
+<td>Float</td>
+<td>Scales overall stroke width (default 1.0)</td>
+</tr>
+<tr>
+<td><code>dispersion</code></td>
+<td>Float</td>
+<td>Random perpendicular offset on individual strokes</td>
+</tr>
+<tr>
+<td><code>dynamicColor</code></td>
+<td><code>0</code> or <code>1</code></td>
+<td>Whether strokes sample colour from the source image</td>
+</tr>
+<tr>
+<td><code>dynamicColorSegmentLength</code></td>
+<td>Float</td>
+<td>Length of each colour segment in dynamic mode</td>
+</tr>
+</tbody>
+</table>
+<p>Additional attributes vary by fill type. The Halftone fill has <code>shape</code>, <code>dotSize</code>, and <code>dotGap</code>. The Spiral fill has <code>centerX</code> and <code>centerY</code>. Consult the fill's Properties Panel in the GUI for a complete list --- each property maps to an XML attribute with the same or a similar name.</p>
+<hr />
+<h2 id="colour-format-aarrggbb">Colour Format: <code>#AARRGGBB</code><a class="headerlink" href="#colour-format-aarrggbb" title="Permanent link">&para;</a></h2>
+<p>Vexy Lines uses an eight-character hex colour format with alpha first, not last:</p>
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>#FFFF6B35
+ ││││││││
+ ││││││└┘── Blue:  0x35 = 53
+ ││││└┘──── Green: 0x6B = 107
+ ││└┘────── Red:   0xFF = 255
+ └┘──────── Alpha: 0xFF = 255 (fully opaque)
+</code></pre></div>
+<p>This differs from the more common <code>#RRGGBBAA</code> or <code>#RRGGBB</code> formats used in CSS and most design tools. When reading or writing colour values in <code>.lines</code> files, remember: <strong>alpha comes first</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Vexy Lines</th>
+<th>CSS Equivalent</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>#FF000000</code></td>
+<td><code>#000000</code> (fully opaque)</td>
+<td>Solid black</td>
+</tr>
+<tr>
+<td><code>#FFFFFFFF</code></td>
+<td><code>#FFFFFF</code></td>
+<td>Solid white</td>
+</tr>
+<tr>
+<td><code>#FFFF0000</code></td>
+<td><code>#FF0000</code></td>
+<td>Solid red</td>
+</tr>
+<tr>
+<td><code>#80FF0000</code></td>
+<td><code>rgba(255, 0, 0, 0.5)</code></td>
+<td>50% transparent red</td>
+</tr>
+<tr>
+<td><code>#00FF0000</code></td>
+<td><code>rgba(255, 0, 0, 0)</code></td>
+<td>Fully transparent red</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="source-image-encoding">Source Image Encoding<a class="headerlink" href="#source-image-encoding" title="Permanent link">&para;</a></h2>
+<p>The source photograph is embedded in the <code>&lt;SourceImage&gt;</code> element as a base64 string. But it is not simply base64-of-JPEG. There is an extra layer of compression:</p>
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>base64( 4-byte-size-prefix + zlib-compressed-JPEG )
+</code></pre></div>
+<h3 id="decoding-steps">Decoding Steps<a class="headerlink" href="#decoding-steps" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Base64-decode</strong> the text content of <code>&lt;SourceImage&gt;</code>.</li>
+<li><strong>Read the first 4 bytes</strong> as a big-endian unsigned integer. This is the uncompressed size of the JPEG data.</li>
+<li><strong>zlib-decompress</strong> the remaining bytes.</li>
+<li>The result is a standard <strong>JPEG file</strong> that can be opened in any image viewer.</li>
+</ol>
+<h3 id="encoding-steps-if-writing">Encoding Steps (if writing)<a class="headerlink" href="#encoding-steps-if-writing" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Start with a standard JPEG file as bytes.</li>
+<li><strong>Record the byte length</strong> of the JPEG data as a 4-byte big-endian unsigned integer.</li>
+<li><strong>zlib-compress</strong> the JPEG bytes.</li>
+<li><strong>Concatenate</strong> the 4-byte size prefix and the compressed data.</li>
+<li><strong>Base64-encode</strong> the result.</li>
+<li>Write as the text content of <code>&lt;SourceImage&gt;</code>.</li>
+</ol>
+<p>In Python (using <code>vexy-lines-py</code>), the parser handles all of this automatically. The <code>extract_source_image()</code> method returns raw JPEG bytes ready to write to a file.</p>
+<hr />
+<h2 id="preview-image-encoding">Preview Image Encoding<a class="headerlink" href="#preview-image-encoding" title="Permanent link">&para;</a></h2>
+<p>The preview thumbnail is simpler: the <code>&lt;PreviewImage&gt;</code> element contains a base64-encoded PNG image. No size prefix, no zlib layer.</p>
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>base64( PNG-file-bytes )
+</code></pre></div>
+<p>To decode: base64-decode the text, and you have a standard PNG file.</p>
+<p>The preview reflects the last rendered state of the document. If you change parameters without re-rendering, the preview will not match the current settings.</p>
+<hr />
+<h2 id="mesh-data">Mesh Data<a class="headerlink" href="#mesh-data" title="Permanent link">&para;</a></h2>
+<p>Layers that use mesh warping contain additional child elements describing the mesh grid. The mesh is a grid of control points, each with an X and Y position in canvas coordinates.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;FreeMesh</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Warped Layer&quot;</span><span class="w"> </span><span class="na">visible=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;LinearStrokesTmpl</span><span class="w"> </span><span class="na">interval=</span><span class="s">&quot;1.0&quot;</span><span class="w"> </span><span class="na">angle=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Mesh</span><span class="w"> </span><span class="na">rows=</span><span class="s">&quot;5&quot;</span><span class="w"> </span><span class="na">cols=</span><span class="s">&quot;5&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Point</span><span class="w"> </span><span class="na">x=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="na">y=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Point</span><span class="w"> </span><span class="na">x=</span><span class="s">&quot;600&quot;</span><span class="w"> </span><span class="na">y=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Point</span><span class="w"> </span><span class="na">x=</span><span class="s">&quot;1200&quot;</span><span class="w"> </span><span class="na">y=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- ... more points ... --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/Mesh&gt;</span>
+<span class="nt">&lt;/FreeMesh&gt;</span>
+</code></pre></div>
+<p>The mesh points define a deformation grid. Each point can be displaced from its default position to warp the fill strokes. The warp templates (Rectangle, Donut, Rising, Falling, Ribbon, etc.) are preset mesh configurations.</p>
+<hr />
+<h2 id="clone-references">Clone References<a class="headerlink" href="#clone-references" title="Permanent link">&para;</a></h2>
+<p>Layers can be clones of other layers. A clone layer does not store its own fill parameters --- it references another layer by ID and inherits everything from it. Changes to the source layer propagate to all clones.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;FreeMesh</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Clone of Engraving&quot;</span><span class="w"> </span><span class="na">visible=</span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="na">href=</span><span class="s">&quot;#layer-42&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+</code></pre></div>
+<p>The <code>href</code> attribute contains the ID of the source layer, prefixed with <code>#</code>. When you see a <code>&lt;FreeMesh&gt;</code> with no fill children but an <code>href</code> attribute, it is a clone.</p>
+<hr />
+<h2 id="a-complete-example">A Complete Example<a class="headerlink" href="#a-complete-example" title="Permanent link">&para;</a></h2>
+<p>A minimal <code>.lines</code> file with one group, one layer, and one Linear fill:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;Project</span><span class="w"> </span><span class="na">caption=</span><span class="s">&quot;Minimal Example&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;4.2&quot;</span><span class="w"> </span><span class="na">dpi=</span><span class="s">&quot;300&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Document</span><span class="w"> </span><span class="na">width=</span><span class="s">&quot;1200&quot;</span><span class="w"> </span><span class="na">height=</span><span class="s">&quot;800&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Objects&gt;</span>
+<span class="w">      </span><span class="nt">&lt;LrSection</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Main Group&quot;</span><span class="w"> </span><span class="na">visible=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;FreeMesh</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Lines&quot;</span><span class="w"> </span><span class="na">visible=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+<span class="w">          </span><span class="nt">&lt;LinearStrokesTmpl</span>
+<span class="w">            </span><span class="na">interval=</span><span class="s">&quot;1.5&quot;</span>
+<span class="w">            </span><span class="na">angle=</span><span class="s">&quot;45&quot;</span>
+<span class="w">            </span><span class="na">randomization=</span><span class="s">&quot;10&quot;</span>
+<span class="w">            </span><span class="na">smoothing=</span><span class="s">&quot;25&quot;</span>
+<span class="w">            </span><span class="na">shift=</span><span class="s">&quot;0&quot;</span>
+<span class="w">            </span><span class="na">color=</span><span class="s">&quot;#FF000000&quot;</span>
+<span class="w">            </span><span class="na">strokeThicknessMode=</span><span class="s">&quot;linear&quot;</span>
+<span class="w">            </span><span class="na">multiplier=</span><span class="s">&quot;1.0&quot;</span>
+<span class="w">            </span><span class="na">dispersion=</span><span class="s">&quot;0&quot;</span>
+<span class="w">            </span><span class="na">dynamicColor=</span><span class="s">&quot;0&quot;</span>
+<span class="w">          </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/FreeMesh&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/LrSection&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/Objects&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/Document&gt;</span>
+<span class="w">  </span><span class="nt">&lt;SourceImage&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- base64(4-byte-size + zlib(JPEG)) goes here --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/SourceImage&gt;</span>
+<span class="w">  </span><span class="nt">&lt;PreviewImage&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- base64(PNG) goes here --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/PreviewImage&gt;</span>
+<span class="nt">&lt;/Project&gt;</span>
+</code></pre></div>
+<p>This is the skeleton that every <code>.lines</code> file follows. Real documents have more groups, more layers, more fills, and much longer base64 strings for the embedded images.</p>
+<hr />
+<h2 id="editing-files-by-hand">Editing Files by Hand<a class="headerlink" href="#editing-files-by-hand" title="Permanent link">&para;</a></h2>
+<p>You can edit <code>.lines</code> files in a text editor. This is occasionally useful for:</p>
+<ul>
+<li>Changing a colour across many fills simultaneously (find and replace).</li>
+<li>Fixing a corrupted file where one element is broken.</li>
+<li>Batch-modifying parameters with a script that reads and writes XML.</li>
+</ul>
+<p><strong>Warnings:</strong></p>
+<ul>
+<li><strong>Always work on a copy.</strong> Save your original before editing.</li>
+<li><strong>Do not touch the base64 blocks.</strong> Even a single missing character will corrupt the embedded image.</li>
+<li><strong>Validate your XML.</strong> A missing closing tag or unescaped character will make the file unreadable. The app will refuse to open an invalid XML file.</li>
+<li><strong>Attribute order does not matter.</strong> XML attributes can appear in any order.</li>
+<li><strong>Use the parser instead.</strong> For anything beyond trivial edits, the <code>vexy-lines-py</code> parser is safer and faster than hand-editing. See <a href="../604-python-parser/">Reading .lines Files with Python</a>.</li>
+</ul>
+<hr />
+<h2 id="further-reading">Further Reading<a class="headerlink" href="#further-reading" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../604-python-parser/">Reading .lines Files with Python</a> --- the parser that reads this format.</li>
+<li><a href="../111-saving/">Save, Backup, Recover</a> --- file management and recovery.</li>
+<li><a href="../612-glossary/">Glossary</a> --- definitions of terms used in this article.</li>
+</ul>
+<hr />
+<p><em>Previous: <a href="../610-shortcuts/">Keyboard Shortcuts Reference</a> | Next: <a href="../612-glossary/">Glossary</a></em></p>
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+          <div class="md-top" data-md-component="top" hidden>
+  <div class="md-top__center">
+    <button type="button" class="md-top__button md-top__button--main" data-md-action="top">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+      <span>Back to top</span>
+    </button>
+    
+      
+      
+      <label class="md-top__button md-top__side md-top__side--nav" for="__drawer" >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m0 14H9V6h11Z"/></svg>
+      </label>
+    
+    
+      
+      
+      <label class="md-top__button md-top__side md-top__side--toc" for="__toc" >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m-5 14H4V6h11Z"/></svg>
+      </label>
+    
+  </div>
+</div>
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://jaywhj.github.io/mkdocs-materialx/" target="_blank" rel="noopener">
+      MaterialX
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "navigation.sections", "navigation.expand"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e3ad5d0a.min.js"></script>
+      
+    
+  </body>
+</html>

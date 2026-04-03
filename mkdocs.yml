@@ -1,19 +1,20 @@
-site_name: "vexy-lines"
-site_description: "Vexy Lines for developers"
+site_name: "Vexy Lines Manual"
+site_description: "The complete guide to Vexy Lines vector art"
 theme:
   custom_dir: overrides
   name: materialx
   features:
     - content.code.copy
     - navigation.sections
+    - navigation.expand
   palette:
     - scheme: slate
-      primary: orange
+      primary: deep purple
       toggle:
         icon: material/brightness-7
         name: Light mode
     - scheme: default
-      primary: orange
+      primary: deep purple
       toggle:
         icon: material/brightness-4
         name: Dark mode
@@ -21,10 +22,98 @@ docs_dir: src_docs
 site_dir: docs
 markdown_extensions:
   - pymdownx.highlight:
-      auto_title: false
+      auto_title: true
+      auto_title_map:
+        Python: ""
+        Bash: ""
+        JSON: ""
+        XML: ""
   - pymdownx.superfences
   - admonition
   - toc:
       permalink: true
+  - tables
 nav:
-  - Vexy Lines: index.md
+  - Home: index.md
+  - Front Matter:
+    - Table of Contents: 001-toc.md
+    - The One-Page Manual: 002-tldr.md
+    - What Is Vexy Lines?: 003-intro.md
+  - "Part 1: Getting Started":
+    - Getting Started in Five Minutes: 101-part1-tldr.md
+    - Download, Install, Activate: 102-installing.md
+    - The Workspace: 103-workspace.md
+    - Zoom, Pan, and Navigate: 104-navigating.md
+    - Creating a New Document: 105-new-document.md
+    - Your First Fill: 106-first-fill.md
+    - Tuning Your Artwork: 107-adjusting-fills.md
+    - Hiding and Revealing: 108-basic-masks.md
+    - Organising Your Work: 109-layers-groups.md
+    - Getting Your Art Out: 110-exporting.md
+    - "Save, Backup, Recover": 111-saving.md
+    - Controlling When Vexy Recalculates: 112-refresh-controls.md
+  - "Part 2: The Fill Parade":
+    - Twelve Ways to See: 201-part2-tldr.md
+    - "Linear: The Engraver's Line": 202-linear.md
+    - "Wave: Rivers of Line": 203-wave.md
+    - "Circular: Concentric Rings": 204-circular.md
+    - "Spiral: The Continuous Wind": 205-spiral.md
+    - "Radial: Exploding Rays": 206-radial.md
+    - "Halftone: Dots and Shapes": 207-halftone.md
+    - "Trace: Finding Edges": 208-trace.md
+    - "Wireframe: Dimensional Lattice": 209-wireframe.md
+    - "Scribble: Controlled Chaos": 210-scribble.md
+    - "Fractal: Space-Filling Curves": 211-fractal.md
+    - "Text: Painting with Letters": 212-text.md
+    - "Handmade: Your Strokes, Your Rules": 213-handmade.md
+    - "Combining Fills: The Art of the Stack": 214-combining-fills.md
+  - "Part 3: Properties and Controls":
+    - The Control Surface: 301-part3-tldr.md
+    - "Colour: Static and Dynamic": 302-colour.md
+    - "Stroke Thickness: Weight from Light": 303-stroke-thickness.md
+    - "Image Threshold: Choosing What Matters": 304-image-threshold.md
+    - "Interval and Spacing: Density Control": 305-interval-spacing.md
+    - Angle and Rotation: 306-angle-rotation.md
+    - Randomisation and Organic Feel: 307-randomisation.md
+    - Smoothing and Curve Quality: 308-smoothing.md
+    - "Dashes, Gaps, and Overlap Cuts": 309-dash-patterns.md
+    - Emboss and Bas-Relief: 310-emboss.md
+    - Clones and Overlap Control: 311-clones-overlap.md
+    - Document and Canvas Settings: 312-document-settings.md
+  - "Part 4: Masks, Meshes, and Composition":
+    - Composing Complex Artwork: 401-part4-tldr.md
+    - Painting Masks with the Brush: 402-brush-mask.md
+    - "Rectangle, Ellipse, and Freeform Masks": 403-shape-masks.md
+    - Editing Mask Paths: 404-refining-masks.md
+    - "Mesh Warping: Bending Fills in 3D": 405-mesh-warping.md
+    - Hidden Strokes Removal: 406-hidden-strokes.md
+    - "Groups: Source Images and Inheritance": 407-groups-advanced.md
+    - Layer Order and Stacking Strategy: 408-layer-ordering.md
+    - Composition Recipes: 409-composition-recipes.md
+    - Cloning for Coordinated Systems: 410-cloning-strategies.md
+  - "Part 5: Creative Workflows":
+    - From Tool to Craft: 501-part5-tldr.md
+    - Portrait Engraving: 502-portrait-engraving.md
+    - Landscape and Nature: 503-landscape-illustration.md
+    - Preparing for Screen Printing: 504-screen-printing.md
+    - Tattoo Design: 505-tattoo-design.md
+    - Laser Cutting and CNC: 506-laser-cutting.md
+    - Botanical Illustration: 507-botanical-illustration.md
+    - Comics and Graphic Novels: 508-comics-graphics.md
+    - Guilloche and Ornamental Patterns: 509-guilloche.md
+    - Building a Style Library: 510-style-libraries.md
+    - Preparing Files for Print: 511-print-preparation.md
+    - Gallery of Techniques: 512-gallery-recipes.md
+  - "Part 6: Power Tools":
+    - Beyond the GUI: 601-part6-tldr.md
+    - The Command Line Tool: 602-cli-basics.md
+    - Batch Export and Style Transfer: 603-cli-advanced.md
+    - Reading .lines Files with Python: 604-python-parser.md
+    - Controlling Vexy Lines via API: 605-mcp-api.md
+    - Style Transfer and Interpolation: 606-style-engine.md
+    - Video to Vector Video: 607-video-processing.md
+    - AI-Assisted Workflows (Claude + MCP): 608-ai-workflows.md
+    - Performance and Troubleshooting: 609-performance.md
+    - Keyboard Shortcuts Reference: 610-shortcuts.md
+    - The .lines File Format: 611-file-format.md
+    - Glossary: 612-glossary.md
