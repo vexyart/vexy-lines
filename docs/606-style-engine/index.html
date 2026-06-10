@@ -3283,7 +3283,7 @@
 <p>Masks are not transferred because they are tied to the geometry of the source image. A mask that outlines a face in one portrait would not align with a face in a different portrait. Warp settings are similarly geometry-dependent.</p>
 <hr />
 <h2 id="interpolating-two-styles">Interpolating Two Styles<a class="headerlink" href="#interpolating-two-styles" title="Permanent link">&para;</a></h2>
-<p>This is where the style engine moves from useful to magical. <code>interpolate_style()</code> takes two styles and a blending factor <code>t</code> (from 0.0 to 1.0), and returns a new style whose parameters are a weighted average of the two inputs.</p>
+<p>This is where the style engine moves from useful to magical. <code>interpolate_style()</code> takes two styles and a blending factor <code>t</code> (from 0.0 to 1.0), and returns a new style whose parameters are a weighted average of the two inputs. Matching image-filter chains are interpolated with the same rule: numeric values blend, colours blend, and booleans stay discrete.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">vexy_lines</span><span class="w"> </span><span class="kn">import</span> <span class="n">parse</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">vexy_lines_apy</span><span class="w"> </span><span class="kn">import</span> <span class="n">extract_style</span><span class="p">,</span> <span class="n">interpolate_style</span>
 

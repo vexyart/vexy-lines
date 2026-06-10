@@ -3390,6 +3390,8 @@ DPI:     300
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Layer: </span><span class="si">{</span><span class="n">layer</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">fill</span> <span class="ow">in</span> <span class="n">layer</span><span class="o">.</span><span class="n">fills</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;    Fill: </span><span class="si">{</span><span class="n">fill</span><span class="o">.</span><span class="n">fill_type</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">image_filter</span> <span class="ow">in</span> <span class="n">fill</span><span class="o">.</span><span class="n">image_filters</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;      Filter: </span><span class="si">{</span><span class="n">image_filter</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">image_filter</span><span class="o">.</span><span class="n">params</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p><strong>Output:</strong></p>
 <div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>Group: Background
@@ -3406,7 +3408,8 @@ Group: Figure
   Layer: Outline
     Fill: trace
 </code></pre></div>
-<p>This is the same hierarchy you see in the GUI's Layers Panel, but as text.</p>
+<p>This is the same hierarchy you see in the GUI's Layers Panel, but as text.
+<code>fill.image_filters</code> is the ordered source-image filter chain saved inside the fill, if the file uses image filters.</p>
 <hr />
 <h2 id="the-object-types">The Object Types<a class="headerlink" href="#the-object-types" title="Permanent link">&para;</a></h2>
 <h3 id="groupinfo">GroupInfo<a class="headerlink" href="#groupinfo" title="Permanent link">&para;</a></h3>

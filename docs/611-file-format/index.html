@@ -2923,6 +2923,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#image-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Image Filters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#colour-format-aarrggbb" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3233,6 +3244,17 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#image-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Image Filters
+      
+    </span>
+  </a>
   
 </li>
       
@@ -3640,6 +3662,80 @@
 </tbody>
 </table>
 <p>Additional attributes vary by fill type. The Halftone fill has <code>shape</code>, <code>dotSize</code>, and <code>dotGap</code>. The Spiral fill has <code>centerX</code> and <code>centerY</code>. Consult the fill's Properties Panel in the GUI for a complete list --- each property maps to an XML attribute with the same or a similar name.</p>
+<hr />
+<h2 id="image-filters">Image Filters<a class="headerlink" href="#image-filters" title="Permanent link">&para;</a></h2>
+<p>Recent Vexy Lines files can store a source-image filter chain inside each fill. The chain is a child element of the fill, not an attribute:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;LinearStrokesTmpl</span><span class="w"> </span><span class="na">caption=</span><span class="s">&quot;Linear Fill&quot;</span><span class="w"> </span><span class="na">interval=</span><span class="s">&quot;1.2&quot;</span><span class="w"> </span><span class="na">angle=</span><span class="s">&quot;45&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;image_filters&gt;</span>
+<span class="w">    </span><span class="nt">&lt;filter</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;25&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;filter</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;4&quot;</span><span class="w"> </span><span class="na">left=</span><span class="s">&quot;10&quot;</span><span class="w"> </span><span class="na">right=</span><span class="s">&quot;240&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;filter</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;6&quot;</span><span class="w"> </span><span class="na">inverted=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/image_filters&gt;</span>
+<span class="nt">&lt;/LinearStrokesTmpl&gt;</span>
+</code></pre></div>
+<p>The filter order matters. Vexy Lines applies them before the fill samples the source image.</p>
+<table>
+<thead>
+<tr>
+<th><code>type</code></th>
+<th>Filter</th>
+<th>Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td>Brightness</td>
+<td><code>value</code></td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td>Contrast</td>
+<td><code>value</code></td>
+</tr>
+<tr>
+<td><code>2</code></td>
+<td>Blur</td>
+<td><code>value</code></td>
+</tr>
+<tr>
+<td><code>3</code></td>
+<td>Sharpen / Unsharp Mask</td>
+<td><code>amount</code>, <code>radius</code></td>
+</tr>
+<tr>
+<td><code>4</code></td>
+<td>Levels</td>
+<td><code>left</code>, <code>right</code></td>
+</tr>
+<tr>
+<td><code>5</code></td>
+<td>Shadows / Highlights</td>
+<td><code>shadows</code>, <code>highlights</code></td>
+</tr>
+<tr>
+<td><code>6</code></td>
+<td>Invert</td>
+<td><code>inverted</code></td>
+</tr>
+<tr>
+<td><code>7</code></td>
+<td>Remove Background</td>
+<td><code>strength</code></td>
+</tr>
+<tr>
+<td><code>8</code></td>
+<td>Colour Filter</td>
+<td><code>color</code>, <code>tolerance</code></td>
+</tr>
+<tr>
+<td><code>9</code></td>
+<td>Linear Gradient</td>
+<td><code>direction</code>, <code>opacity</code></td>
+</tr>
+</tbody>
+</table>
+<p>Parameter typing follows the app loader: <code>inverted</code> is boolean, <code>color</code> is a string, <code>left</code>, <code>right</code>, and <code>direction</code> are integers, and the remaining numeric values are floating-point numbers. Older files have no <code>&lt;image_filters&gt;</code> element; that means an empty filter chain.</p>
 <hr />
 <h2 id="colour-format-aarrggbb">Colour Format: <code>#AARRGGBB</code><a class="headerlink" href="#colour-format-aarrggbb" title="Permanent link">&para;</a></h2>
 <p>Vexy Lines uses an eight-character hex colour format with alpha first, not last:</p>

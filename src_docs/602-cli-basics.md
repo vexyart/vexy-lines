@@ -80,7 +80,7 @@ This prints every option the `info` command accepts, with explanations. The `--h
 
 ## Command: `info` --- File Metadata
 
-The `info` command reads a `.lines` file and prints a summary of what is inside: canvas dimensions, DPI, number of groups, number of layers, number of fills, and the fill types used.
+The `info` command reads a `.lines` file and prints a summary of what is inside: canvas dimensions, DPI, number of groups, number of layers, number of fills, and the number of image filters stored on those fills.
 
 ```
 vexy-lines info portrait.lines
@@ -97,6 +97,7 @@ Canvas:     2400 x 3200 px (203.2 x 271.0 mm)
 Groups:     2
 Layers:     5
 Fills:      7
+Image filters: 3
 Fill types: Linear (3), Circular (2), Halftone (1), Trace (1)
 ```
 
@@ -106,7 +107,7 @@ This is useful for quick cataloguing. If you have a folder of `.lines` files and
 
 ## Command: `file-tree` --- Layer Hierarchy
 
-The `file-tree` command prints the document's layer structure as an indented tree, showing groups, layers, and their fills.
+The `file-tree` command prints the document's layer structure as an indented tree, showing groups, layers, their fills, and any per-fill image-filter chains.
 
 ```
 vexy-lines file-tree portrait.lines

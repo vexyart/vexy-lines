@@ -97,7 +97,7 @@ Masks are not transferred because they are tied to the geometry of the source im
 
 ## Interpolating Two Styles
 
-This is where the style engine moves from useful to magical. `interpolate_style()` takes two styles and a blending factor `t` (from 0.0 to 1.0), and returns a new style whose parameters are a weighted average of the two inputs.
+This is where the style engine moves from useful to magical. `interpolate_style()` takes two styles and a blending factor `t` (from 0.0 to 1.0), and returns a new style whose parameters are a weighted average of the two inputs. Matching image-filter chains are interpolated with the same rule: numeric values blend, colours blend, and booleans stay discrete.
 
 ```python
 from vexy_lines import parse

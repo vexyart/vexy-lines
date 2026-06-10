@@ -2,7 +2,7 @@
 
 The parser from [Reading .lines Files with Python](604-python-parser.md) reads files. The API writes reality. It talks to a running Vexy Lines instance and tells it what to do: open a document, add a fill, change a parameter, render, export. Anything you can do with the mouse in the GUI, you can do with a line of Python through the API.
 
-The package is called `vexy-lines-apy`. It wraps the 25 tools in the Vexy Lines MCP server into a clean Python interface. You do not need to understand JSON-RPC, TCP sockets, or any protocol detail. You write Python. The package handles the plumbing.
+The package is called `vexy-lines-apy`. It wraps the 29 tools in the Vexy Lines MCP server into a clean Python interface. You do not need to understand JSON-RPC, TCP sockets, or any protocol detail. You write Python. The package handles the plumbing.
 
 ---
 
@@ -65,7 +65,7 @@ But the `with` pattern is preferred because it never leaves a connection open by
 
 ## The 25 Tools, Grouped
 
-The MCP API offers 25 tools organised into five groups. Each tool maps to a method on `MCPClient`.
+The MCP API offers 29 tools organised into five groups. Each tool maps to a method on `MCPClient`.
 
 ### Document Tools
 
@@ -99,6 +99,12 @@ Read and write fill settings.
 |--------|-------------|
 | `get_fill_params(fill_id)` | Return all parameters for a fill |
 | `set_fill_params(fill_id, params)` | Update one or more parameters |
+| `get_image_filters(fill_id)` | Return the ordered image-filter chain for a fill |
+| `set_image_filters(fill_id, filters)` | Replace a fill's image-filter chain |
+| `add_image_filter(fill_id, type, params, index)` | Add one image filter |
+| `remove_image_filter(fill_id, index)` | Remove one image filter |
+
+Image-filter entries use the MCP shape `{"type": "brightness", "params": {"value": 25}}`. Supported filter names include `brightness`, `contrast`, `blur`, `sharpen`, `levels`, `shadows_highlights`, `invert`, `remove_background`, `color`, and `gradient`.
 
 ### Visual Tools
 

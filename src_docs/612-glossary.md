@@ -178,7 +178,7 @@ A greyscale overlay on a layer that controls where strokes are visible. White re
 Model Context Protocol. The communication channel through which external tools (scripts, AI assistants, other applications) control a running Vexy Lines instance. Uses JSON-RPC 2.0 over TCP on `localhost:47384`. See [Controlling Vexy Lines via API](605-mcp-api.md).
 
 **MCPClient**
-The Python class in `vexy-lines-apy` that manages the connection to the Vexy Lines MCP server. Provides methods for all 25 MCP tools. See [Controlling Vexy Lines via API](605-mcp-api.md).
+The Python class in `vexy-lines-apy` that manages the connection to the Vexy Lines MCP server. Provides methods for all 29 MCP tools. See [Controlling Vexy Lines via API](605-mcp-api.md).
 
 **MCPError**
 The exception raised by `MCPClient` when an API call fails. Contains a descriptive error message. See [Controlling Vexy Lines via API](605-mcp-api.md).

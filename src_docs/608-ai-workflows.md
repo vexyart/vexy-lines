@@ -100,7 +100,7 @@ If Claude responds with the document name and dimensions, the connection is work
 
 ## What Claude Can Do
 
-Once connected, Claude has access to the same 25 MCP tools described in [Controlling Vexy Lines via API](605-mcp-api.md). Through conversation, Claude can:
+Once connected, Claude has access to the same 29 MCP tools described in [Controlling Vexy Lines via API](605-mcp-api.md). Through conversation, Claude can:
 
 ### Document Operations
 
@@ -256,7 +256,7 @@ The configuration format may differ slightly between tools. Consult your tool's 
 
 ## Further Reading
 
-- [Controlling Vexy Lines via API](605-mcp-api.md) --- the 25 MCP tools that Claude uses under the hood.
+- [Controlling Vexy Lines via API](605-mcp-api.md) --- the 29 MCP tools that Claude uses under the hood.
 - [Beyond the GUI](601-part6-tldr.md) --- overview of all power tools.
 - [Batch Export and Style Transfer](603-cli-advanced.md) --- for when the CLI is faster than conversation.
 

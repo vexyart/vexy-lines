@@ -3345,7 +3345,7 @@
 
 <h1 id="controlling-vexy-lines-via-api">Controlling Vexy Lines via API<a class="headerlink" href="#controlling-vexy-lines-via-api" title="Permanent link">&para;</a></h1>
 <p>The parser from <a href="../604-python-parser/">Reading .lines Files with Python</a> reads files. The API writes reality. It talks to a running Vexy Lines instance and tells it what to do: open a document, add a fill, change a parameter, render, export. Anything you can do with the mouse in the GUI, you can do with a line of Python through the API.</p>
-<p>The package is called <code>vexy-lines-apy</code>. It wraps the 25 tools in the Vexy Lines MCP server into a clean Python interface. You do not need to understand JSON-RPC, TCP sockets, or any protocol detail. You write Python. The package handles the plumbing.</p>
+<p>The package is called <code>vexy-lines-apy</code>. It wraps the 29 tools in the Vexy Lines MCP server into a clean Python interface. You do not need to understand JSON-RPC, TCP sockets, or any protocol detail. You write Python. The package handles the plumbing.</p>
 <hr />
 <h2 id="installing">Installing<a class="headerlink" href="#installing" title="Permanent link">&para;</a></h2>
 <div class="highlight"><span class="filename">Text Only</span><pre><span></span><code>pip install vexy-lines-apy
@@ -3384,7 +3384,7 @@
 <p>But the <code>with</code> pattern is preferred because it never leaves a connection open by accident.</p>
 <hr />
 <h2 id="the-25-tools-grouped">The 25 Tools, Grouped<a class="headerlink" href="#the-25-tools-grouped" title="Permanent link">&para;</a></h2>
-<p>The MCP API offers 25 tools organised into five groups. Each tool maps to a method on <code>MCPClient</code>.</p>
+<p>The MCP API offers 29 tools organised into five groups. Each tool maps to a method on <code>MCPClient</code>.</p>
 <h3 id="document-tools">Document Tools<a class="headerlink" href="#document-tools" title="Permanent link">&para;</a></h3>
 <p>Manage files and exports.</p>
 <table>
@@ -3467,8 +3467,25 @@
 <td><code>set_fill_params(fill_id, params)</code></td>
 <td>Update one or more parameters</td>
 </tr>
+<tr>
+<td><code>get_image_filters(fill_id)</code></td>
+<td>Return the ordered image-filter chain for a fill</td>
+</tr>
+<tr>
+<td><code>set_image_filters(fill_id, filters)</code></td>
+<td>Replace a fill's image-filter chain</td>
+</tr>
+<tr>
+<td><code>add_image_filter(fill_id, type, params, index)</code></td>
+<td>Add one image filter</td>
+</tr>
+<tr>
+<td><code>remove_image_filter(fill_id, index)</code></td>
+<td>Remove one image filter</td>
+</tr>
 </tbody>
 </table>
+<p>Image-filter entries use the MCP shape <code>{"type": "brightness", "params": {"value": 25}}</code>. Supported filter names include <code>brightness</code>, <code>contrast</code>, <code>blur</code>, <code>sharpen</code>, <code>levels</code>, <code>shadows_highlights</code>, <code>invert</code>, <code>remove_background</code>, <code>color</code>, and <code>gradient</code>.</p>
 <h3 id="visual-tools">Visual Tools<a class="headerlink" href="#visual-tools" title="Permanent link">&para;</a></h3>
 <p>Control what the document looks like beyond fill parameters.</p>
 <table>

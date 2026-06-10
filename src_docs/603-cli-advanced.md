@@ -236,6 +236,10 @@ The CLI includes a handful of commands for interacting with the running app dire
 | `new-document` | Create a new blank document in the app |
 | `open <file>` | Open a `.lines` file in the app |
 | `add-fill <type>` | Add a fill to the current layer |
+| `get-image-filters <fill-id>` | Read a fill's image-filter chain |
+| `set-image-filters <fill-id> <filters-json>` | Replace a fill's image-filter chain |
+| `add-image-filter <fill-id> <filter-type>` | Add one image filter |
+| `remove-image-filter <fill-id> <index>` | Remove one image filter |
 | `render` | Trigger a full render of the current document |
 
 These are convenience wrappers around the MCP API. For full programmatic control, see [Controlling Vexy Lines via API](605-mcp-api.md).

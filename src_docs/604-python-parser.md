@@ -91,6 +91,8 @@ for group in doc.groups:
         print(f"  Layer: {layer.name}")
         for fill in layer.fills:
             print(f"    Fill: {fill.fill_type}")
+            for image_filter in fill.image_filters:
+                print(f"      Filter: {image_filter.name} {image_filter.params}")
 ```
 
 **Output:**
@@ -112,6 +114,7 @@ Group: Figure
 ```
 
 This is the same hierarchy you see in the GUI's Layers Panel, but as text.
+`fill.image_filters` is the ordered source-image filter chain saved inside the fill, if the file uses image filters.
 
 ---
 

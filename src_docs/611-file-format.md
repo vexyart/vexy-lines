@@ -135,6 +135,39 @@ Additional attributes vary by fill type. The Halftone fill has `shape`, `dotSize
 
 ---
 
+## Image Filters
+
+Recent Vexy Lines files can store a source-image filter chain inside each fill. The chain is a child element of the fill, not an attribute:
+
+```xml
+<LinearStrokesTmpl caption="Linear Fill" interval="1.2" angle="45">
+  <image_filters>
+    <filter type="0" value="25" />
+    <filter type="4" left="10" right="240" />
+    <filter type="6" inverted="true" />
+  </image_filters>
+</LinearStrokesTmpl>
+```
+
+The filter order matters. Vexy Lines applies them before the fill samples the source image.
+
+| `type` | Filter | Parameters |
+|--------|--------|------------|
+| `0` | Brightness | `value` |
+| `1` | Contrast | `value` |
+| `2` | Blur | `value` |
+| `3` | Sharpen / Unsharp Mask | `amount`, `radius` |
+| `4` | Levels | `left`, `right` |
+| `5` | Shadows / Highlights | `shadows`, `highlights` |
+| `6` | Invert | `inverted` |
+| `7` | Remove Background | `strength` |
+| `8` | Colour Filter | `color`, `tolerance` |
+| `9` | Linear Gradient | `direction`, `opacity` |
+
+Parameter typing follows the app loader: `inverted` is boolean, `color` is a string, `left`, `right`, and `direction` are integers, and the remaining numeric values are floating-point numbers. Older files have no `<image_filters>` element; that means an empty filter chain.
+
+---
+
 ## Colour Format: `#AARRGGBB`
 
 Vexy Lines uses an eight-character hex colour format with alpha first, not last:

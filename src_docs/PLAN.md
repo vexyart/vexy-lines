@@ -566,7 +566,7 @@ The `vexy-lines-py` package: a pure Python parser that reads .lines files withou
 
 #### 605-mcp-api.md -- Controlling Vexy Lines via API
 
-The MCP API: 25 tools that let any program control Vexy Lines in real time. Connection: JSON-RPC 2.0 over TCP on localhost:47384. The `MCPClient` Python class handles connection, handshake, and method calls. Five tool groups: Document (new/open/save/export/info), Structure (tree/group/layer/fill/delete), Fill params (get/set), Visual (source image/caption/visibility/mask/transform/warp), Control (render/status/undo/redo/selection). Code examples: open a document, add a fill, change parameters, render, export. Coordinates: pixels at document DPI, origin top-left. Error handling: `MCPError` exceptions with descriptive messages.
+The MCP API: 29 tools that let any program control Vexy Lines in real time. Connection: JSON-RPC 2.0 over TCP on localhost:47384. The `MCPClient` Python class handles connection, handshake, and method calls. Five tool groups: Document (new/open/save/export/info), Structure (tree/group/layer/fill/delete), Fill params and image filters (get/set fill params, get/set/add/remove image filters), Visual (source image/caption/visibility/mask/transform/warp), Control (render/status/undo/redo/selection). Code examples: open a document, add a fill, change parameters, render, export. Coordinates: pixels at document DPI, origin top-left. Error handling: `MCPError` exceptions with descriptive messages.
 
 #### 606-style-engine.md -- Style Transfer and Interpolation
 
@@ -670,7 +670,7 @@ The following items must be verified against the Vexy Lines application and sour
 
 ### MCP API
 
-- Verify the 25 tools and their exact parameter names against the running server.
+- Verify the 29 tools and their exact parameter names against the running server.
 - Verify the port number (47384) is still current.
 - Verify the MCP bridge binary name (`vexylines-mcp` or `vexy-lines-mcp`).
 - Verify JSON-RPC protocol version (`2024-11-05`).
