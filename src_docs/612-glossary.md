@@ -313,7 +313,7 @@ The pure Python `.lines` file parser. Works offline with no running app. Install
 **vexy-lines-run**
 The standalone batch processing GUI application. Three tabs for images, folders, and video. Install with `pip install vexy-lines-run`. See [Beyond the GUI](601-part6-tldr.md).
 
-**vexylines-mcp**
+**vexy-lines-mcp**
 The bridge binary that translates between the MCP stdio protocol (used by Claude Desktop and similar tools) and the TCP protocol (used by the Vexy Lines app). Installed as part of `vexy-lines-cli`. See [AI-Assisted Workflows](608-ai-workflows.md).
 
 ## W

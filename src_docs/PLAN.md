@@ -672,7 +672,7 @@ The following items must be verified against the Vexy Lines application and sour
 
 - Verify the 29 tools and their exact parameter names against the running server.
 - Verify the port number (47384) is still current.
-- Verify the MCP bridge binary name (`vexylines-mcp` or `vexy-lines-mcp`).
+- Confirm the MCP bridge binary name remains `vexy-lines-mcp`.
 - Verify JSON-RPC protocol version (`2024-11-05`).
 
 ### Guilloche plugin

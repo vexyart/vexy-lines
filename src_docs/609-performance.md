@@ -144,7 +144,7 @@ The CLI and API commands talk to the running Vexy Lines app over a local network
 1. Make sure Vexy Lines is launched and running.
 2. Check that no firewall is blocking `localhost:47384`. On macOS, the built-in firewall rarely causes issues. On Windows, you may need to add an exception.
 3. Try restarting the app.
-4. Run `vexy-lines mcp-status` to check the connection.
+4. Run `vexy-lines-cli mcp-status` to check the connection.
 
 ### Display Scaling Issues
 

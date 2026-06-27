@@ -94,39 +94,31 @@ This takes 2–10 minutes per image depending on how much mask and threshold adj
 
 ## Style Transfer: The SDK/CLI Method
 
-For batch processing — applying the same style to dozens or hundreds of images — use the command-line tools:
-
-### Extract a Style
-
-```bash
-vexy-lines-cli style extract portrait-engraving.lines --output portrait-style.json
-```
-
-This extracts the fill parameters, layer structure, and mask data into a portable format.
+For batch processing - applying the same style to dozens or hundreds of images - use the command-line tools. A `.lines` file is the style source; you do not need to export a separate JSON style file.
 
 ### Apply a Style
 
 ```bash
-vexy-lines-cli style apply portrait-style.json --source new-photo.jpg --output result.lines
+vexy-lines-cli style-transfer --style portrait-engraving.lines --images new-photo.jpg --output-dir ./results --format svg
 ```
 
-The CLI creates a new .lines document with the extracted style applied to the new source image. The fills recalculate against the new photo automatically.
+The CLI opens a new document for the source image, applies the fill tree from the style `.lines` file, renders, and writes the requested output format.
 
 ### Batch Apply
 
 ```bash
-vexy-lines-cli style apply portrait-style.json --source-dir ./photos/ --output-dir ./results/
+vexy-lines-cli style-transfer --style portrait-engraving.lines --input-dir ./photos --output-dir ./results --format svg
 ```
 
-Every image in `./photos/` gets the style applied. The output directory fills with .lines files, each ready for export.
+Every image in `./photos` gets the style applied. The output directory fills with rendered files.
 
-### Batch Export
+### Export Existing .lines Files
 
 ```bash
-vexy-lines-cli export --input-dir ./results/ --format svg --output-dir ./svgs/
+vexy-lines-cli export ./results --format svg --output ./svgs
 ```
 
-All .lines files in the results directory export to SVG. The entire pipeline — style transfer + export — runs unattended.
+All `.lines` files in the results directory export to SVG. The export command accepts either one `.lines` file or a directory and uses `--output` for the destination file or directory.
 
 ---
 
@@ -137,10 +129,10 @@ What happens when you blend two styles together? Style interpolation takes two s
 ### How It Works
 
 ```bash
-vexy-lines-cli style interpolate style-a.lines style-b.lines --blend 0.5 --output hybrid.lines
+vexy-lines-cli style-transfer --style style-a.lines --end-style style-b.lines --input-dir ./frames --output-dir ./hybrid
 ```
 
-At blend 0.0, the result is 100% Style A. At blend 1.0, it's 100% Style B. At 0.5, it's a 50/50 mix.
+The first image gets Style A, the last image gets Style B, and images between them receive interpolated fill parameters. For direct control over one blend ratio, use `interpolate_style(a, b, t)` from `vexy_lines_api`.
 
 The interpolation blends **numeric parameters**: intervals, angles, thresholds, thickness values, randomization, smoothing. Non-numeric properties (fill type, masks, colours) are taken from Style A when blend < 0.5 and Style B when blend ≥ 0.5.
 
@@ -209,9 +201,9 @@ As your library grows past twenty or thirty styles, maintenance matters:
 |--------|-----|
 | Save style | File > Save As (the .lines file *is* the style) |
 | Apply style manually | Open template → replace source image → adjust masks → Save As |
-| Apply style via CLI | `vexy-lines-cli style apply style.json --source photo.jpg` |
-| Batch apply | `vexy-lines-cli style apply style.json --source-dir ./photos/` |
-| Interpolate styles | `vexy-lines-cli style interpolate a.lines b.lines --blend 0.5` |
-| Extract style | `vexy-lines-cli style extract template.lines --output style.json` |
+| Apply style via CLI | `vexy-lines-cli style-transfer --style template.lines --images photo.jpg --output-dir ./results` |
+| Batch apply | `vexy-lines-cli style-transfer --style template.lines --input-dir ./photos --output-dir ./results` |
+| Interpolate styles | `vexy-lines-cli style-transfer --style a.lines --end-style b.lines --input-dir ./frames --output-dir ./results` |
+| Export .lines files | `vexy-lines-cli export ./results --format svg --output ./svgs` |
 
 *Next: [Preparing Files for Print](511-print-preparation.md)*
