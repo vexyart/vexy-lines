@@ -1,6 +1,6 @@
 # Botanical Illustration
 
-Botanical illustration has rules. Not the "break them to be creative" kind — the kind that exist because a scientist in 1753 needed to tell two species apart from a drawing, and the conventions that emerged are still used in herbarium sheets, field guides, and taxonomic papers today. Vexy Lines can produce illustrations that follow these conventions, but only if you design with them in mind.
+Botanical illustration has rules. Not the "break them to be creative" kind, but the kind that exist because a scientist in 1753 needed to tell two species apart from a drawing, and the conventions that emerged are still used in herbarium sheets, field guides, and taxonomic papers today. Vexy Lines can produce illustrations that follow these conventions, but only if you design with them in mind.
 
 The payoff: a botanical illustration that took a trained artist forty hours of stippling and cross-hatching can be approximated in Vexy Lines in an afternoon, with the vector output scalable to any reproduction size.
 
@@ -10,9 +10,9 @@ The payoff: a botanical illustration that took a trained artist forty hours of s
 
 A botanical illustration is not a pretty picture of a flower. It's a scientific document that must:
 
-- **Show the complete structure.** Roots, stem, leaves, flowers, fruit, seeds — whatever is taxonomically relevant. Not artistic cropping.
+- **Show the complete structure.** Roots, stem, leaves, flowers, fruit, seeds: whatever is taxonomically relevant. Not artistic cropping.
 - **Maintain proportion.** Parts must be accurately scaled relative to each other. No exaggeration for drama.
-- **Use consistent lighting.** Traditional convention: light from the upper left. This is arbitrary but universal — every botanical illustrator uses it, so every botanist expects it.
+- **Use consistent lighting.** Traditional convention: light from the upper left. This is arbitrary but universal: every botanical illustrator uses it, so every botanist expects it.
 - **Distinguish surfaces through texture.** Smooth leaves get clean parallel lines. Hairy stems get short scattered strokes. Waxy petals get subtle shading. The line technique communicates surface quality.
 
 Vexy Lines' fill algorithms map directly to these conventions. Linear for smooth surfaces, Scribble for rough textures, Circular for flower centres, Trace for clean outlines, Handmade for specialised symbols.
@@ -21,7 +21,7 @@ Vexy Lines' fill algorithms map directly to these conventions. Linear for smooth
 
 ## Photo Preparation
 
-The source photo is your reference, not your subject. In traditional botanical illustration, artists work from live specimens. In Vexy Lines, you work from photographs — but the photo needs to be set up properly.
+The source photo is your reference, not your subject. In traditional botanical illustration, artists work from live specimens. In Vexy Lines, you work from photographs, but the photo needs to be set up properly.
 
 ### Ideal Source Photo
 
@@ -57,7 +57,7 @@ Leaves are the most common element and the one that most clearly demonstrates Ve
 
 1. **Mask each leaf separately** using the Freeform tool (S) or auto-detection. Separate masks let you set a different angle on each leaf's fill, following the vein direction.
 
-2. **Linear fill at 1.5 mm interval.** The angle should follow the leaf's central vein — if the vein runs at 30°, set the fill angle to 30°. This is a botanical convention: line direction on a leaf indicates vein orientation.
+2. **Linear fill at 1.5 mm interval.** The angle should follow the leaf's central vein: if the vein runs at 30°, set the fill angle to 30°. This is a botanical convention: line direction on a leaf indicates vein orientation.
 
 3. **Smoothing: 80+.** Botanical lines should be clean and confident, not jagged.
 
@@ -70,7 +70,7 @@ Leaves are the most common element and the one that most clearly demonstrates Ve
 ### Stems and Branches
 
 - **Linear fill** with the angle aligned to the stem's longitudinal axis.
-- **Interval: 1.0 mm** — tighter than leaves, because stems are typically more tonal and rounded.
+- **Interval: 1.0 mm**, tighter than leaves, because stems are typically more tonal and rounded.
 - **Thickness: Thick mode** to emphasise the cylindrical shadow along one side.
 - **Mask tightly** using the Freeform tool. Stems have clean boundaries.
 
@@ -101,7 +101,7 @@ Many plants have hairy stems, fuzzy leaves, or rough bark. The Scribble fill com
 
 - **Linear fill** at the root angle, interval 1.2 mm.
 - Roots are usually shown in a lighter line weight than above-ground structures (a convention indicating below-ground location).
-- Set thickness max to 0.4 mm — noticeably lighter than the stem at 0.6 mm.
+- Set thickness max to 0.4 mm, noticeably lighter than the stem at 0.6 mm.
 
 ---
 
@@ -126,10 +126,10 @@ Vexy Lines can approximate the hand-coloured style:
 
 1. Build the complete line illustration in black (all the layers described above).
 2. Enable **Dynamic Color** on the primary shading layers (leaves, petals, stems).
-3. The strokes sample colours from the source photo — green for leaves, coloured for petals, brown for stems.
+3. The strokes sample colours from the source photo: green for leaves, coloured for petals, brown for stems.
 4. Set the **Segment Length** to 8–15. This creates smooth colour transitions along each stroke, mimicking watercolour wash rather than confetti.
 
-The result is a line illustration where the shading strokes carry botanical colours — not photorealistic, but reminiscent of the hand-coloured copper-plate engravings in 18th-century botanical atlases.
+The result is a line illustration where the shading strokes carry botanical colours: not photorealistic, but reminiscent of the hand-coloured copper-plate engravings in 18th-century botanical atlases.
 
 For the purest scientific style, keep everything in black ink. Dynamic Color is an aesthetic choice, not a taxonomic one.
 
@@ -175,6 +175,6 @@ The final illustration shows all diagnostic views on a single plate, each driven
 
 **Smoothing is your friend.** Botanical lines should look confident and deliberate. Set smoothing to 80+ on every fill. Jagged strokes look amateur.
 
-**Less is more.** Botanical illustration is restrained. The goal is clarity, not drama. Keep intervals relatively wide, thickness relatively thin, and avoid filling every surface with dense shading. White space on a botanical plate is not wasted space — it's breathing room.
+**Less is more.** Botanical illustration is restrained. The goal is clarity, not drama. Keep intervals relatively wide, thickness relatively thin, and avoid filling every surface with dense shading. White space on a botanical plate is not wasted space. It is breathing room.
 
 *Next: [Comics and Graphic Novels](508-comics-graphics.md)*

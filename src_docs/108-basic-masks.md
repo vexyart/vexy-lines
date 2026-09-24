@@ -1,6 +1,6 @@
 # Hiding and Revealing
 
-A single fill applied to an entire image is a good start. But the moment you want a Linear fill on the face and a Halftone fill on the background — or a Scribble fill only in the shadows — you need masks.
+A single fill applied to an entire image is a good start. But the moment you want a Linear fill on the face and a Halftone fill on the background, or a Scribble fill only in the shadows, you need masks.
 
 Masks are the answer to the question: "Where does this fill appear?"
 
@@ -10,7 +10,7 @@ Every fill layer can have a mask attached to it. The mask is a greyscale image t
 
 - **White** means the fill is fully visible.
 - **Black** means the fill is completely hidden.
-- **Grey** means the fill is partially visible — the darker the grey, the more transparent the fill becomes.
+- **Grey** means the fill is partially visible: the darker the grey, the more transparent the fill becomes.
 
 By default, a new fill has no mask, which is equivalent to a fully white mask: the fill appears everywhere. The moment you start painting black areas, you're cutting holes in the fill, revealing whatever is beneath it (another fill, the canvas background, or nothing).
 
@@ -24,7 +24,7 @@ The Brush tool is your primary masking instrument. Press **B** to activate it, t
 
 - **Paint with white** to reveal the fill (make strokes visible).
 - **Paint with black** to hide the fill (remove strokes).
-- **Alt + drag** to erase — this switches to the opposite colour temporarily. If you're painting white, Alt+drag paints black, and vice versa.
+- **Alt + drag** to erase: this switches to the opposite colour temporarily. If you're painting white, Alt+drag paints black, and vice versa.
 
 When you activate the Brush tool and select a fill layer that has a mask, the mask becomes visible as a semi-transparent red overlay on the canvas. The red areas are where the mask is hiding the fill. As you paint white, the red overlay disappears and strokes appear. As you paint black, red overlay covers the strokes.
 
@@ -44,7 +44,7 @@ The Properties Panel shows additional brush settings when the Brush tool is sele
 
 A typical masking workflow looks like this:
 
-1. Add two fill layers — say, a Linear fill and a Halftone fill.
+1. Add two fill layers, say a Linear fill and a Halftone fill.
 2. Select the top fill (Halftone) in the Layers Panel.
 3. Add a mask to it (if one doesn't exist yet, right-click the layer and choose **Add Mask**, or use the mask button in the Layers Panel).
 4. Press **B** to activate the Brush tool.
@@ -90,7 +90,7 @@ The Freeform tool is for shapes that aren't rectangles or ellipses: a silhouette
 
 This is the feature that saves the most time and gets the least attention.
 
-With a mask tool or the Brush active, **click on a distinct shape** in your source image — a face, a building, an object with clear edges against its background. Vexy Lines analyses the image and automatically creates a mask boundary around the detected shape.
+With a mask tool or the Brush active, **click on a distinct shape** in your source image: a face, a building, an object with clear edges against its background. Vexy Lines analyses the image and automatically creates a mask boundary around the detected shape.
 
 The auto-detection works by looking at contrast edges in the source image. It works best when:
 
@@ -104,7 +104,7 @@ It works less well when:
 - The edge is soft or blurred.
 - Multiple overlapping elements create ambiguous boundaries.
 
-When auto-detection nails it, it saves minutes of careful brush painting. When it misses, you can refine the result with the Brush tool — paint white to expand the detected area, black to shrink it.
+When auto-detection nails it, it saves minutes of careful brush painting. When it misses, you can refine the result with the Brush tool: paint white to expand the detected area, black to shrink it.
 
 **The workflow:** Click to auto-detect, then refine with the Brush. This combination handles most masking tasks faster than either approach alone.
 
@@ -114,9 +114,9 @@ When auto-detection nails it, it saves minutes of careful brush painting. When i
 
 The simplest approach. Add your fills, then paint masks to hide fills in areas where you don't want them.
 
-- Fill 1 (Linear, full coverage, no mask) — the base layer.
-- Fill 2 (Halftone, masked) — paint black to hide it everywhere except the background.
-- Fill 3 (Scribble, masked) — paint black to hide it everywhere except the shadow regions.
+- Fill 1 (Linear, full coverage, no mask): the base layer.
+- Fill 2 (Halftone, masked): paint black to hide it everywhere except the background.
+- Fill 3 (Scribble, masked): paint black to hide it everywhere except the shadow regions.
 
 Each mask is a simple "show here, hide there" stencil.
 
@@ -124,15 +124,15 @@ Each mask is a simple "show here, hide there" stencil.
 
 Sometimes it's easier to define where a fill *shouldn't* be than where it should. Start with a white mask (fill visible everywhere), then paint black on the areas to exclude.
 
-For a portrait where you want a fill only on the face: paint black on the background, the clothing, the hair. What's left — the face — is where the fill appears.
+For a portrait where you want a fill only on the face: paint black on the background, the clothing, the hair. What's left, the face, is where the fill appears.
 
 ### Strategy 3: Graduated Masks
 
-Use a soft brush (low Hardness) at reduced Opacity to create gradual transitions. A mask that fades from white to black creates a fill that fades from fully visible to invisible. This produces smooth blends between different fill types — Linear fading into Wave, for instance — without hard edges.
+Use a soft brush (low Hardness) at reduced Opacity to create gradual transitions. A mask that fades from white to black creates a fill that fades from fully visible to invisible. This produces smooth blends between different fill types, Linear fading into Wave for instance, without hard edges.
 
 ### Strategy 4: Multiple Masks
 
-A layer can have one mask, but you can achieve multi-mask effects by grouping layers. A group can have its own mask, and the layers inside it can have individual masks. The final visibility is the intersection — a pixel is only visible if both the layer mask and the group mask allow it.
+A layer can have one mask, but you can achieve multi-mask effects by grouping layers. A group can have its own mask, and the layers inside it can have individual masks. The final visibility is the intersection: a pixel is only visible if both the layer mask and the group mask allow it.
 
 This is advanced and covered more fully in [Organising Your Work](109-layers-groups.md). For now, know that the capability exists when your masking needs grow complex.
 

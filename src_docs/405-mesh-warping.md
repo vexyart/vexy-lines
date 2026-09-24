@@ -1,14 +1,14 @@
 # Mesh Warping: Bending Fills in 3D
 
-Flat vector patterns are elegant. Flat vector patterns bent around a bottle, draped over a waving flag, or spiralling through a twisted ribbon are *spectacular*. Mesh warping takes any fill — Linear, Wave, Halftone, all twelve — and maps it onto a deformable surface, turning two-dimensional line work into something that looks and feels three-dimensional.
+Flat vector patterns are elegant. Flat vector patterns bent around a bottle, draped over a waving flag, or spiralling through a twisted ribbon are something else. Mesh warping takes any fill (Linear, Wave, Halftone, all twelve) and maps it onto a deformable surface, turning two-dimensional line work into something that reads as three-dimensional.
 
 ---
 
 ## What a Mesh Does
 
-A mesh is an invisible grid of connected points that sits on top of your fill. In its default state, the grid is flat and regular — the fill looks exactly as it would without a mesh. But drag a mesh point upward and the fill bulges. Drag it sideways and the fill stretches. Fold an edge over and the fill wraps behind itself.
+A mesh is an invisible grid of connected points that sits on top of your fill. In its default state, the grid is flat and regular, so the fill looks exactly as it would without a mesh. But drag a mesh point upward and the fill bulges. Drag it sideways and the fill stretches. Fold an edge over and the fill wraps behind itself.
 
-The mesh doesn't change your fill parameters. Interval is still 1.5 mm, Angle is still 45 degrees, Randomization is still 12%. The mesh changes *where those strokes end up* after generation — it warps the output geometry, not the input algorithm.
+The mesh doesn't change your fill parameters. Interval is still 1.5 mm, Angle is still 45 degrees, Randomization is still 12%. The mesh changes *where those strokes end up* after generation: it warps the output geometry, not the input algorithm.
 
 Think of it as placing your fill artwork on a sheet of rubber, then pushing and pulling that rubber into a new shape. The art stretches and compresses with the surface.
 
@@ -17,7 +17,7 @@ Think of it as placing your fill artwork on a sheet of rubber, then pushing and 
 ## Adding a Mesh
 
 1. Select a fill layer in the Layers Panel.
-2. Click the **Mesh** button in the Properties Panel (or toolbar — it looks like a grid icon).
+2. Click the **Mesh** button in the Properties Panel (or toolbar; it looks like a grid icon).
 3. A dialog offers six templates. Choose one.
 4. The mesh appears over your fill, and the fill immediately warps to match the template's shape.
 
@@ -31,7 +31,7 @@ Each template is a starting point. After applying, you edit freely.
 
 ### Rectangle
 
-A four-cornered perspective grid. The default mesh — a flat rectangle that does nothing until you drag its corner or edge points.
+A four-cornered perspective grid. The default mesh: a flat rectangle that does nothing until you drag its corner or edge points.
 
 **Best for:** Perspective distortion. Drag the top-right corner upward and the top-left corner downward to simulate a surface tilted away from the viewer. Product mockups, book covers, screen displays, angled signage.
 
@@ -39,15 +39,15 @@ A four-cornered perspective grid. The default mesh — a flat rectangle that doe
 
 ### Donut
 
-A circular ring. The fill wraps around the ring as if applied to the surface of a cylinder seen from above — or a coin, a medallion, a jar lid.
+A circular ring. The fill wraps around the ring as if applied to the surface of a cylinder seen from above, or a coin, a medallion, a jar lid.
 
-**Best for:** Cylindrical label wraps, coin engravings, medallion borders, circular sticker mockups. The curvature is inherent in the template — you don't need to manually bend anything.
+**Best for:** Cylindrical label wraps, coin engravings, medallion borders, circular sticker mockups. The curvature is inherent in the template, so you don't need to bend anything by hand.
 
 **Quick recipe:** Apply Donut mesh to a Linear fill at 0° angle, interval 1.5 mm. The straight parallel lines immediately become concentric arcs following the donut's curvature. Adjust the inner and outer radii by dragging edge points.
 
 ### Rising
 
-A wave that curves upward — like a flag caught in an updraft or a banner blowing in the wind.
+A wave that curves upward, like a flag caught in an updraft or a banner blowing in the wind.
 
 **Best for:** Flags, banners, ribbons ascending, dynamic motion effects. The wave amplitude and frequency are controlled by how aggressively you drag the mesh points after applying.
 
@@ -55,15 +55,15 @@ A wave that curves upward — like a flag caught in an updraft or a banner blowi
 
 ### Falling
 
-The inverse of Rising — a wave that curves downward. Same principle, opposite direction.
+The inverse of Rising: a wave that curves downward. Same principle, opposite direction.
 
 **Best for:** Drooping fabric, descending scrolls, gravitational effects. Often used in combination with Rising on a different layer to create opposing wave directions that suggest complex cloth movement.
 
 ### Ribbon
 
-A spiralling band that twists through space. This is the most dramatic template — the fill appears to wrap around a Möbius-strip-like form that folds over itself.
+A spiralling band that twists through space. This is the most dramatic template: the fill appears to wrap around a Möbius-strip-like form that folds over itself.
 
-**Best for:** Twisted ribbons, spiral banners, decorative scrollwork, certificate ornaments. Combined with [Hidden Strokes Removal](406-hidden-strokes.md), the ribbon looks genuinely three-dimensional — the back face disappears behind the front.
+**Best for:** Twisted ribbons, spiral banners, decorative scrollwork, certificate ornaments. Combined with [Hidden Strokes Removal](406-hidden-strokes.md), the ribbon reads as three-dimensional, because the back face disappears behind the front.
 
 **Quick recipe:** Apply Ribbon mesh to a Linear fill at 15° angle, interval 1.0 mm. Enable Hidden Strokes Removal. The fill now looks like an engraved ribbon spiralling through space, with the far side hidden behind the near side.
 
@@ -75,7 +75,7 @@ Every template is just a starting configuration of points and edges. Once applie
 
 ## Editing Mesh Points
 
-After applying a template, the mesh appears as a grid of points connected by edges. Editing is immediate and intuitive:
+After applying a template, the mesh appears as a grid of points connected by edges. Editing is immediate:
 
 ### Selecting Points
 
@@ -87,7 +87,7 @@ After applying a template, the mesh appears as a grid of points connected by edg
 
 Drag a selected point to a new position. The mesh surface deforms smoothly, and the fill re-warps in real time (if Auto Refresh is on) or on the next Refresh (if it's off).
 
-Moving points near each other compresses the fill in that area — strokes bunch together. Moving points apart stretches the fill — strokes spread. This compression and stretching is the entire visual mechanism of mesh warping.
+Moving points near each other compresses the fill in that area, so strokes bunch together. Moving points apart stretches the fill, so strokes spread. This compression and stretching is the entire visual mechanism of mesh warping.
 
 ### Adding Points
 
@@ -101,7 +101,7 @@ When to add points:
 
 ### Deleting Edges
 
-Select an edge and press **Delete**. The mesh face that relied on that edge becomes a hole — the fill doesn't render in that area.
+Select an edge and press **Delete**. The mesh face that relied on that edge becomes a hole, and the fill doesn't render in that area.
 
 **Use for:** Creating windows, cutouts, or irregular mesh shapes. A donut with deleted inner edges becomes a disc. A rectangle with a deleted centre face becomes a frame.
 
@@ -164,7 +164,7 @@ The mesh warps the fill *after* the mask is applied. This means:
 - If you mask a fill to a rectangle and then apply a Rising mesh, the rectangular region of fill bends with the wave. The mask boundary itself deforms.
 - If you change the mask after applying the mesh, the new mask region is warped by the existing mesh.
 
-This is usually what you want — the mask and fill move together as a unit on the mesh surface. But be aware that a mask painted on the flat canvas will look different once the mesh bends it. Paint your mask, *then* apply the mesh — or accept that you'll need to adjust the mask after warping.
+This is usually what you want: the mask and fill move together as a unit on the mesh surface. But be aware that a mask painted on the flat canvas will look different once the mesh bends it. Paint your mask, *then* apply the mesh, or accept that you'll need to adjust the mask after warping.
 
 ---
 

@@ -1,6 +1,6 @@
 # Getting Your Art Out
 
-The artwork exists inside Vexy Lines. Now it needs to exist outside it — as a file you can print, publish, email, or open in another design application. Exporting is the last step in every project and the one where format choices actually matter.
+The artwork exists inside Vexy Lines. Now it needs to exist outside it: as a file you can print, publish, email, or open in another design application. Exporting is the last step in every project and the one where format choices matter.
 
 ## The Export Command
 
@@ -18,9 +18,9 @@ Vector exports contain the actual mathematical curves that Vexy Lines generates.
 
 SVG is the universal vector format. Every web browser renders it. Every vector design application opens it. If you're not sure which format to use, use SVG.
 
-SVG files from Vexy Lines contain path elements — one `<path>` per stroke — with stroke attributes (colour, width) preserved. The source image is never included. The file is XML text, so it's human-readable (if you enjoy reading XML) and compressible.
+SVG files from Vexy Lines contain path elements, one `<path>` per stroke, with stroke attributes (colour, width) preserved. The source image is never included. The file is XML text, so it's human-readable (if you enjoy reading XML) and compressible.
 
-**File size considerations:** A document with thousands of fine strokes at a small Interval produces a large SVG — potentially tens of megabytes. This is the nature of detailed vector artwork: each stroke is a path definition with control points. If file size matters (web delivery, email), consider increasing Interval slightly to reduce stroke count, or use raster export for web display.
+**File size considerations:** A document with thousands of fine strokes at a small Interval produces a large SVG, potentially tens of megabytes. This is the nature of detailed vector artwork: each stroke is a path definition with control points. If file size matters (web delivery, email), consider increasing Interval slightly to reduce stroke count, or use raster export for web display.
 
 ### PDF (Portable Document Format)
 
@@ -28,9 +28,9 @@ SVG files from Vexy Lines contain path elements — one `<path>` per stroke — 
 
 PDF wraps vector content in a format that every computer can display, regardless of installed software. Print shops universally accept PDF. Recipients who don't have Illustrator or Inkscape can still view and print a PDF.
 
-Vexy Lines PDF exports contain the same vector path data as SVG, wrapped in the PDF container format. The quality is identical — no rasterisation occurs during export.
+Vexy Lines PDF exports contain the same vector path data as SVG, wrapped in the PDF container format. The quality is identical: no rasterisation occurs during export.
 
-**When to choose PDF over SVG:** When the recipient needs to view or print the file without vector editing software. When submitting to a print service. When archiving, since PDF is an ISO standard with long-term preservation guarantees.
+**When to choose PDF over SVG:** When the recipient needs to view or print the file without vector editing software. When submitting to a print service. When archiving, since PDF is an ISO standard suited to long-term preservation.
 
 ### EPS (Encapsulated PostScript)
 
@@ -42,7 +42,7 @@ For any new project where you have a choice, SVG or PDF is preferable. EPS doesn
 
 ## Raster Formats
 
-Raster exports render your vector artwork into a pixel grid at a specific resolution. The output is a conventional image file — useful for web display, social media, and contexts where vector files aren't supported.
+Raster exports render your vector artwork into a pixel grid at a specific resolution. The output is a conventional image file, useful for web display, social media, and contexts where vector files aren't supported.
 
 ### PNG (Portable Network Graphics)
 
@@ -50,7 +50,7 @@ Raster exports render your vector artwork into a pixel grid at a specific resolu
 
 PNG supports transparency, so areas of your canvas without strokes export as transparent rather than white. This is valuable when you want to composite your vector artwork over a background in another application.
 
-PNG is lossless — no compression artifacts. The trade-off is larger file size compared to JPEG.
+PNG is lossless: no compression artifacts. The trade-off is larger file size compared to JPEG.
 
 **Resolution matters for raster exports.** Your document's DPI setting (in document properties) and dimensions determine the pixel dimensions of the exported PNG. A 10-inch-wide document at 300 DPI exports as a 3000-pixel-wide PNG. At 96 DPI, the same document exports at 960 pixels wide. Set your DPI appropriately before exporting. See [Creating a New Document](105-new-document.md) for guidance on resolution.
 
@@ -58,7 +58,7 @@ PNG is lossless — no compression artifacts. The trade-off is larger file size 
 
 **Best for:** Web images without transparency, email attachments, contexts where file size matters.
 
-JPEG doesn't support transparency — empty areas export as white (or whatever your canvas background colour is). It uses lossy compression, which reduces file size at the cost of slight quality loss. For vector artwork with clean, high-contrast strokes, JPEG compression artifacts can be visible along stroke edges at lower quality settings. Use a quality setting of 90% or higher for clean results.
+JPEG doesn't support transparency: empty areas export as white (or whatever your canvas background colour is). It uses lossy compression, which reduces file size at the cost of slight quality loss. For vector artwork with clean, high-contrast strokes, JPEG compression artifacts can be visible along stroke edges at lower quality settings. Use a quality setting of 90% or higher for clean results.
 
 **When to choose JPEG over PNG:** When file size matters more than transparency. When uploading to platforms that don't handle PNG transparency well. When emailing to recipients who might struggle with PNG files (increasingly rare, but it happens).
 
@@ -74,7 +74,7 @@ JPEG doesn't support transparency — empty areas export as white (or whatever y
 
 ## Exporting Layers Separately
 
-By default, Vexy Lines exports the entire visible document — all visible layers composited together into one file.
+By default, Vexy Lines exports the entire visible document: all visible layers composited together into one file.
 
 You can also export individual layers or groups as separate files. This is essential for:
 
@@ -99,11 +99,11 @@ The clipboard contains vector data. Pasted strokes arrive as editable vector pat
 
 **Clipboard vs. file export:** Clipboard is faster for quick transfers to an open application. File export is better for archival, sending to others, and workflows where you need a persistent file.
 
-**Compatibility notes:** Clipboard vector transfer works well with Adobe Illustrator and Affinity Designer on both macOS and Windows. Other applications may receive pasted content as a raster image instead of vector paths — this depends on the receiving application's clipboard handling, not on Vexy Lines.
+**Compatibility notes:** Clipboard vector transfer works well with Adobe Illustrator and Affinity Designer on both macOS and Windows. Other applications may receive pasted content as a raster image instead of vector paths. This depends on the receiving application's clipboard handling, not on Vexy Lines.
 
 ## Screen-Print Separation
 
-Vexy Lines is unusually well-suited to screen printing because each fill layer is already a discrete set of single-colour strokes — which is exactly what a screen-printing plate needs.
+Vexy Lines is well suited to screen printing because each fill layer is already a discrete set of single-colour strokes, which is exactly what a screen-printing plate needs.
 
 **Basic separation workflow:**
 
@@ -114,7 +114,7 @@ Vexy Lines is unusually well-suited to screen printing because each fill layer i
    c. Name the file by its colour: `portrait-black.svg`, `portrait-red.svg`, etc.
 3. Send the set of SVGs to your screen printer. Each file is one plate.
 
-For more sophisticated separation — including halftone screens, registration marks, and overprint simulation — see Part 5 of this manual.
+For more elaborate separation, including halftone screens, registration marks, and overprint simulation, see Part 5 of this manual.
 
 ## Export Checklist
 
@@ -128,11 +128,11 @@ Before you click Export, verify:
 
 ## What Doesn't Export
 
-- **The source image.** It's the brightness map fills read from — it never becomes part of the output.
+- **The source image.** It's the brightness map fills read from. It never becomes part of the output.
 - **Hidden layers.** Only visible layers export.
-- **Masks themselves.** Masks control where fills appear, but the mask image doesn't export. The export contains only the masked result — strokes that are visible after masking.
+- **Masks themselves.** Masks control where fills appear, but the mask image doesn't export. The export contains only the masked result: strokes that are visible after masking.
 - **The canvas background** (in vector exports). SVG, PDF, and EPS exports have a transparent background. The strokes float on nothing. In raster exports, the background fills with white (PNG with transparency preserves the transparency; JPEG fills with the canvas background colour).
 
 ## Next Steps
 
-Your artwork is exported. Before you close the document, make sure it's saved — [Save, Backup, Recover](111-saving.md) covers the `.lines` file format, Auto Save, and backup strategies. And if your exports look different from what you see on screen, check [Controlling When Vexy Recalculates](112-refresh-controls.md) to ensure your renders are up to date.
+Your artwork is exported. Before you close the document, make sure it's saved. [Save, Backup, Recover](111-saving.md) covers the `.lines` file format, Auto Save, and backup strategies. And if your exports look different from what you see on screen, check [Controlling When Vexy Recalculates](112-refresh-controls.md) to ensure your renders are up to date.

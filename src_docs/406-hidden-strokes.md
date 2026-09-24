@@ -1,14 +1,14 @@
 # Hidden Strokes Removal
 
-Fold a piece of paper in half. The back surface disappears — you only see the front. Now imagine that paper is covered in engraved lines. Where the paper folds behind itself, the lines vanish. That's Hidden Strokes Removal. It makes mesh-warped fills behave like physical objects instead of flat projections.
+Fold a piece of paper in half. The back surface disappears; you only see the front. Now imagine that paper is covered in engraved lines. Where the paper folds behind itself, the lines vanish. That's Hidden Strokes Removal. It makes mesh-warped fills behave like physical objects instead of flat projections.
 
 ---
 
 ## The Problem HSR Solves
 
-Without Hidden Strokes Removal, a mesh-warped fill is a mathematical projection. If you twist a ribbon mesh so it folds over itself, both the front-facing and back-facing strokes render on top of each other. The result is a tangled mess of overlapping lines — the "ribbon" looks like a transparent sheet of cellophane, not a solid surface.
+Without Hidden Strokes Removal, a mesh-warped fill is a mathematical projection. If you twist a ribbon mesh so it folds over itself, both the front-facing and back-facing strokes render on top of each other. The result is a tangle of overlapping lines: the "ribbon" looks like a transparent sheet of cellophane, not a solid surface.
 
-Enable Hidden Strokes Removal and the back-facing strokes vanish behind the front-facing ones. The ribbon suddenly looks *real*. It has a front and a back, and your eyes understand the three-dimensional form without any additional cues.
+Enable Hidden Strokes Removal and the back-facing strokes vanish behind the front-facing ones. The ribbon suddenly looks solid. It has a front and a back, and your eyes read the three-dimensional form without any additional cues.
 
 HSR is purely a mesh feature. It has no effect on fills without a mesh, because there's nothing to fold.
 
@@ -35,7 +35,7 @@ HSR calculates which parts of the mesh surface face toward the viewer and which 
 | **High** | Slow | Very clean occlusion; rare artifacts only on extremely tight folds | Final renders, portfolio pieces |
 | **Maximum** | Slowest | Pixel-perfect occlusion on all folds | Print production, close-up detail work |
 
-The differences are most visible at fold edges — where front and back surfaces meet. At Low precision, you might see a few stray strokes from the back surface poking through the fold line. At Maximum, the fold is knife-clean.
+The differences are most visible at fold edges, where front and back surfaces meet. At Low precision, you might see a few stray strokes from the back surface poking through the fold line. At Maximum, the fold is knife-clean.
 
 **Recommendation:** Work at Low or Medium while editing the mesh. Switch to High or Maximum for the final render before export. There's no visual difference in areas far from folds, so the precision mode only matters at the occlusion boundaries.
 
@@ -43,7 +43,7 @@ The differences are most visible at fold edges — where front and back surfaces
 
 ## How HSR Determines "Front" and "Back"
 
-HSR uses the mesh surface normals — mathematical arrows perpendicular to each mesh face — to determine orientation. A face whose normal points toward the viewer is front-facing and renders normally. A face whose normal points away from the viewer is back-facing and its strokes are hidden.
+HSR uses the mesh surface normals (mathematical arrows perpendicular to each mesh face) to determine orientation. A face whose normal points toward the viewer is front-facing and renders normally. A face whose normal points away from the viewer is back-facing and its strokes are hidden.
 
 You don't need to understand the maths. The practical effect is:
 
@@ -51,7 +51,7 @@ You don't need to understand the maths. The practical effect is:
 - **Folded-over areas** are hidden where the fold puts the surface facing away from you. The strokes behind the fold disappear.
 - **Edge areas** (where the surface turns sideways) may partially render depending on the precision mode.
 
-If a fold looks wrong — strokes appear where they should be hidden, or disappear where they should be visible — it usually means the mesh points need adjustment. Drag mesh points to make the fold cleaner, and HSR will respond correctly.
+If a fold looks wrong (strokes appear where they should be hidden, or disappear where they should be visible), it usually means the mesh points need adjustment. Drag mesh points to make the fold cleaner, and HSR will respond correctly.
 
 ---
 
@@ -67,7 +67,7 @@ If a fold looks wrong — strokes appear where they should be hidden, or disappe
 
 - The mesh is a simple perspective distortion (Rectangle template, no folds). There's no back-facing surface, so HSR does nothing.
 - Speed matters more than realism during editing. HSR adds computation to every refresh.
-- The fill is intentionally transparent or ghostly — the overlapping-strokes look might be what you want.
+- The fill is intentionally transparent or ghostly, and the overlapping-strokes look might be what you want.
 
 ---
 
@@ -81,7 +81,7 @@ To create the illusion that one meshed fill passes behind another:
 2. Enable HSR on both.
 3. Use masks to hide the portion of the back layer where the front layer's surface covers it.
 
-This requires some manual masking but produces convincing results — a red ribbon spiralling in front of a blue ribbon, for instance.
+This requires some manual masking but produces convincing results: a red ribbon spiralling in front of a blue ribbon, for instance.
 
 ---
 
@@ -89,7 +89,7 @@ This requires some manual masking but produces convincing results — a red ribb
 
 ### Ribbon Without HSR
 
-A Ribbon-mesh Linear fill renders both sides of the twist. Front-facing lines and back-facing lines overlap, creating an X-ray transparency effect. The ribbon has no visual depth — your brain reads it as a flat tangle.
+A Ribbon-mesh Linear fill renders both sides of the twist. Front-facing lines and back-facing lines overlap, creating an X-ray transparency effect. The ribbon has no visual depth; your brain reads it as a flat tangle.
 
 ### Ribbon With HSR
 
@@ -111,7 +111,7 @@ HSR hides the far side. The cylinder looks solid. Strokes on the front surface r
 Increase the precision mode. If you're at Medium, try High. If folds are still leaky at High, try Maximum.
 
 **Entire mesh areas disappear unexpectedly.**
-The mesh face normals may be flipped — the surface thinks "front" is "back." This usually happens when mesh points are dragged past each other, inverting a face. Undo (Cmd+Z) the last mesh edit and check that no faces are inside-out.
+The mesh face normals may be flipped: the surface thinks "front" is "back." This usually happens when mesh points are dragged past each other, inverting a face. Undo (Cmd+Z) the last mesh edit and check that no faces are inside-out.
 
 **Performance is unacceptable.**
 - Reduce precision mode while editing.
@@ -126,9 +126,9 @@ The selected fill doesn't have a mesh. Add a mesh first (see [Mesh Warping: Bend
 
 ## HSR and Export
 
-HSR is calculated before export. The exported SVG, PDF, or PNG contains only the visible (front-facing) strokes. Back-facing strokes are not included in the output file — they're genuinely removed, not just hidden. This means exported files are also smaller, since they contain fewer paths.
+HSR is calculated before export. The exported SVG, PDF, or PNG contains only the visible (front-facing) strokes. Back-facing strokes are not included in the output file; they're removed, not hidden. This means exported files are also smaller, since they contain fewer paths.
 
-One note: if you open the exported SVG in Illustrator and expect to find the hidden strokes still there (just invisible), they aren't. HSR is destructive at export time. If you need both front and back strokes preserved, export without HSR, then re-export with HSR — you'll have two versions.
+One note: if you open the exported SVG in Illustrator and expect to find the hidden strokes still there (just invisible), they aren't. HSR is destructive at export time. If you need both front and back strokes preserved, export without HSR, then re-export with HSR, so you'll have two versions.
 
 ---
 

@@ -4,13 +4,13 @@ If you read nothing else, read this. The entire Vexy Lines workflow fits on a si
 
 ## The Workflow in Four Sentences
 
-Load a raster image. Add one or more fills — algorithms that read pixel brightness and generate vector strokes. Shape each fill with masks. Export as SVG, PDF, or PNG.
+Load a raster image. Add one or more fills: algorithms that read pixel brightness and generate vector strokes. Shape each fill with masks. Export as SVG, PDF, or PNG.
 
 That's it. Everything else is refinement.
 
 ## Step by Step
 
-1. **Open an image.** File > New, then drag a photo onto the canvas. PNG, JPEG, TIFF, BMP, SVG, and PDF all work. This becomes your *source image* — the blueprint that fills read from. It never appears in your export.
+1. **Open an image.** File > New, then drag a photo onto the canvas. PNG, JPEG, TIFF, BMP, SVG, and PDF all work. This becomes your *source image*, the blueprint that fills read from. It never appears in your export.
 
 2. **Add a fill.** Click the **+** button in the Layers Panel and choose a fill type. [Linear](106-first-fill.md) is the classic starting point: parallel lines whose thickness maps to image brightness.
 
@@ -18,7 +18,7 @@ That's it. Everything else is refinement.
 
 4. **Mask areas.** Select the Brush tool (**B**) and paint white to reveal, black to hide. Use the Rectangle (**I**) or Ellipse (**O**) mask tools for geometric shapes. Alt+click a region for auto-detection.
 
-5. **Stack more fills.** Add a second fill at a different angle for crosshatching. Add a Halftone fill for dot patterns in specific areas. Each fill is a separate layer — you control them independently.
+5. **Stack more fills.** Add a second fill at a different angle for crosshatching. Add a Halftone fill for dot patterns in specific areas. Each fill is a separate layer, so you control them independently.
 
 6. **Export.** File > Export. Choose SVG for scalable vector, PDF for print, PNG for raster. Done.
 
@@ -76,9 +76,9 @@ That's it. Everything else is refinement.
 
 | Control | What It Does |
 |---------|-------------|
-| **Interval** | Spacing between strokes — the most impactful single parameter |
+| **Interval** | Spacing between strokes: the single parameter with the largest effect |
 | **Angle** | Rotation of the fill pattern in degrees |
-| **Image Threshold** | Histogram with handles for shadows, midtones, highlights — controls which brightness values generate strokes |
+| **Image Threshold** | Histogram with handles for shadows, midtones, highlights; controls which brightness values generate strokes |
 | **Stroke Thickness** | Maps brightness to stroke weight; three modes: Linear, Thick, Thin |
 | **Smoothing** | Reduces jagged edges in generated strokes |
 | **Randomization** | Adds controlled chaos (0–100%) to stroke placement |
@@ -87,6 +87,6 @@ That's it. Everything else is refinement.
 
 ## One More Thing
 
-Turn off **Auto Refresh** (in the toolbar) when your document gets complex. Manually trigger **Refresh Fill** for the selected fill or **Refresh All** when you're ready to see changes. Your computer will thank you.
+Turn off **Auto Refresh** (in the toolbar) when your document gets complex. Manually trigger **Refresh Fill** for the selected fill or **Refresh All** when you're ready to see changes. Your computer stays responsive.
 
 For everything else, there's the [rest of this manual](001-toc.md).

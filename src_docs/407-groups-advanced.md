@@ -1,12 +1,12 @@
 # Groups: Source Images and Inheritance
 
-A fifty-layer document without groups is a filing cabinet with no folders — technically functional, practically nightmarish. Groups turn chaos into structure. But they do more than organise: they carry their own source images, create inheritance chains, import entire documents as sub-compositions, and control how masks interact across layer boundaries.
+A fifty-layer document without groups is a filing cabinet with no folders: technically functional, practically unworkable. Groups turn chaos into structure. But they do more than organise: they carry their own source images, create inheritance chains, import entire documents as sub-compositions, and control how masks interact across layer boundaries.
 
 ---
 
 ## Creating Groups
 
-Select one or more layers in the Layers Panel and press **Cmd+G** (macOS) or **Ctrl+G** (Windows). The selected layers collapse into a group — a folder icon with a disclosure triangle. Click the triangle to expand or collapse the group.
+Select one or more layers in the Layers Panel and press **Cmd+G** (macOS) or **Ctrl+G** (Windows). The selected layers collapse into a group, shown as a folder icon with a disclosure triangle. Click the triangle to expand or collapse the group.
 
 You can also:
 
@@ -21,9 +21,9 @@ To ungroup: select the group, then Cmd+Shift+G (macOS) or Ctrl+Shift+G (Windows)
 
 ## Per-Group Source Images
 
-This is the feature that transforms groups from organisational folders into compositing powerhouses.
+This feature turns groups from organisational folders into compositing tools.
 
-Every group can have its own **source image** — the photograph or illustration that its fills read brightness (and Dynamic Color) from. To assign one:
+Every group can have its own **source image**: the photograph or illustration that its fills read brightness (and Dynamic Color) from. To assign one:
 
 1. Select a group in the Layers Panel (click its header, not a layer inside it).
 2. Drag a photo onto the group header. Or use the Properties Panel to browse for an image file.
@@ -57,7 +57,7 @@ The document now contains fills driven by different photographs, all composited 
 
 ## The Inheritance Chain
 
-Not every group needs its own source image. Groups without an assigned source image **inherit** from their parent — and if the parent doesn't have one either, inheritance continues upward until it reaches a group that does, or the document root.
+Not every group needs its own source image. Groups without an assigned source image **inherit** from their parent. If the parent has none either, inheritance continues upward until it reaches a group that does, or the document root.
 
 The inheritance chain:
 
@@ -91,9 +91,9 @@ Document (source: landscape.jpg)
     └── Linear fill (reads woodgrain.png)
 ```
 
-The Sky Group doesn't need its own source — it uses the document's landscape. The Foreground Group overrides with a portrait. The Detail Sub-Group inside it inherits the portrait without needing a second assignment. The Texture Group uses a completely different image for its wood-grain fills.
+The Sky Group needs no source of its own: it uses the document's landscape. The Foreground Group overrides with a portrait. The Detail Sub-Group inside it inherits the portrait without needing a second assignment. The Texture Group uses a completely different image for its wood-grain fills.
 
-Inheritance keeps things DRY. You only assign a source image where you need a change. Everything else flows automatically.
+Inheritance saves repetition. You only assign a source image where you need a change. Everything else flows automatically.
 
 ---
 
@@ -123,9 +123,9 @@ By default, a group's masks only affect layers *inside* that group. Fills outsid
 
 ### When to use overlay
 
-- **Subject isolation.** You have a background group with wide-interval fills and a foreground group with tight-interval fills masked to a portrait. Enable overlay on the foreground group, and the background fills vanish behind the portrait — no need to manually mask the background.
+- **Subject isolation.** You have a background group with wide-interval fills and a foreground group with tight-interval fills masked to a portrait. Enable overlay on the foreground group, and the background fills vanish behind the portrait, so you never mask the background by hand.
 - **Sticker effect.** An imported group with its own source image, overlaid so it punches through the layers beneath it, creating a sticker-on-canvas effect.
-- **Cutout compositions.** Multiple overlaid groups create a collage where each group's region is exclusive — fills never overlap between groups.
+- **Cutout compositions.** Multiple overlaid groups create a collage where each group's region is exclusive: fills never overlap between groups.
 
 ### How to enable
 

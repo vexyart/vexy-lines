@@ -1,6 +1,6 @@
 # The .lines File Format
 
-Open a `.lines` file in a text editor and you will find XML. Not especially pretty XML --- the source image alone is a wall of base64 characters that can run for megabytes --- but XML nonetheless. Every group, every layer, every fill, every parameter, every embedded image is encoded in a structured hierarchy that you can read, search, and (carefully) edit by hand.
+Open a `.lines` file in a text editor and you will find XML. Not especially pretty XML (the source image alone is a wall of base64 characters that can run for megabytes), but XML nonetheless. Every group, every layer, every fill, every parameter, every embedded image is encoded in a structured hierarchy that you can read, search, and (carefully) edit by hand.
 
 This article is a reference for the technically curious. You do not need any of this information to use Vexy Lines. But if you want to build tools that read or write `.lines` files, debug a corrupted document, or simply understand what the parser from [Reading .lines Files with Python](604-python-parser.md) is actually parsing, this is the map.
 
@@ -111,7 +111,7 @@ Each fill type has its own XML tag. The tag name determines the algorithm. All f
 | `TracedAreaTmpl` | Traced Area | Trace (area) |
 | `SourceStrokes` | Source | Source Strokes |
 
-The `FreeCurveStrokesTmpl` tag serves double duty: it covers both the Handmade fill (user-drawn strokes) and the Trace fill (edge-detected contours), distinguished by internal attributes.
+The `FreeCurveStrokesTmpl` tag covers two fills: the Handmade fill (user-drawn strokes) and the Trace fill (edge-detected contours), distinguished by internal attributes.
 
 ### Common Fill Attributes
 
@@ -131,7 +131,7 @@ Most fill elements share a common set of attributes:
 | `dynamicColor` | `0` or `1` | Whether strokes sample colour from the source image |
 | `dynamicColorSegmentLength` | Float | Length of each colour segment in dynamic mode |
 
-Additional attributes vary by fill type. The Halftone fill has `shape`, `dotSize`, and `dotGap`. The Spiral fill has `centerX` and `centerY`. Consult the fill's Properties Panel in the GUI for a complete list --- each property maps to an XML attribute with the same or a similar name.
+Additional attributes vary by fill type. The Halftone fill has `shape`, `dotSize`, and `dotGap`. The Spiral fill has `centerX` and `centerY`. Consult the fill's Properties Panel in the GUI for a complete list: each property maps to an XML attribute with the same or a similar name.
 
 ---
 
@@ -257,7 +257,7 @@ The mesh points define a deformation grid. Each point can be displaced from its 
 
 ## Clone References
 
-Layers can be clones of other layers. A clone layer does not store its own fill parameters --- it references another layer by ID and inherits everything from it. Changes to the source layer propagate to all clones.
+Layers can be clones of other layers. A clone layer does not store its own fill parameters: it references another layer by ID and inherits everything from it. Changes to the source layer propagate to all clones.
 
 ```xml
 <FreeMesh name="Clone of Engraving" visible="1" href="#layer-42" />
@@ -327,9 +327,9 @@ You can edit `.lines` files in a text editor. This is occasionally useful for:
 
 ## Further Reading
 
-- [Reading .lines Files with Python](604-python-parser.md) --- the parser that reads this format.
-- [Save, Backup, Recover](111-saving.md) --- file management and recovery.
-- [Glossary](612-glossary.md) --- definitions of terms used in this article.
+- [Reading .lines Files with Python](604-python-parser.md): the parser that reads this format.
+- [Save, Backup, Recover](111-saving.md): file management and recovery.
+- [Glossary](612-glossary.md): definitions of terms used in this article.
 
 ---
 

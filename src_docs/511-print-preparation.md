@@ -1,6 +1,6 @@
 # Preparing Files for Print
 
-Your artwork looks perfect on screen. Then the print arrives and the fine hatching in the shadows has turned into a dark smear, the delicate Trace outlines have vanished, and the background texture that looked subtle at 100% zoom is invisible on paper. The screen lied. Not because the software was wrong, but because screens and presses speak different languages, and translation requires deliberate preparation.
+Your artwork looks perfect on screen. Then the print arrives and the fine hatching in the shadows has turned into a dark smear, the delicate Trace outlines have vanished, and the background texture that looked subtle at 100% zoom is invisible on paper. The screen lied. Not because the software was wrong, but because screens and presses speak different languages, and translation takes deliberate preparation.
 
 This article covers every setting and decision between "I'm happy with this on screen" and "this printed exactly as intended."
 
@@ -24,7 +24,7 @@ Vexy Lines produces vector output (SVG, PDF, EPS) and raster output (PNG, JPEG).
 
 ## Resolution: What Applies and What Doesn't
 
-Vector output from Vexy Lines is resolution-independent. A PDF of your engraving contains mathematical curve definitions, not pixels. It prints at the resolution of the press — 2400 DPI on an offset press, 1200 DPI on a digital press — regardless of any resolution setting in Vexy Lines.
+Vector output from Vexy Lines is resolution-independent. A PDF of your engraving contains mathematical curve definitions, not pixels. It prints at the resolution of the press (2400 DPI on an offset press, 1200 DPI on a digital press) regardless of any resolution setting in Vexy Lines.
 
 **When does resolution matter?** Only when exporting raster formats (PNG, JPEG). For raster exports:
 
@@ -54,7 +54,7 @@ If you've been working at a different canvas size (e.g., a smaller size for fast
 
 ## Bleed and Trim
 
-If your artwork extends to the edge of the printed piece (no white border), you need **bleed** — extra artwork that extends beyond the trim line.
+If your artwork extends to the edge of the printed piece (no white border), you need **bleed**: extra artwork that extends beyond the trim line.
 
 ### What is bleed?
 
@@ -63,7 +63,7 @@ Printing presses don't cut with pixel-perfect precision. The cut can drift by 1�
 ### Adding bleed in Vexy Lines
 
 1. **Set your canvas size** to the final trim size plus bleed on all sides. For a 210 × 297 mm (A4) print with 3 mm bleed: set canvas to 216 × 303 mm.
-2. **Extend all fills** to cover the bleed area. Make sure no fill stops at the trim boundary — every fill that touches an edge must extend to the canvas edge (which is now 3 mm beyond the trim).
+2. **Extend all fills** to cover the bleed area. Make sure no fill stops at the trim boundary: every fill that touches an edge must extend to the canvas edge (which is now 3 mm beyond the trim).
 3. **Adjust masks** to cover the bleed area. If a fill is masked to the background, extend that mask 3 mm beyond where the trim will be.
 
 ### Trim marks
@@ -74,11 +74,11 @@ Some print shops want trim marks (small lines indicating where to cut) embedded 
 
 ## Colour: RGB to CMYK
 
-Vexy Lines works in RGB colour space. Most commercial printing uses CMYK (Cyan, Magenta, Yellow, Key/Black). The conversion matters because some RGB colours — particularly bright blues, greens, and oranges — don't have exact CMYK equivalents. They shift during conversion, sometimes noticeably.
+Vexy Lines works in RGB colour space. Most commercial printing uses CMYK (Cyan, Magenta, Yellow, Key/Black). The conversion matters because some RGB colours (particularly bright blues, greens, and oranges) don't have exact CMYK equivalents. They shift during conversion, sometimes noticeably.
 
 ### For single-colour (black) artwork
 
-No conversion needed. Export with strokes set to pure black (R:0, G:0, B:0). In CMYK, this maps to K:100 (pure black ink) — the cleanest possible print.
+No conversion needed. Export with strokes set to pure black (R:0, G:0, B:0). In CMYK, this maps to K:100 (pure black ink), the cleanest possible print.
 
 If you want a richer black (for large solid areas), some printers prefer "rich black" (C:40, M:30, Y:30, K:100). But for line art, pure K:100 is standard and avoids registration issues between colour plates.
 
@@ -86,7 +86,7 @@ If you want a richer black (for large solid areas), some printers prefer "rich b
 
 **Option 1: Let the print shop convert.** Export your RGB PDF and tell the printer "please convert to CMYK using [profile]." The most common profile for coated paper is US Web Coated (SWOP) v2 or ISO Coated v2 300%. For uncoated paper, use US Web Uncoated or ISO Uncoated.
 
-**Option 2: Convert before sending.** Open your exported PDF in Acrobat Pro, Illustrator, or Affinity Publisher and convert to the appropriate CMYK profile. Compare the before and after — if any colours shift unacceptably, adjust them in Vexy Lines and re-export.
+**Option 2: Convert before sending.** Open your exported PDF in Acrobat Pro, Illustrator, or Affinity Publisher and convert to the appropriate CMYK profile. Compare the before and after. If any colours shift unacceptably, adjust them in Vexy Lines and re-export.
 
 ### For spot colours (screen printing, Pantone)
 
@@ -105,7 +105,7 @@ The minimum printable stroke thickness depends on the printing method:
 | Digital press (laser) | 0.2 mm | Toner particles limit fine detail |
 | Digital press (inkjet) | 0.25 mm | Ink dot size limits resolution |
 | Large format (solvent/eco-solvent) | 0.5 mm | Lower resolution heads |
-| Screen printing | 0.3–0.5 mm | Mesh count dependent — see [Preparing for Screen Printing](504-screen-printing.md) |
+| Screen printing | 0.3–0.5 mm | Mesh count dependent; see [Preparing for Screen Printing](504-screen-printing.md) |
 
 **Check your Stroke Thickness Min** in the Properties Panel. If it's below the minimum for your print method, increase it. Strokes below the printable minimum will either vanish or bleed into their neighbours.
 
@@ -144,13 +144,13 @@ The most common print preparation mistake: evaluating artwork at the wrong zoom 
 
 **Always proof at 100% (actual pixels or actual size).** At 100% zoom, 1 mm on screen ≈ 1 mm on paper (assuming your screen is roughly calibrated). This shows you the physical stroke spacing and thickness at print scale.
 
-At 50% zoom, strokes look twice as close together and twice as thin as they'll actually print. You'll think the artwork needs more density and increase it — then the print comes out too dark.
+At 50% zoom, strokes look twice as close together and twice as thin as they'll actually print. You'll think the artwork needs more density and increase it. Then the print comes out too dark.
 
-At 200% zoom, strokes look twice as far apart and twice as thick. You'll think the artwork needs less density and decrease it — then the print comes out too light.
+At 200% zoom, strokes look twice as far apart and twice as thick. You'll think the artwork needs less density and decrease it. Then the print comes out too light.
 
 **Zoom to 100%. Evaluate. Then export.**
 
-If your canvas is larger than your screen at 100%, pan across it in sections. The whole composition matters, but detail quality matters more — and detail quality is only visible at 100%.
+If your canvas is larger than your screen at 100%, pan across it in sections. The whole composition matters, but detail quality matters more, and detail quality is only visible at 100%.
 
 ---
 

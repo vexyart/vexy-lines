@@ -1,14 +1,14 @@
 # Trace: Finding Edges
 
-Every other fill in Vexy Lines asks the same question: "How bright is this pixel?" Trace asks a different one: "Where does brightness change?" It ignores flat areas entirely and hunts for boundaries --- the edge of a jaw against a background, the line where shadow meets light, the border between one colour region and another. It converts those boundaries into clean vector paths. No fill patterns, no dot grids, no parallel lines. Just edges.
+Every other fill in Vexy Lines asks the same question: "How bright is this pixel?" Trace asks a different one: "Where does brightness change?" It ignores flat areas entirely and hunts for boundaries: the edge of a jaw against a background, the line where shadow meets light, the border between one colour region and another. It converts those boundaries into clean vector paths. No fill patterns, no dot grids, no parallel lines. Just edges.
 
-The result is closer to auto-tracing than to engraving. But unlike generic auto-tracers, Trace is designed to work *alongside* other Vexy Lines fills. Use it alone for silhouettes and logo vectorisation. Combine it with Linear or Halftone for outline-plus-shading compositions that rival hand-drawn illustration.
+The result is closer to auto-tracing than to engraving. But unlike generic auto-tracers, Trace is designed to work *alongside* other Vexy Lines fills. Use it alone for silhouettes and logo vectorisation. Combine it with Linear or Halftone for outline-plus-shading compositions.
 
 ---
 
 ## What It Looks Like
 
-Clean vector outlines following the contours of your source image. High-contrast edges produce thick, confident paths. Subtle transitions produce thin, tentative ones (or nothing at all, depending on your threshold setting). The output resembles a line drawing extracted from a photograph --- the kind of illustration you might find in a technical manual, an architectural rendering, or a comic book before the colourist gets involved.
+Clean vector outlines following the contours of your source image. High-contrast edges produce thick, confident paths. Subtle transitions produce thin, tentative ones (or nothing at all, depending on your threshold setting). The output resembles a line drawing extracted from a photograph: the kind of illustration you might find in a technical manual, an architectural rendering, or a comic book before the colourist gets involved.
 
 At low sensitivity, Trace captures only the strongest edges: the outline of a face, the border of a building. At high sensitivity, it captures everything: wrinkles, hair strands, fabric folds, background noise. The skill lies in finding the right balance for your subject.
 
@@ -20,7 +20,7 @@ At low sensitivity, Trace captures only the strongest edges: the outline of a fa
 - **Silhouettes and outlines:** Extract the outer boundary of a subject for cutting machines, screen printing, or overlay compositions.
 - **Contour map illustration:** Layer multiple Trace fills at different thresholds to create topographic-style contour lines.
 - **Comic book inking:** Trace provides the outlines; other fills provide the shading. The combination is classic.
-- **Cutting and plotting paths:** Trace output is inherently suitable for vinyl cutters, laser cutters, and pen plotters that follow paths rather than filling areas.
+- **Cutting and plotting paths:** Trace output suits vinyl cutters, laser cutters, and pen plotters that follow paths rather than filling areas.
 - **Edge-plus-fill compositions:** Trace for structure, [Linear](202-linear.md) or [Halftone](207-halftone.md) for tonal rendering. See [Combining Fills](214-combining-fills.md).
 
 ---
@@ -84,7 +84,7 @@ Export as SVG. The traced paths are clean vector outlines suitable for scaling t
 
 ### Pixel-Art Aesthetic
 
-Smoothing at 0. Every pixel staircase is preserved. The traced edges look like they came from an 8-bit video game: blocky, angular, unapologetically digital. Apply to a photograph and the result is a strange hybrid of photographic content and pixel-art rendering. Works well at low resolution --- resize your source image to 200x200 pixels before importing for maximum effect.
+Smoothing at 0. Every pixel staircase is preserved. The traced edges look like they came from an 8-bit video game: blocky, angular, unapologetically digital. Apply to a photograph and the result is a strange hybrid of photographic content and pixel-art rendering. Works well at low resolution: resize your source image to 200x200 pixels before importing for maximum effect.
 
 - **Smoothing:** 0
 - **Min Spot Size:** 3 px
@@ -118,7 +118,7 @@ The Trace fill draws the "ink lines." The Linear fill draws the "shading." Toget
 
 ### Silhouette Extraction
 
-Push the threshold to capture only the strongest contrast boundary --- the outline of the subject against the background:
+Push the threshold to capture only the strongest contrast boundary: the outline of the subject against the background:
 
 - **Image Threshold:** Narrow to detect only the darkest-to-lightest transitions.
 - **Min Spot Size:** 100+ px. Kill everything except the main subject outline.
@@ -136,7 +136,7 @@ The result: a clean silhouette path around your subject. Export as SVG for use a
 - **Image Threshold is your most powerful control.** More than any other fill, Trace's character changes dramatically with threshold adjustments. The same image can produce delicate detail tracing or bold silhouette outlines depending entirely on where you place the histogram handles.
 - **Smoothing and Min Spot Size trade off.** High smoothing with low min spot size produces many smooth paths (slow to render, potentially noisy). High smoothing with high min spot size produces few smooth paths (fast, clean). Find the combination that captures your subject without the noise.
 - **Trace works on any image, but high contrast works best.** Photographs with crisp edges (architecture, text, objects on white backgrounds) trace cleanly. Photographs with soft gradients (foggy landscapes, soft-lit portraits) produce ambiguous edges. Increase contrast in your image before importing if Trace is not finding the edges you want.
-- **Use Trace as a structural skeleton.** In complex compositions, Trace provides the visual framework --- the outlines that tell the viewer what they are looking at. Other fills provide texture, tone, and colour within that framework. This division of labour produces results that neither fill could achieve alone.
+- **Use Trace as a structural skeleton.** In complex compositions, Trace provides the visual framework: the outlines that tell the viewer what they are looking at. Other fills provide texture, tone, and colour within that framework. This division of labour produces results that neither fill could achieve alone.
 
 ---
 

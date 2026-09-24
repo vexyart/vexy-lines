@@ -12,13 +12,13 @@ Three clicks and a drag. That's all it takes to confine a fill to a perfect rect
 | Ellipse | **O** | Elliptical mask regions from circles to stretched ovals |
 | Freeform | **S** | Irregular polygons defined by clicked points |
 
-All three tools write to the same mask data as the Brush. You can draw a rectangle, refine its edge with the Brush, and cut a hole in it with the Freeform tool — they're interchangeable at the mask-pixel level. The only difference is the *drawing interface*.
+All three tools write to the same mask data as the Brush. You can draw a rectangle, refine its edge with the Brush, and cut a hole in it with the Freeform tool: they're interchangeable at the mask-pixel level. The only difference is the *drawing interface*.
 
 ---
 
 ## Rectangle Mask (I)
 
-Press **I** to activate. Click on the canvas where you want one corner, then drag to the opposite corner. Release the mouse. A white rectangle appears in the layer's mask — the fill now renders inside that rectangle and nowhere else.
+Press **I** to activate. Click on the canvas where you want one corner, then drag to the opposite corner. Release the mouse. A white rectangle appears in the layer's mask, and the fill now renders inside that rectangle and nowhere else.
 
 **Shift+drag** constrains the rectangle to a perfect square.
 
@@ -26,7 +26,7 @@ Press **I** to activate. Click on the canvas where you want one corner, then dra
 
 - **Confine a fill to a print region.** If your artwork needs a 5×7-inch boundary, draw a rectangle mask at those dimensions. The fill stops at the edge.
 - **Create panel layouts.** Multiple fills, each masked to a different rectangle, create a comic-panel or grid composition.
-- **Quick crop for testing.** While experimenting with fill parameters, draw a small rectangle mask so the fill only renders in that region. This speeds up refresh dramatically on large canvases.
+- **Quick crop for testing.** While experimenting with fill parameters, draw a small rectangle mask so the fill only renders in that region. This speeds up refresh considerably on large canvases.
 
 ---
 
@@ -52,15 +52,15 @@ The Freeform tool draws straight-edged polygons by default. For curves, place po
 
 ### Practical uses
 
-- **Masking irregular regions.** A face in a crowd photo, an architectural element, a silhouette with angles — anywhere that rectangles and ellipses don't fit.
+- **Masking irregular regions.** A face in a crowd photo, an architectural element, a silhouette with angles: anywhere that rectangles and ellipses don't fit.
 - **Multi-region masks.** Draw several freeform shapes on the same layer to create a mask with multiple isolated regions.
-- **Precise geometric shapes.** Triangles, hexagons, stars — anything you can define with straight edges and corner points.
+- **Precise geometric shapes.** Triangles, hexagons, stars: anything you can define with straight edges and corner points.
 
 ---
 
 ## Compound Masks: Union and Subtraction
 
-Shape tools become genuinely powerful when you combine them. This is where "compound masks" come in.
+Shape tools earn their keep when you combine them. This is where "compound masks" come in.
 
 ### Adding shapes (Union)
 
@@ -72,7 +72,7 @@ Hold **Shift** and draw a new shape. The new shape *adds to* the existing mask r
 
 Hold **Alt** and draw a new shape. The new shape *subtracts from* the existing mask, punching a hole.
 
-**Example:** Draw a large circle (the medallion border), then Alt+draw a smaller circle inside it. The result is a ring-shaped mask — the fill appears in the ring, not the center.
+**Example:** Draw a large circle (the medallion border), then Alt+draw a smaller circle inside it. The result is a ring-shaped mask: the fill appears in the ring, not the center.
 
 ### Combining union and subtraction
 
@@ -83,7 +83,7 @@ You can chain these operations:
 3. Shift+draw another circle on the opposite edge (adds the other rounded end).
 4. Alt+draw a small rectangle in the centre (punches a window).
 
-The result is a stadium shape with a rectangular cutout — and you built it without touching a vector editor.
+The result is a stadium shape with a rectangular cutout, and you built it without touching a vector editor.
 
 **Tip:** If you accidentally add or subtract the wrong shape, **Cmd+Z** undoes the last operation without losing the rest of the compound mask.
 
@@ -93,13 +93,13 @@ The result is a stadium shape with a rectangular cutout — and you built it wit
 
 This is the feature that saves the most time and gets the least attention.
 
-With any mask tool active — Rectangle, Ellipse, Freeform, or even the Brush — **click on a distinct shape in your source photo.** Vexy Lines analyzes the colour and brightness boundaries around that click point and attempts to generate a mask that isolates the shape.
+With any mask tool active (Rectangle, Ellipse, Freeform, or even the Brush), **click on a distinct shape in your source photo.** Vexy Lines analyzes the colour and brightness boundaries around that click point and attempts to generate a mask that isolates the shape.
 
 ### How it works
 
 1. Select a fill layer.
 2. Activate a mask tool (B, I, O, or S).
-3. Click inside a visually distinct area — a white shirt against a dark background, a bright sky above a treeline, a coloured object on a neutral surface.
+3. Click inside a visually distinct area: a white shirt against a dark background, a bright sky above a treeline, a coloured object on a neutral surface.
 4. Vexy Lines floods outward from your click point, stopping at colour or brightness boundaries.
 5. A mask appears that roughly isolates the shape.
 
@@ -110,7 +110,7 @@ The auto-detection algorithm uses a tolerance setting that controls how aggressi
 - **Low tolerance:** Stops at subtle colour changes. Produces tight, conservative masks. Good for high-contrast subjects with clear edges.
 - **High tolerance:** Ignores subtle colour changes and expands further. Produces broader masks. Good for subjects with gradual transitions.
 
-Adjust the tolerance slider in the toolbar when the auto-detection result is too tight (low tolerance — it missed parts of the shape) or too loose (high tolerance — it grabbed the background too).
+Adjust the tolerance slider in the toolbar when the auto-detection result is too tight (low tolerance: it missed parts of the shape) or too loose (high tolerance: it grabbed the background too).
 
 ### Compound auto-detection
 
@@ -147,12 +147,12 @@ Auto-detection is a starting point, not an ending point. Use it to get 80% of th
 | Geometric region (card, panel, frame) | Rectangle (I) or Ellipse (O) |
 | Irregular but angular region | Freeform (S) |
 | Distinct shape in photo | Auto-detection (click with any mask tool) |
-| Organic, curved boundary | Brush (B) — see [Painting Masks with the Brush](402-brush-mask.md) |
+| Organic, curved boundary | Brush (B): see [Painting Masks with the Brush](402-brush-mask.md) |
 | Soft, feathered edge | Brush (B) with low hardness |
 | Quick compound shape | Shape tools with Shift/Alt |
-| Precise node-level control | Freeform (S) → Editor (V) — see [Editing Mask Paths](404-refining-masks.md) |
+| Precise node-level control | Freeform (S) → Editor (V): see [Editing Mask Paths](404-refining-masks.md) |
 
-In practice, most masks use a combination. Auto-detect the subject, add missed regions with Shift+click, subtract over-included areas with Alt+click, then switch to the Brush for edge cleanup. The tools don't compete — they collaborate.
+In practice, most masks use a combination. Auto-detect the subject, add missed regions with Shift+click, subtract over-included areas with Alt+click, then switch to the Brush for edge cleanup. The tools don't compete; they work together.
 
 ---
 

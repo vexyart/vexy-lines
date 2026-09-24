@@ -1,12 +1,12 @@
 # Interval and Spacing: Density Control
 
-Interval is the simplest parameter in Vexy Lines and, pixel for pixel, the most powerful. It is the distance between repeating elements — the gap from one stroke to the next, from one dot row to the next, from one spiral ring to the next. Change it by one millimetre and the entire character of your fill transforms: from a sparse pencil sketch to a dense copperplate engraving, from a polite halftone grid to a crushing wall of dots.
+Interval is the simplest parameter in Vexy Lines and, pixel for pixel, the one with the largest effect. It is the distance between repeating elements: the gap from one stroke to the next, from one dot row to the next, from one spiral ring to the next. Change it by one millimetre and the entire character of your fill transforms: from a sparse pencil sketch to a dense copperplate engraving, from a polite halftone grid to a crushing wall of dots.
 
 ## What Interval Means
 
 For a Linear fill, interval is the perpendicular distance between adjacent parallel lines. For a Circular fill, it is the distance between concentric rings. For a Halftone fill, it is the distance between dot centers in the grid. For a Spiral fill, it is the gap between successive turns. The concept adapts to each algorithm, but the principle is constant: interval defines how much blank space separates the repeating elements.
 
-The value is specified in the document's current units — millimetres, pixels, inches, or points. You can change units in [Document and Canvas Settings](312-document-settings.md), and the interval display updates accordingly. A value of 2 in a millimetre document is 2 mm. Switch to inches and the same physical distance displays as approximately 0.079 in.
+The value is specified in the document's current units: millimetres, pixels, inches, or points. You can change units in [Document and Canvas Settings](312-document-settings.md), and the interval display updates accordingly. A value of 2 in a millimetre document is 2 mm. Switch to inches and the same physical distance displays as approximately 0.079 in.
 
 ## The Density Spectrum
 
@@ -31,7 +31,7 @@ At the darkest point of your image, the stroke width equals the gap between stro
 
 ### When Thickness Max Is Half the Interval
 
-At the darkest point, the stroke occupies half the available space. You always see individual lines, even in the deepest shadows. This is the sweet spot for most illustration work — dense enough to render tone convincingly, open enough to preserve the line quality.
+At the darkest point, the stroke occupies half the available space. You always see individual lines, even in the deepest shadows. This is the sweet spot for most illustration work: dense enough to render tone convincingly, open enough to preserve the line quality.
 
 ### When Thickness Max Is a Quarter of the Interval
 
@@ -75,7 +75,7 @@ Similar to Circular, but the single continuous path means interval is the gap be
 Interval controls the angular spacing between rays, converted to distance at a reference radius. More rays = denser = more coverage. Fewer rays = sparser = more starburst.
 
 ### Halftone
-Interval is the center-to-center distance of the dot grid. Tight interval means many small dots packed closely — a fine screen. Wide interval means fewer, larger dots — a coarse screen. The dot size itself is controlled by [Stroke Thickness](303-stroke-thickness.md), so interval and thickness together define the halftone's frequency and amplitude.
+Interval is the center-to-center distance of the dot grid. Tight interval means many small dots packed closely: a fine screen. Wide interval means fewer, larger dots: a coarse screen. The dot size itself is controlled by [Stroke Thickness](303-stroke-thickness.md), so interval and thickness together define the halftone's frequency and amplitude.
 
 ### Trace
 Interval controls the distance between contour levels. Tight interval produces many closely spaced contour lines, like a detailed topographic map. Wide interval produces fewer contours, like a simplified elevation diagram.
@@ -84,7 +84,7 @@ Interval controls the distance between contour levels. Tight interval produces m
 Interval influences the density of scribble clusters. Tight interval means the chaotic strokes are packed close together, producing dark, energetic regions. Wide interval spaces them out, producing a looser, more casual scribble.
 
 ### Fractal
-Interval controls the recursion density of the space-filling curve. Tight interval produces an intricate, tightly woven pattern. Wide interval produces a simpler curve with fewer turns.
+Interval controls the recursion density of the space-filling curve. Tight interval produces a dense, tightly woven pattern. Wide interval produces a simpler curve with fewer turns.
 
 ## Performance and File Size
 
@@ -97,7 +97,7 @@ Interval has a direct, roughly quadratic relationship with both rendering time a
 | 1.0 mm | ~16x | ~16x | ~16x |
 | 0.5 mm | ~64x | ~64x | ~64x |
 
-These numbers are approximate — the actual count depends on canvas size, threshold range, and fill type. But the exponential growth is real. Going from 2 mm to 0.5 mm interval on a large canvas can turn a 200 KB SVG into a 12 MB SVG and a 2-second render into a 2-minute render.
+These numbers are approximate; the actual count depends on canvas size, threshold range, and fill type. But the growth is real. Going from 2 mm to 0.5 mm interval on a large canvas can turn a 200 KB SVG into a 12 MB SVG and a 2-second render into a 2-minute render.
 
 **Practical advice:** Start wide (3–4 mm) when exploring compositions. Tighten the interval only after you have settled on your fill types, angles, and threshold ranges. Save the final tightening (below 1 mm) for the last step before export.
 
@@ -121,7 +121,7 @@ Prevention:
 
 ## Further Reading
 
-- [Stroke Thickness: Weight from Light](303-stroke-thickness.md) — the partner parameter that, together with interval, defines visual density.
-- [Image Threshold: Choosing What Matters](304-image-threshold.md) — controls which pixels produce strokes, complementing interval's control of how densely those strokes are spaced.
-- [Controlling When Vexy Recalculates](112-refresh-controls.md) — essential reading before experimenting with tight intervals.
-- [The Control Surface](301-part3-tldr.md) — the full parameter map.
+- [Stroke Thickness: Weight from Light](303-stroke-thickness.md): the partner parameter that, together with interval, defines visual density.
+- [Image Threshold: Choosing What Matters](304-image-threshold.md): controls which pixels produce strokes, complementing interval's control of how densely those strokes are spaced.
+- [Controlling When Vexy Recalculates](112-refresh-controls.md): read this before experimenting with tight intervals.
+- [The Control Surface](301-part3-tldr.md): the full parameter map.

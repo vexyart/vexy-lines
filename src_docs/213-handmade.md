@@ -1,6 +1,6 @@
 # Handmade: Your Strokes, Your Rules
 
-Every other fill in Vexy Lines is algorithmic. You set parameters. The software draws. Handmade inverts that relationship. You draw the strokes --- or import them, or paste them from another application --- and the software distributes them across your image, repeating and modulating your hand-drawn marks according to brightness. Your stroke. Your rules. The algorithm serves, not leads.
+Every other fill in Vexy Lines is algorithmic. You set parameters. The software draws. Handmade inverts that relationship. You draw the strokes, or import them, or paste them from another application, and the software distributes them across your image, repeating and modulating your hand-drawn marks according to brightness. Your stroke. Your rules. The algorithm serves, not leads.
 
 This is the fill for artists who think, "I like what Vexy Lines does, but I want my own line quality." Calligraphers who want their brush strokes distributed across a portrait. Illustrators who want a signature mark language repeated at scale. Designers who have a specific SVG pattern and want it to respond to image tone. Handmade is the blank canvas within the canvas.
 
@@ -31,9 +31,9 @@ Handmade offers three distribution modes, each treating your strokes differently
 
 ### Manual
 
-Your strokes stay exactly where you draw them. No duplication, no redistribution, no brightness response. What you place is what you get. Use Manual when you want precise control over every mark --- hand-placed strokes in specific locations, like a traditional illustrator working directly on the canvas.
+Your strokes stay exactly where you draw them. No duplication, no redistribution, no brightness response. What you place is what you get. Use Manual when you want precise control over every mark: hand-placed strokes in specific locations, like a traditional illustrator working directly on the canvas.
 
-This mode bypasses the brightness-to-density logic entirely. It is not really a "fill" in the usual Vexy Lines sense --- it is a drawing mode that happens to live inside the fill framework.
+This mode bypasses the brightness-to-density logic entirely. It is not really a "fill" in the usual Vexy Lines sense: it is a drawing mode that happens to live inside the fill framework.
 
 ### Blend
 
@@ -45,7 +45,7 @@ Blend requires at least two source strokes. More strokes create more blend stage
 
 Your source strokes are duplicated and distributed to maintain even density across the image. The algorithm adds or removes stroke instances to ensure consistent coverage, adjusting individual stroke weight according to brightness. Dark areas get thicker instances. Light areas get thinner ones. But the spacing remains uniform.
 
-Balanced is the most "automatic" mode. Draw one or a few strokes, switch to Balanced, and the software fills the image with brightness-modulated copies. This is the mode most similar to how other fills (Linear, Wave) work --- except the stroke shape is yours rather than algorithmic.
+Balanced is the most "automatic" mode. Draw one or a few strokes, switch to Balanced, and the software fills the image with brightness-modulated copies. This is the mode most similar to how other fills (Linear, Wave) work, except that the stroke shape is yours rather than algorithmic.
 
 ---
 
@@ -71,7 +71,7 @@ This walkthrough demonstrates the most common Handmade workflow: draw one stroke
 
 ### 1. Choose your image
 
-Select any photograph with decent tonal range. Portraits, landscapes, and textured surfaces all work. The image matters less than your stroke choice --- the Handmade fill's character comes from *you*, not from the algorithm.
+Select any photograph with decent tonal range. Portraits, landscapes, and textured surfaces all work. The image matters less than your stroke choice: the Handmade fill's character comes from *you*, not from the algorithm.
 
 ### 2. Add a Handmade fill
 
@@ -79,7 +79,7 @@ Click **+** in the Layers Panel. Select **Handmade**. The canvas awaits your inp
 
 ### 3. Draw your source stroke
 
-Select the **Pencil tool (P)**. Draw a single stroke on the canvas. For this walkthrough, draw a gentle wave --- a loose S-curve about 20--30 mm long. Do not try to be precise. The beauty of Handmade is that your hand's natural imperfections become the texture.
+Select the **Pencil tool (P)**. Draw a single stroke on the canvas. For this walkthrough, draw a gentle wave: a loose S-curve about 20--30 mm long. Do not try to be precise. The beauty of Handmade is that your hand's natural imperfections become the texture.
 
 A few strokes to consider:
 
@@ -104,7 +104,7 @@ In the Properties Panel, set **Mode** to **Balanced**. The single stroke you dre
 
 ### 7. Evaluate
 
-Zoom out. Your hand-drawn wave now tiles across the photograph, building tone through accumulated repetition. The marks are yours --- your line quality, your curvature, your energy --- but they respond to the image like any other fill.
+Zoom out. Your hand-drawn wave now tiles across the photograph, building tone through accumulated repetition. The marks are yours, your line quality, your curvature, your energy, but they respond to the image like any other fill.
 
 If the texture feels too uniform, increase Randomization. If it feels too chaotic, decrease it. If individual stroke instances are too small, increase Multiplier. If they overlap too much, increase Interval.
 
@@ -118,7 +118,7 @@ Not happy with your stroke? Draw another one. In Balanced mode, the fill regener
 
 ### Calligraphic Portrait
 
-Draw a single brush-like stroke --- thick at the start, tapering to a point. A stroke that a calligrapher would make with a loaded brush.
+Draw a single brush-like stroke: thick at the start, tapering to a point. A stroke that a calligrapher would make with a loaded brush.
 
 - **Mode:** Balanced.
 - **Interval:** 1.5 mm.
@@ -132,7 +132,7 @@ The portrait is built from hundreds of calligraphic marks, each one carrying you
 
 Instead of drawing on the canvas, import an SVG element:
 
-1. Create a decorative motif in Illustrator, Affinity Designer, or Inkscape --- a leaf, a star, a geometric tessellation unit.
+1. Create a decorative motif in Illustrator, Affinity Designer, or Inkscape: a leaf, a star, a geometric tessellation unit.
 2. Save as SVG.
 3. In Vexy Lines, with a Handmade fill selected, import the SVG as your source stroke.
 4. Switch to Balanced mode.
@@ -146,7 +146,7 @@ Draw two source strokes:
 - Stroke 1: A straight, precise horizontal line (geometric, controlled).
 - Stroke 2: A loose, wavy scribble (organic, chaotic).
 
-Set **Mode** to **Blend**. In dark areas, the distributed marks resemble the scribble. In light areas, they resemble the straight line. The transition zone --- mid-tones --- produces marks that are half-controlled, half-chaotic. The portrait (or landscape) transitions from order in the highlights to chaos in the shadows, a visual metaphor for control and its absence.
+Set **Mode** to **Blend**. In dark areas, the distributed marks resemble the scribble. In light areas, they resemble the straight line. The transition zone (mid-tones) produces marks that are half-controlled, half-chaotic. The portrait (or landscape) transitions from order in the highlights to chaos in the shadows, a visual metaphor for control and its absence.
 
 ### Paste from Illustrator
 
@@ -164,9 +164,9 @@ Draw three to five different strokes: a straight line, a wave, a zigzag, a spira
 ## Tips
 
 - **Balanced is the quickest path to results.** If you are experimenting, start with Balanced mode. Draw one stroke. Evaluate. Iterate. Manual mode is for precise work; Blend mode is for advanced brightness-driven morphing. Balanced is where most users spend most of their time.
-- **Your stroke quality is the fill's quality.** A clumsy stroke produces clumsy texture. A confident stroke produces confident texture. Take time with your source strokes --- they are the DNA of the entire fill. Five minutes of careful stroke experimentation pays off across the whole image.
+- **Your stroke quality is the fill's quality.** A clumsy stroke produces clumsy texture. A confident stroke produces confident texture. Take time with your source strokes: they are the DNA of the entire fill. Five minutes of careful stroke experimentation pays off across the whole image.
 - **Short strokes tile better than long strokes.** A 10 mm stroke distributes cleanly and fills the image evenly. A 100 mm stroke is harder to tile without awkward overlaps and gaps. If your results look patchy, shorten your source stroke.
-- **Blend mode needs distinct source strokes.** If your two source strokes are nearly identical, the blend produces nearly identical marks everywhere --- no visible morphing. Make the source strokes as different as practical: one thick, one thin; one angular, one curved; one long, one short. The more different the inputs, the more visible the brightness-driven transition.
+- **Blend mode needs distinct source strokes.** If your two source strokes are nearly identical, the blend produces nearly identical marks everywhere: no visible morphing. Make the source strokes as different as practical: one thick, one thin; one angular, one curved; one long, one short. The more different the inputs, the more visible the brightness-driven transition.
 - **Handmade + mask = localised texture.** Draw a specific stroke for a specific area. Hair gets a loose, flowing Handmade stroke. Skin gets [Linear](202-linear.md). Background gets [Halftone](207-halftone.md). Handmade is most powerful when used selectively, providing custom texture where algorithmic fills fall short.
 - **Experiment with unexpected imported SVGs.** A company logo. A letter of the alphabet. A leaf outline. A gear icon. The Balanced distribution algorithm treats any shape as a repeatable mark. The creative possibilities are limited only by what you can draw or import.
 

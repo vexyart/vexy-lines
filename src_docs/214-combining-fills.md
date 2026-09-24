@@ -1,14 +1,14 @@
 # Combining Fills: The Art of the Stack
 
-A single fill is a technique. Multiple fills are a composition. This is where Vexy Lines stops being a clever filter and becomes an instrument --- where you move from "I applied an effect" to "I built an illustration." Every professional Vexy Lines artwork you have admired uses more than one fill. The fills interact: they layer, they mask each other, they cut through each other, they divide the tonal range between them. Understanding how to combine fills is the difference between using the software and mastering it.
+A single fill is a technique. Multiple fills are a composition. This is where Vexy Lines stops being a clever filter and becomes an instrument: where you move from "I applied an effect" to "I built an illustration." Finished Vexy Lines artwork usually uses more than one fill. The fills interact: they layer, they mask each other, they cut through each other, they divide the tonal range between them. Understanding how to combine fills is the difference between using the software and mastering it.
 
 ---
 
 ## The Stacking Principle
 
-Fills in Vexy Lines stack vertically, like transparent sheets. The fill at the top of the Layers Panel draws on top of everything below it. Each fill is independent --- its own type, its own parameters, its own colour, its own brightness range. They do not blend like Photoshop layers (no opacity, no blend modes). They simply coexist on the same canvas, each contributing its strokes to the final composition.
+Fills in Vexy Lines stack vertically, like transparent sheets. The fill at the top of the Layers Panel draws on top of everything below it. Each fill is independent: its own type, its own parameters, its own colour, its own brightness range. They do not blend like Photoshop layers (no opacity, no blend modes). They simply coexist on the same canvas, each contributing its strokes to the final composition.
 
-This independence is the key to powerful combinations. Each fill can target a different aspect of the image. One handles shadows. Another handles midtones. A third handles highlights. One provides outlines. Another provides shading. A third provides texture. The division of labour creates results that no single fill could achieve.
+This independence is what makes combinations work. Each fill can target a different aspect of the image. One handles shadows. Another handles midtones. A third handles highlights. One provides outlines. Another provides shading. A third provides texture. The division of labour creates results that no single fill could achieve.
 
 ---
 
@@ -69,7 +69,7 @@ The Linear fill renders the photograph's tones as parallel strokes. The Trace fi
 | Fill 2 | Halftone | Midtone texture | Grid, circles, Interval 2 mm, threshold: midtones only |
 | Fill 3 | Trace | Outlines | Smoothing 50, bold weight |
 
-Shadows get dense parallel lines. Midtones get halftone dots. Highlights get nothing (white space). Outlines tie everything together. The result is a rich multi-technique illustration that looks hand-crafted.
+Shadows get dense parallel lines. Midtones get halftone dots. Highlights get nothing (white space). Outlines tie everything together. The result is a multi-technique illustration.
 
 ---
 
@@ -176,7 +176,7 @@ Add a [Trace](208-trace.md) fill.
 - **Colour:** Black.
 - **Image Threshold:** Full range.
 
-This fill provides the structural skeleton of the illustration. Every major edge --- face outline, eyes, nose, lips, hair boundary --- gets a clean vector outline.
+This fill provides the structural skeleton of the illustration. Every major edge (face outline, eyes, nose, lips, hair boundary) gets a clean vector outline.
 
 ### 3. Layer 2: Linear primary shading
 
@@ -215,7 +215,7 @@ Add a [Halftone](207-halftone.md) fill. Place it at the bottom of the stack.
 - **Image Threshold:** Narrow to the lightest 30%. Drag the shadow handle right so this fill only appears in highlights.
 - **Colour:** Light grey (60% black).
 
-The lightest areas of the portrait --- the forehead catch light, the tip of the nose, the whites of the eyes --- receive a scattering of small dots. This adds texture to areas that the Linear fills leave mostly empty, preventing the highlights from looking like blank paper.
+The lightest areas of the portrait (the forehead catch light, the tip of the nose, the whites of the eyes) receive a scattering of small dots. This adds texture to areas that the Linear fills leave mostly empty, preventing the highlights from looking like blank paper.
 
 ### 6. Evaluate the stack
 
@@ -233,7 +233,7 @@ Adjust each fill's threshold handles to control the tonal boundaries. If the cro
 
 ### 8. Optional: Dynamic Color
 
-Enable Dynamic Color on the Linear fills (both of them). Set segment length to 4 mm. The shading strokes now carry the source image's colours --- skin tones, hair colours, background hues --- while the Trace outlines remain solid black and the Halftone dots remain light grey. The result: a colour illustration with black outlines, reminiscent of a hand-coloured engraving.
+Enable Dynamic Color on the Linear fills (both of them). Set segment length to 4 mm. The shading strokes now carry the source image's colours (skin tones, hair colours, background hues) while the Trace outlines remain solid black and the Halftone dots remain light grey. The result: a colour illustration with black outlines, reminiscent of a hand-coloured engraving.
 
 ---
 
@@ -263,7 +263,7 @@ The concentric rings create a topographic map of the face, with denser rings in 
 - [Scribble](210-scribble.md): Interval 1 mm, Randomization 60%, full tonal range.
 - [Trace](208-trace.md): Smoothing 60, bold outlines, full range.
 
-The Scribble fill provides chaotic, energetic texture throughout the image. The Trace fill overlays clean outlines that define shapes. The combination reads as "an artist's energetic sketch with confident ink outlines" --- the kind of illustration you find in high-end editorial magazines.
+The Scribble fill provides chaotic, energetic texture throughout the image. The Trace fill overlays clean outlines that define shapes. The combination reads as "an artist's energetic sketch with confident ink outlines": the kind of illustration you find in editorial magazines.
 
 ### Maze Portrait: Fractal + Trace
 
@@ -286,7 +286,7 @@ The Image Threshold is your most powerful combination tool. Fills that target th
 
 ### 3. Vary the visual language
 
-A crosshatch (two Linear fills at different angles) is a valid combination, but the visual language is uniform --- parallel lines in both cases. Mixing fill types (Trace + Linear + Halftone) creates richer visual texture because each fill contributes a different mark language.
+A crosshatch (two Linear fills at different angles) is a valid combination, but the visual language is uniform: parallel lines in both cases. Mixing fill types (Trace + Linear + Halftone) creates richer visual texture because each fill contributes a different mark language.
 
 ### 4. Use Shift to prevent muddy overlap
 
@@ -313,11 +313,11 @@ Outline fills need bold weight and low density. Shading fills need moderate weig
 
 ## Tips
 
-- **Start with two fills.** The jump from one fill to two teaches you everything about combination. The jump from two to three refines it. Do not start with four fills --- you will not know which one to adjust when something looks wrong.
+- **Start with two fills.** The jump from one fill to two teaches you everything about combination. The jump from two to three refines it. Do not start with four fills: you will not know which one to adjust when something looks wrong.
 - **Trace belongs on top.** In almost every multi-fill composition, the Trace outlines should be the topmost layer. Outlines drawn under shading fills get partially obscured and lose their defining clarity.
 - **Crosshatch angles matter.** A 60° difference between Linear fills produces classic diamond crosshatch. A 90° difference produces square grid crosshatch. A 30° difference produces tight, compressed diamonds. The angle *difference* matters more than the absolute angles.
 - **Overlap Control is advanced.** Master basic stacking and threshold separation before attempting overlap weaving. The dash/gap/orientation parameters add complexity quickly.
-- **Fewer fills, better tuned, beat more fills, poorly tuned.** Three fills with carefully adjusted thresholds, intervals, and weights will always look better than six fills thrown together. Quality over quantity.
+- **Fewer fills, better tuned, beat more fills, poorly tuned.** Three fills with carefully adjusted thresholds, intervals, and weights look better than six fills thrown together. Quality over quantity.
 - **Save your best combinations as .lines templates.** Once you develop a combination you like, save the document (without the source image) as a template. Apply different source images to the same fill stack for consistent results across a series.
 
 ---

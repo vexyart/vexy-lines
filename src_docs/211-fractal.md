@@ -1,6 +1,6 @@
 # Fractal: Space-Filling Curves
 
-In 1890, the Italian mathematician Giuseppe Peano discovered a curve that passes through every point in a square. A single continuous line, never crossing itself, filling an entire two-dimensional area. The mathematical community was stunned. Over a century later, Vexy Lines uses that same principle to turn your photographs into maze-like vector art where a single winding path fills space with mathematical precision, thickening in the dark areas and thinning in the light.
+In 1890, the Italian mathematician Giuseppe Peano discovered a curve that passes through every point in a square. A single continuous line, never crossing itself, filling an entire two-dimensional area. Over a century later, Vexy Lines uses that same principle to turn your photographs into maze-like vector art where a single winding path fills space with mathematical precision, thickening in the dark areas and thinning in the light.
 
 Fractal fill draws Peano-style space-filling curves modulated by your source image's brightness. The result looks like a labyrinth, a circuit board, a fingerprint magnified a thousand times, or a maze designed by someone who does not believe in dead ends.
 
@@ -8,7 +8,7 @@ Fractal fill draws Peano-style space-filling curves modulated by your source ima
 
 ## What It Looks Like
 
-A continuous curve snakes back and forth in a recursive pattern, filling the canvas without crossing itself. At low iteration depth, the path makes broad, simple turns --- a chunky maze with wide corridors. At high iteration depth, the path folds in on itself repeatedly, creating an intricate pattern that approaches solid fill in dark areas while remaining loose and open in light areas.
+A continuous curve snakes back and forth in a recursive pattern, filling the canvas without crossing itself. At low iteration depth, the path makes broad, simple turns: a chunky maze with wide corridors. At high iteration depth, the path folds in on itself repeatedly, creating a tightly folded pattern that approaches solid fill in dark areas while remaining loose and open in light areas.
 
 The stroke weight varies with image brightness throughout the path: thick through shadows, thin through highlights. From a distance, the tonal variations reconstruct the source photograph. Up close, the recursive geometric pattern is visible and mesmerising.
 
@@ -20,7 +20,7 @@ The stroke weight varies with image brightness throughout the path: thick throug
 - **Mathematical and scientific illustration:** The Peano curve carries intellectual weight. Use it for subjects where mathematical precision is thematically appropriate.
 - **Circuit board and technology aesthetics:** The right-angle turns and space-filling pattern echo PCB traces and chip layouts.
 - **Fingerprint and biometric imagery:** At high iteration, the dense winding pattern resembles magnified skin ridges.
-- **Novelty and conversation pieces:** "It is a photograph rendered as a single space-filling curve" is a guaranteed conversation starter.
+- **Novelty and conversation pieces:** "It is a photograph rendered as a single space-filling curve" is a reliable conversation starter.
 - **Pen-plotter and CNC work:** Like [Spiral](205-spiral.md), the continuous path is mechanically efficient for plotters and engravers that prefer not to lift the tool.
 
 ---
@@ -47,11 +47,11 @@ This walkthrough transforms a high-contrast photograph into a maze-like composit
 
 ### 1. Choose your image
 
-Select a photograph with strong, simple tonal contrast. A face with dramatic lighting, a silhouette, or a graphic design with clear black-and-white regions. The Fractal fill is most visually striking when there are large areas of distinct brightness --- the maze structure is clearly visible in light areas and becomes dense texture in dark areas.
+Select a photograph with strong, simple tonal contrast. A face with dramatic lighting, a silhouette, or a graphic design with clear black-and-white regions. The Fractal fill is most visually striking when there are large areas of distinct brightness: the maze structure is clearly visible in light areas and becomes dense texture in dark areas.
 
 ### 2. Add a Fractal fill
 
-Click **+** in the Layers Panel. Select **Fractal**. (Note: in the fill selector, this may appear as "Fractals" or "Peano" --- both refer to the same space-filling curve algorithm.) A winding path appears across the canvas.
+Click **+** in the Layers Panel. Select **Fractal**. (Note: in the fill selector, this may appear as "Fractals" or "Peano"; both refer to the same space-filling curve algorithm.) A winding path appears across the canvas.
 
 ### 3. Set the density
 
@@ -69,7 +69,7 @@ Click **+** in the Layers Panel. Select **Fractal**. (Note: in the fill selector
 
 ### 6. Adjust the threshold
 
-For a maze effect, consider narrowing the Image Threshold to compress the tonal range. Push the shadow handle to 30% and the highlight handle to 80%. This creates a more binary dark/light distinction in the curve's weight --- the maze has "walls" (thick sections) and "paths" (thin sections) rather than a continuous gradient.
+For a maze effect, consider narrowing the Image Threshold to compress the tonal range. Push the shadow handle to 30% and the highlight handle to 80%. This creates a more binary dark/light distinction in the curve's weight: the maze has "walls" (thick sections) and "paths" (thin sections) rather than a continuous gradient.
 
 ### 7. Evaluate
 
@@ -109,7 +109,7 @@ The curve packs so tightly that its recursive structure becomes almost invisible
 
 ### Organic Fractal
 
-Smoothing at 70--90. Randomization at 15%. The sharp mathematical character dissolves into something more biological --- the winding curves of intestinal villi, the branching of blood vessels, the meander of a river delta. The Peano origin is still there, but disguised as nature.
+Smoothing at 70--90. Randomization at 15%. The sharp mathematical character dissolves into something more biological: the winding curves of intestinal villi, the branching of blood vessels, the meander of a river delta. The Peano origin is still there, but disguised as nature.
 
 - **Smoothing:** 80.
 - **Randomization:** 15%.
@@ -137,11 +137,11 @@ Each Peano curve fills its tonal band independently. The three colour layers ove
 ## Tips
 
 - **Fractal is computationally heavy at high density.** The recursive path calculation is more intensive than Linear or Circular. Turn off Auto Refresh before adjusting parameters. Render once when ready.
-- **The curve never crosses itself.** This is a mathematical guarantee of the Peano construction. Every apparent crossing is an illusion of proximity. This property is useful for pen plotters and CNC machines --- the tool path never needs to negotiate an intersection.
+- **The curve never crosses itself.** This is a mathematical guarantee of the Peano construction. Every apparent crossing is an illusion of proximity. This property is useful for pen plotters and CNC machines: the tool path never needs to negotiate an intersection.
 - **Smoothing is the personality switch.** At 0, Fractal is mathematical, angular, and mechanical. At 100, it is organic, flowing, and biological. The same fill, the same algorithm, two completely different visual registers. Try both extremes before settling on a value.
 - **Fractal + Trace is surprisingly effective.** Use Trace for the outlines of major shapes, and Fractal for the shading within them. The clean edges from Trace contain the maze-like texture from Fractal, producing an illustration that is structured but textured.
 - **Print large.** The recursive detail of the Peano curve rewards close inspection. At poster size or larger, viewers can lean in and trace the path with their eyes. At postcard size, the detail compresses into texture and the maze structure is lost. Design for the viewing distance that serves the content.
-- **Fractal is the fill for people who like puzzles.** The visual promise of a maze --- the suggestion that there is a path to follow, a solution to find --- creates engagement that purely aesthetic fills do not. Use it when you want the viewer to spend time with the piece.
+- **Fractal is the fill for people who like puzzles.** The visual promise of a maze, the suggestion that there is a path to follow, a solution to find, creates engagement that purely aesthetic fills do not. Use it when you want the viewer to spend time with the piece.
 
 ---
 

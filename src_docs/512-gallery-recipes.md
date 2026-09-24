@@ -8,7 +8,7 @@ If you want to understand *why* these values work, the earlier articles in Part 
 
 ## 1. Copper-Plate Portrait
 
-A face rendered in the style of banknote engraving — formal, precise, and hypnotically detailed.
+A face rendered in the style of banknote engraving: formal, precise, and densely detailed.
 
 **Source:** High-contrast portrait, directional lighting, clean background.
 
@@ -27,7 +27,7 @@ A face rendered in the style of banknote engraving — formal, precise, and hypn
 
 ## 2. Fingerprint Spiral
 
-A portrait where a single continuous spiral line creates a fingerprint-like image. Mesmerising at any scale.
+A portrait where a single continuous spiral line creates a fingerprint-like image. It holds up at any scale.
 
 **Source:** High-contrast face, centred, tight crop.
 
@@ -38,7 +38,7 @@ A portrait where a single continuous spiral line creates a fingerprint-like imag
 
 **Masks:** Layer 1 full canvas. Layer 2 full canvas.
 **Key move:** Set the Spiral centre precisely on the nose bridge. The spiral radiates outward, thickening in the shadows and thinning in the highlights, creating a fingerprint-portrait hybrid.
-**Export:** SVG. Looks stunning as a large-format print.
+**Export:** SVG. Suits large-format print.
 
 ---
 
@@ -46,7 +46,7 @@ A portrait where a single continuous spiral line creates a fingerprint-like imag
 
 Roy Lichtenstein meets a laser printer. Bold dots, sampled colours, thick outlines.
 
-**Source:** Simple composition with bold shapes — face in profile, single object, graphic scene.
+**Source:** Simple composition with bold shapes: face in profile, single object, graphic scene.
 
 | Layer | Fill | Interval | Special | Threshold |
 |-------|------|----------|---------|-----------|
@@ -74,13 +74,13 @@ Rolling hills rendered as contour lines, like a topographic survey map transform
 
 **Masks:** Both layers full canvas.
 **Key move:** The Trace fill detects tonal boundaries in the terrain, producing contour lines. The Circular fill adds subtle concentric rings that radiate from below the horizon, suggesting depth. Smoothing at 90 makes the contour lines flow like a real survey.
-**Export:** SVG. Beautiful as a line-art print.
+**Export:** SVG. Suits a line-art print.
 
 ---
 
 ## 5. Wood-Grain
 
-Organic parallel curves that mimic natural wood grain — use for backgrounds, textures, or standalone abstract art.
+Organic parallel curves that mimic natural wood grain. Use them for backgrounds, textures, or standalone abstract art.
 
 **Source:** Any photo with smooth tonal gradients. A close-up of actual wood works, but even a portrait creates interesting "wood" patterns.
 
@@ -90,14 +90,14 @@ Organic parallel curves that mimic natural wood grain — use for backgrounds, t
 | 2 | Wave | 3.0 mm | Wave Height 10 mm, Wave Length 50 mm, Angle 5°, Randomization 35% | Midtones 40–180 |
 
 **Masks:** Both layers full canvas.
-**Key move:** Two Wave layers at slightly different angles and frequencies create interference patterns that look remarkably like wood grain. The randomization adds the irregularity that makes wood look natural.
+**Key move:** Two Wave layers at slightly different angles and frequencies create interference patterns that read as wood grain. The randomization adds the irregularity that makes wood look natural.
 **Export:** SVG. Works as a texture layer in other compositions.
 
 ---
 
 ## 6. Newspaper Photo
 
-Vintage newsprint halftone — the look of a 1960s broadsheet photograph reproduced on cheap stock.
+Vintage newsprint halftone: the look of a 1960s broadsheet photograph reproduced on cheap stock.
 
 **Source:** Any photograph. Portraits and news scenes work best for the nostalgic effect.
 
@@ -106,16 +106,16 @@ Vintage newsprint halftone — the look of a 1960s broadsheet photograph reprodu
 | 1 | Halftone | 2.0 mm | Circle, Grid, Angle 45°, Thickness max 1.8 mm | Full range |
 
 **Masks:** Full canvas.
-**Key move:** Single Halftone layer. The magic is in the angle (45° is the classic newsprint screen angle) and the interval (2.0 mm gives visible dots that read as "printed" not "digital"). One layer. One fill. Done.
+**Key move:** Single Halftone layer. The effect comes from the angle (45° is the classic newsprint screen angle) and the interval (2.0 mm gives visible dots that read as "printed" not "digital"). One layer. One fill. Done.
 **Export:** PNG. The raster output at screen resolution is part of the aesthetic.
 
 ---
 
 ## 7. Calligraphic
 
-Graceful, flowing strokes that suggest brush calligraphy — thick on the downstrokes, thin on the upstrokes.
+Flowing strokes that suggest brush calligraphy: thick on the downstrokes, thin on the upstrokes.
 
-**Source:** Subject with strong vertical forms — a standing figure, a tree, a building.
+**Source:** Subject with strong vertical forms: a standing figure, a tree, a building.
 
 | Layer | Fill | Interval | Angle | Special | Threshold |
 |-------|------|----------|-------|---------|-----------|
@@ -149,7 +149,7 @@ Hard-edged geometric zones, each with a different fill, creating a Mondrian-meet
 
 ## 9. Photo-Mosaic Text
 
-A portrait made entirely of words. Character density follows image tone — dense text in shadows, sparse in highlights.
+A portrait made entirely of words. Character density follows image tone: dense text in shadows, sparse in highlights.
 
 **Source:** High-contrast portrait, tight crop.
 
@@ -166,7 +166,7 @@ A portrait made entirely of words. Character density follows image tone — dens
 
 ## 10. Neon Wireframe
 
-A retro-futuristic 3D mesh effect — vaporwave aesthetics, sci-fi terrain, synthwave album covers.
+A retro-futuristic 3D mesh effect: vaporwave aesthetics, sci-fi terrain, synthwave album covers.
 
 **Source:** A landscape, a face, or any image with smooth tonal gradients.
 
@@ -203,7 +203,7 @@ For five contour levels:
 | 1d | 150–200 | Light tan | 0.1 mm |
 | 1e | 200–255 | Cream | 0.1 mm |
 
-**Export:** SVG or PDF. Beautiful as a minimalist print.
+**Export:** SVG or PDF. Suits a minimalist print.
 
 ---
 
@@ -222,7 +222,7 @@ Two fill families that weave over and under each other like fabric, creating a t
 
 **Setup:** Enable "Can Cut Other Fills" on Layers 1 and 2. Enable "Can Be Cut By Other Fills" on Layers 3 and 4. The horizontal and vertical families weave through each other.
 **Key move:** The Dash/Gap settings (4 mm each) create the over-under rhythm. The shifted clones in each family add a second strand for a denser weave.
-**Export:** SVG. Works beautifully printed on textured paper.
+**Export:** SVG. Works well printed on textured paper.
 **Full guide:** [Cloning for Coordinated Systems](410-cloning-strategies.md)
 
 ---
@@ -233,7 +233,7 @@ Two fill families that weave over and under each other like fabric, creating a t
 2. **Open a source photo.** The recipe suggests a source type, but experiment freely.
 3. **Build the layer stack** exactly as specified. Use the parameter values in the table.
 4. **Evaluate the result.** It will look good. It might not look perfect for *your* photo.
-5. **Adjust.** Tighten or widen intervals, shift thresholds, change angles. The recipe got you to 80% — the last 20% is tuning to your specific image.
+5. **Adjust.** Tighten or widen intervals, shift thresholds, change angles. The recipe got you to 80%. The last 20% is tuning to your specific image.
 6. **Save as a style template** if you like the result. See [Building a Style Library](510-style-libraries.md).
 
 Every recipe here started as an experiment. The best ones will start as a recipe and end as something you've made entirely your own.

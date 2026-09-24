@@ -151,6 +151,6 @@ See [Combining Fills](214-combining-fills.md) for detailed layering strategies.
 
 Read the fills in order if you want the full tour. Or jump to whichever fill caught your eye in the table above. Each article follows the same structure: what it looks like, when to reach for it, a parameter reference, a step-by-step walkthrough, creative variations, and practical tips.
 
-Start with [Linear](202-linear.md) --- it is the simplest fill and the foundation everything else builds on.
+Start with [Linear](202-linear.md): it is the simplest fill and the foundation everything else builds on.
 
 *Next: [Linear: The Engraver's Line](202-linear.md)*

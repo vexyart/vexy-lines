@@ -1,6 +1,6 @@
 # Tattoo Design
 
-Skin is not paper. It stretches, it bleeds ink sideways over time, it wraps around muscles and bones that change shape when the body moves. A design that looks perfect on screen might become an illegible smudge on a forearm after five years. Vexy Lines is an excellent tattoo design tool precisely because it produces clean vector strokes with controllable spacing — but you need to design for the medium, not just the screen.
+Skin is not paper. It stretches, it bleeds ink sideways over time, it wraps around muscles and bones that change shape when the body moves. A design that looks perfect on screen might become an illegible smudge on a forearm after five years. Vexy Lines suits tattoo design because it produces clean vector strokes with controllable spacing, but you need to design for the medium, not just the screen.
 
 ---
 
@@ -34,7 +34,7 @@ A design that looks great at A4 print size might be destined for a 7 cm wrist. P
 | **Stroke Thickness Max** | 0.8–1.5 mm | Thin strokes fade; thick strokes survive |
 | **Stroke Thickness Min** | 0.3 mm | Below 0.3 mm, tattoo needles can't reliably reproduce |
 | **Smoothing** | 70–90 | Smooth curves translate better to skin than jagged paths |
-| **Randomization** | 0–10% | Controlled precision — the tattoo artist adds organic variation naturally |
+| **Randomization** | 0–10% | Controlled precision: the tattoo artist adds organic variation naturally |
 | **Min Spot Size (Trace)** | 5–8 px | Prevents tiny contour fragments that can't be tattooed |
 
 ---
@@ -50,11 +50,11 @@ Bold outlines, limited shading, flat colour areas.
 | 1 | Linear | Interval 2.5 mm, Angle 45°, Thickness mode Thick, max 1.0 mm | Mask to shaded areas only |
 | 2 | Trace | Thickness 1.2 mm, Smoothing 80, Spot Size 8 px | Full design area |
 
-The Trace outlines do the heavy lifting. The Linear shading adds tone to specific regions (under a rose petal, behind a banner, inside a shadow). Keep the shading minimal — traditional tattoos are defined by line, not tone.
+The Trace outlines do the heavy lifting. The Linear shading adds tone to specific regions (under a rose petal, behind a banner, inside a shadow). Keep the shading minimal: traditional tattoos are defined by line, not tone.
 
 ### Fine-Line
 
-Delicate single-line work with minimal shading. Currently trendy, but prone to fading — design with wider spacing than the style's screen-based examples suggest.
+Delicate single-line work with minimal shading. Currently trendy, but prone to fading. Design with wider spacing than the style's screen-based examples suggest.
 
 | Layer | Fill | Parameters | Mask |
 |-------|------|-----------|------|
@@ -79,7 +79,7 @@ Set the Halftone interval so the smallest dots (in highlight areas) are at least
 
 ### Blackwork / Heavy Shading
 
-Maximum ink coverage with deep shadows. The inverse of fine-line — bold, dramatic, high-contrast.
+Maximum ink coverage with deep shadows. The inverse of fine-line: bold, dramatic, high-contrast.
 
 | Layer | Fill | Parameters | Mask |
 |-------|------|-----------|------|
@@ -87,7 +87,7 @@ Maximum ink coverage with deep shadows. The inverse of fine-line — bold, drama
 | 2 | Linear | Interval 1.5 mm, Angle 75°, Thickness mode Thick, max 1.5 mm, Threshold 0–80 | Deep shadow crosshatch |
 | 3 | Trace | Thickness 1.5 mm, Smoothing 70 | Full design |
 
-The tight interval (1.5 mm) is acceptable here because blackwork is meant to be dense. The heavy strokes fill the skin with ink. In the deepest shadows, the crosshatch layers produce near-solid black — exactly what blackwork demands.
+The tight interval (1.5 mm) is acceptable here because blackwork is meant to be dense. The heavy strokes fill the skin with ink. In the deepest shadows, the crosshatch layers produce near-solid black, which is exactly what blackwork demands.
 
 ---
 
@@ -141,9 +141,9 @@ The Vexy Lines output is a *design template*, not a direct tattoo stencil. The t
 
 Provide the artist with:
 
-- **SVG file** (preferred) — scalable, editable.
-- **PDF at final size** — printable 1:1 for review.
-- **A separate version without outlines** — some artists prefer to draw their own outlines by hand.
+- **SVG file** (preferred): scalable, editable.
+- **PDF at final size**: printable 1:1 for review.
+- **A separate version without outlines**: some artists prefer to draw their own outlines by hand.
 
 Don't over-detail the design. Leave room for the artist's interpretation. A Vexy Lines export with too many micro-details will frustrate the artist and produce a worse tattoo than a cleaner, slightly simpler design.
 

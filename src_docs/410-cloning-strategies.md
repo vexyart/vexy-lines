@@ -1,8 +1,8 @@
 # Cloning for Coordinated Systems
 
-Duplicate a layer and you get two independent fills that happen to share the same parameters — for now. Change one and the other doesn't notice. Clone a layer and you get a family: a parent and children who share structural DNA while expressing individual differences. Change the parent's angle and every child's angle follows. Change a child's colour and only that child changes.
+Duplicate a layer and you get two independent fills that happen to share the same parameters, for now. Change one and the other doesn't notice. Clone a layer and you get a family: a parent and children who share structural DNA while expressing individual differences. Change the parent's angle and every child's angle follows. Change a child's colour and only that child changes.
 
-Clones are how you build coordinated multi-fill systems — crosshatch engines, colour-separated plates, and parameter-locked grids — without managing a spreadsheet of values across a dozen independent layers.
+Clones are how you build coordinated multi-fill systems: crosshatch engines, colour-separated plates, and parameter-locked grids, without managing a spreadsheet of values across a dozen independent layers.
 
 ---
 
@@ -15,7 +15,7 @@ Clones are how you build coordinated multi-fill systems — crosshatch engines, 
 | Changing parent's Angle | No effect on duplicate | Child's Angle updates to match |
 | Changing child's Colour | Independent | Independent (Colour is overrideable) |
 | Changing parent's Interval | No effect on duplicate | Child's Interval updates to match |
-| Performance | Each duplicate recalculates independently | Clones share the parent's calculation where properties match — faster |
+| Performance | Each duplicate recalculates independently | Clones share the parent's calculation where properties match, which is faster |
 
 Use **duplicate** when you want two fills that diverge completely. Use **clone** when you want fills that stay coordinated on some properties while differing on others.
 
@@ -38,19 +38,19 @@ This is the core of the clone system. Some properties flow from parent to child 
 
 | Property | Inherited from Parent | Overrideable per Clone |
 |----------|----------------------|----------------------|
-| **Fill type** | Yes | No — clones must be the same fill type as the parent |
+| **Fill type** | Yes | No: clones must be the same fill type as the parent |
 | **Angle** | Yes | No |
 | **Interval** | Yes | No |
 | **Smoothing** | Yes | No |
 | **Image Threshold** | Yes | No |
-| **Colour** | No — independent by default | Yes |
-| **Stroke Thickness** | No — independent by default | Yes |
-| **Opacity** | No — independent by default | Yes |
-| **Mask** | No — each clone has its own mask | Yes |
-| **Shift** | No — independent by default | Yes |
-| **Dash / Gap** | No — independent by default | Yes |
+| **Colour** | No: independent by default | Yes |
+| **Stroke Thickness** | No: independent by default | Yes |
+| **Opacity** | No: independent by default | Yes |
+| **Mask** | No: each clone has its own mask | Yes |
+| **Shift** | No: independent by default | Yes |
+| **Dash / Gap** | No: independent by default | Yes |
 
-The logic: **structural** properties (what the fill draws, where, and how often) are inherited. **Visual** properties (what it looks like — colour, weight, opacity) are independent. This lets you build a family of fills that share the same geometric structure but express different visual treatments.
+The logic: **structural** properties (what the fill draws, where, and how often) are inherited. **Visual** properties (colour, weight, opacity) are independent. This lets you build a family of fills that share the same geometric structure but express different visual treatments.
 
 Change the parent's Angle from 15° to 30° and all clones rotate together. Change Clone 2's colour from black to red and only Clone 2 turns red. The structural unity remains; the visual diversity expands.
 
@@ -69,7 +69,7 @@ Parent: Linear, Angle 15°, Interval 1.5 mm, Colour Black
 └── Clone 3: Colour Green, Shift X +0.4 mm, Shift Y +0.4 mm
 ```
 
-All four fills share the same angle (15°) and interval (1.5 mm). They differ in colour and shift — each is offset slightly so the strokes don't overlap exactly. The result is four interleaved colour layers at the same angle, creating a rich multi-colour line system.
+All four fills share the same angle (15°) and interval (1.5 mm). They differ in colour and shift: each is offset slightly so the strokes don't overlap exactly. The result is four interleaved colour layers at the same angle, creating a rich multi-colour line system.
 
 Change the parent's angle to 45° and all four rotate together. The colour assignments and shifts remain unchanged.
 
@@ -93,13 +93,13 @@ Clones are the natural tool for colour separation workflows. In screen printing,
 4. **Mask each layer to its colour region:**
    - Parent (black): mask to the outline and shadow areas.
    - Clone 1 (cyan): mask to the sky, water, cool-toned areas.
-   - Clone 2 (magenta): mask to the warm-toned areas — skin, clothing, accents.
+   - Clone 2 (magenta): mask to the warm-toned areas: skin, clothing, accents.
 
 5. **Adjust thresholds per clone** (overrideable) so each plate emphasises different tonal ranges.
 
 6. **Export each layer separately** for individual colour plates. See [Preparing for Screen Printing](504-screen-printing.md).
 
-Because the clones share the parent's angle and interval, the three plates are structurally registered — the lines align across colours. When printed in sequence, the layers build into a unified multi-colour image with no moiré or misalignment.
+Because the clones share the parent's angle and interval, the three plates are structurally registered: the lines align across colours. When printed in sequence, the layers build into a unified multi-colour image with no moiré or misalignment.
 
 ### Avoiding Moiré
 
@@ -112,13 +112,13 @@ To use different angles, you can't use clones (since angle is inherited). Instea
 - Magenta: 75°
 - Yellow: 0°
 
-But if you want the simpler aligned-registration approach — where all colour plates share the same angle and interval — clones are the efficient choice.
+But if you want the simpler aligned-registration approach, where all colour plates share the same angle and interval, clones are the efficient choice.
 
 ---
 
 ## Clone Performance Benefits
 
-Clones aren't just a convenience feature — they're a performance feature. Because clones share the parent's structural properties, Vexy Lines can optimise their calculation:
+Clones also save computation. Because clones share the parent's structural properties, Vexy Lines can optimise their calculation:
 
 - The parent's stroke geometry is calculated once.
 - Each clone reuses that geometry, only recalculating the visual properties (colour, thickness, opacity).
@@ -130,7 +130,7 @@ For complex documents with many layers, switching from duplicates to clones (whe
 
 ## Overlap Control with Clones
 
-Clones and Overlap Control combine to create **weave effects** — fills that appear to pass over and under each other like woven fabric.
+Clones and Overlap Control combine to create **weave effects**: fills that appear to pass over and under each other like woven fabric.
 
 ### Basic Weave Setup
 
@@ -163,7 +163,7 @@ The horizontal and vertical fill families weave through each other, creating a f
 Clones are the wrong tool when:
 
 - **You need different angles.** Angle is inherited and can't be overridden per clone. If each fill needs its own angle (e.g., CMYK separation at traditional screen angles), use duplicates.
-- **You need different fill types.** A clone must be the same fill type as its parent. If you want a Linear and a Halftone to coordinate, they can't be clones — use independent layers and manage the shared parameters manually.
+- **You need different fill types.** A clone must be the same fill type as its parent. If you want a Linear and a Halftone to coordinate, they can't be clones: use independent layers and manage the shared parameters manually.
 - **You need total independence.** If two fills share nothing except a starting configuration, duplicates are simpler and carry no baggage.
 
 ---
@@ -174,9 +174,9 @@ Clones are the wrong tool when:
 
 **Name your clones.** "Clone 1" and "Clone 2" are unhelpful. "Cyan Plate" and "Magenta Plate" tell you exactly what each clone represents.
 
-**Use Shift to separate clones visually.** Clones with identical parameters (except colour) produce strokes that land exactly on top of each other — only the topmost clone's colour shows. Offset each clone with a small Shift value so all clones are visible.
+**Use Shift to separate clones visually.** Clones with identical parameters (except colour) produce strokes that land exactly on top of each other, so only the topmost clone's colour shows. Offset each clone with a small Shift value so all clones are visible.
 
-**Break the link when you must.** If a clone outgrows its parent relationship — you need a different angle, a different interval, a different threshold — right-click the clone and choose "Detach Clone." It becomes an independent layer with its current parameters, and changes to the parent no longer propagate.
+**Break the link when you must.** If a clone outgrows its parent relationship (you need a different angle, interval, or threshold), right-click the clone and choose "Detach Clone." It becomes an independent layer with its current parameters, and changes to the parent no longer propagate.
 
 ---
 

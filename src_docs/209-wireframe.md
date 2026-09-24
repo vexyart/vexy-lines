@@ -2,7 +2,7 @@
 
 Take your photograph. Drape a grid over it. Now push the grid upward where the image is dark and let it sink where the image is light. The flat lattice becomes a three-dimensional terrain, and your photograph has become a topographic surface rendered in vector lines. That is Wireframe.
 
-It looks like something from the early days of computer graphics --- the luminous green grids of Tron, the terrain visualisations of 1980s scientific computing, the elevation maps that predated satellite imagery. Applied to photographs, Wireframe transforms faces into landscapes, landscapes into data surfaces, and everything into something that feels simultaneously retro and futuristic.
+It looks like something from the early days of computer graphics: the luminous green grids of Tron, the terrain visualisations of 1980s scientific computing, the elevation maps that predated satellite imagery. Applied to photographs, Wireframe transforms faces into landscapes, landscapes into data surfaces, and everything into something that feels simultaneously retro and futuristic.
 
 ---
 
@@ -10,7 +10,7 @@ It looks like something from the early days of computer graphics --- the luminou
 
 A rectangular grid of intersecting horizontal and vertical lines deforms in three dimensions. At each grid intersection, the image brightness displaces the grid point upward (or downward). Dark pixels push the grid high. Light pixels leave it flat. The result: a wireframe surface that rises and falls with the tonal contours of your source image.
 
-From one angle it looks like a 3D elevation model viewed in perspective. From another it looks like a sheet of graph paper draped over invisible terrain. The density of the grid determines how much detail survives --- a dense grid preserves subtle facial features; a sparse grid reduces everything to broad topographic slopes.
+From one angle it looks like a 3D elevation model viewed in perspective. From another it looks like a sheet of graph paper draped over invisible terrain. The density of the grid determines how much detail survives: a dense grid preserves subtle facial features; a sparse grid reduces everything to broad topographic slopes.
 
 ---
 
@@ -21,7 +21,7 @@ From one angle it looks like a 3D elevation model viewed in perspective. From an
 - **Vaporwave and synthwave art:** Wireframe grid receding to a horizon, neon colours, sunset gradients. The defining visual of the genre.
 - **Terrain and elevation map art:** Applied to actual landscape photographs, the wireframe echoes real topography.
 - **Architectural visualisation:** Buildings become geometric surfaces. The grid emphasises the planar structure of architecture.
-- **Music and album art:** The dimensional grid reads as "electronic" and "digital" --- natural territory for electronic music visuals.
+- **Music and album art:** The dimensional grid reads as "electronic" and "digital": natural territory for electronic music visuals.
 
 ---
 
@@ -47,7 +47,7 @@ This walkthrough transforms a portrait into a 3D wireframe surface where the fac
 
 ### 1. Choose your image
 
-Select a portrait with strong lighting. Side-lit faces work best --- the gradient from illuminated cheek to shadowed cheek creates dramatic 3D displacement. The nose, brow ridge, and chin should have distinct shadow patterns. Avoid flat, evenly-lit subjects.
+Select a portrait with strong lighting. Side-lit faces work best: the gradient from illuminated cheek to shadowed cheek creates dramatic 3D displacement. The nose, brow ridge, and chin should have distinct shadow patterns. Avoid flat, evenly-lit subjects.
 
 ### 2. Add a Wireframe fill
 
@@ -107,7 +107,7 @@ Maximum detail, scientific feel.
 - **Colour:** Single muted colour (grey, dark blue, or brown).
 - **Dynamic Color:** Off.
 
-The result resembles the output of a 3D scanner or a LIDAR elevation map. Apply to a landscape photograph for doubled resonance --- the wireframe terrain echoes the actual terrain.
+The result resembles the output of a 3D scanner or a LIDAR elevation map. Apply to a landscape photograph for doubled resonance: the wireframe terrain echoes the actual terrain.
 
 ### Vaporwave Horizon
 
@@ -147,11 +147,11 @@ The subject rises as a 3D wireframe surface from a field of flat parallel lines.
 ## Tips
 
 - **Interval determines the trade-off between detail and legibility.** A grid too dense looks like noise. A grid too sparse loses the subject. Start at 2--3 mm and adjust based on your image's complexity. Faces need denser grids than landscapes.
-- **Dispersion is the "height" control.** Think of it as the altitude range of your terrain. Low dispersion = gentle hills. High dispersion = jagged mountains. Match it to the tonal contrast of your image --- high-contrast images can handle high dispersion; low-contrast images look better with restrained displacement.
-- **Smoothing determines geology.** Low smoothing produces angular, faceted surfaces --- like a crystal or a low-polygon 3D model. High smoothing produces rolling, organic surfaces --- like sand dunes or skin. The choice depends on whether you want "digital" or "natural."
+- **Dispersion is the "height" control.** Think of it as the altitude range of your terrain. Low dispersion = gentle hills. High dispersion = jagged mountains. Match it to the tonal contrast of your image: high-contrast images can handle high dispersion; low-contrast images look better with restrained displacement.
+- **Smoothing determines geology.** Low smoothing produces angular, faceted surfaces, like a crystal or a low-polygon 3D model. High smoothing produces rolling, organic surfaces, like sand dunes or skin. The choice depends on whether you want "digital" or "natural."
 - **Wireframe is the most computationally expensive fill.** The grid deformation calculations are heavier than simple stroke generation. Turn off Auto Refresh while adjusting parameters. Use Refresh Fill when ready to evaluate.
 - **Black backgrounds are Wireframe's best friend.** The grid lines stand out dramatically against black, creating the classic computer-graphics aesthetic. If your canvas background is white, consider inverting the composition: bright grid lines on a dark fill.
-- **Wireframe is the only fill that creates the illusion of depth.** All other fills are inherently flat (even if they vary stroke weight). Wireframe's displacement grid genuinely suggests a three-dimensional surface. This makes it uniquely powerful --- and uniquely easy to overuse. One Wireframe fill per composition is usually enough.
+- **Wireframe is the only fill that creates the illusion of depth.** All other fills are inherently flat (even if they vary stroke weight). Wireframe's displacement grid genuinely suggests a three-dimensional surface. This makes it uniquely powerful, and uniquely easy to overuse. One Wireframe fill per composition is usually enough.
 
 ---
 

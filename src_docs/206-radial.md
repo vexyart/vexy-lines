@@ -1,6 +1,6 @@
 # Radial: Exploding Rays
 
-Picture a flashlight beam caught on film: rays shooting outward from a single brilliant point, fanning across everything they touch. Radial fill draws exactly that --- lines radiating from a center point like spokes on a wheel, like sunbeams through clouds, like the propaganda poster you have seen a hundred times and still find compelling. Each ray's thickness responds to the brightness beneath it, thickening through dark regions and thinning through light ones.
+Picture a flashlight beam caught on film: rays shooting outward from a single brilliant point, fanning across everything they touch. Radial fill draws exactly that: lines radiating from a center point like spokes on a wheel, like sunbeams through clouds, like the propaganda poster you have seen a hundred times and still look at. Each ray's thickness responds to the brightness beneath it, thickening through dark regions and thinning through light ones.
 
 Where [Circular](204-circular.md) draws rings and [Spiral](205-spiral.md) draws coils, Radial draws rays. Same center point concept, completely different geometry, completely different emotional register. Circular is meditative. Spiral is hypnotic. Radial is explosive.
 
@@ -10,18 +10,18 @@ Where [Circular](204-circular.md) draws rings and [Spiral](205-spiral.md) draws 
 
 Straight lines extend outward from a single origin, evenly distributed around 360 degrees. Near the center, the rays converge and the density is extreme. As they fan outward, the gaps between rays widen. Each ray's stroke weight fluctuates as it crosses lighter and darker areas of the source image.
 
-At the default density, the effect resembles a woodcut sunburst: bold radiating lines that carry tonal information in their weight variations. At high density, the rays pack tight enough to reproduce the photograph with near-photographic fidelity near the center, fading to loose strokes at the edges. At low density, each ray is a distinct bold slash from center to periphery.
+At the default density, the effect resembles a woodcut sunburst: bold radiating lines that carry tonal information in their weight variations. At high density, the rays pack tight enough to reproduce the photograph closely near the center, fading to loose strokes at the edges. At low density, each ray is a distinct bold slash from center to periphery.
 
 ---
 
 ## When to Use Radial
 
 - **Sunburst and starburst imagery:** The literal visual metaphor. Light source at center, rays expanding outward.
-- **Propaganda and political poster aesthetics:** The Soviet sunburst, the Japanese rising sun, the campaign rally flyer. Radial is inherently dramatic, assertive, and commanding.
+- **Propaganda and political poster aesthetics:** The Soviet sunburst, the Japanese rising sun, the campaign rally flyer. Radial is dramatic and assertive.
 - **Portrait with dramatic lighting:** Place the center at the light source position (a lamp, a window, the sun behind the subject) and the rays emanate from the actual source of illumination.
 - **Spiderweb compositions:** Layer Radial with [Circular](204-circular.md) at the same center point for a web-like pattern. See [Combining Fills](214-combining-fills.md).
-- **Religious and spiritual iconography:** Halos, auras, divine light. Radial is the fill type of revelation.
-- **Eye and iris close-ups:** The natural radial structure of the iris aligns perfectly with radial rays.
+- **Religious and spiritual iconography:** Halos, auras, divine light.
+- **Eye and iris close-ups:** The natural radial structure of the iris aligns with radial rays.
 
 ---
 
@@ -49,15 +49,15 @@ This walkthrough creates a dramatic portrait where radial rays emanate from the 
 
 ### 1. Choose your image
 
-Select a portrait with dramatic side lighting --- strong light from one direction, deep shadows on the opposite side. Studio portraits with a single key light work perfectly. The light source should be implied (off-camera) or visible (a lamp, a window).
+Select a portrait with dramatic side lighting: strong light from one direction, deep shadows on the opposite side. Studio portraits with a single key light work well. The light source should be implied (off-camera) or visible (a lamp, a window).
 
 ### 2. Add a Radial fill
 
-Click **+** in the Layers Panel. Select **Radial**. Rays appear from the canvas center.
+Click **+** in the Layers Panel. Select **Radial**. Vexy Lines draws rays from the canvas center.
 
 ### 3. Place the center at the light source
 
-Determine where the light is coming from. If it is a window on the left side, place the center just off the left edge of the canvas --- or at the brightest point on the subject's face (the cheekbone catching the light). Click the **Center** target, then click that position.
+Determine where the light is coming from. If it is a window on the left side, place the center just off the left edge of the canvas, or at the brightest point on the subject's face (the cheekbone catching the light). Click the **Center** target, then click that position.
 
 The rays now radiate from the implied light source, reinforcing the photograph's natural illumination.
 
@@ -80,11 +80,11 @@ Open the Image Threshold. For dramatic portraits, consider pulling the highlight
 
 ### 7. Evaluate
 
-Zoom out. The rays should emanate from the light source direction, thickening through the shadowed side of the face and thinning on the illuminated side. The composition should feel like the light itself has been made tangible --- frozen beams radiating from their origin.
+Zoom out. The rays should emanate from the light source direction, thickening through the shadowed side of the face and thinning on the illuminated side. The composition should read as light made tangible: frozen beams radiating from their origin.
 
 ### 8. Optional: Add background contrast
 
-If the background is distracting, add a second fill --- a [Linear](202-linear.md) fill at a contrasting angle with a wide interval (5 mm) and its threshold narrowed to just the background tones. Mask it to exclude the face. The background gets a different texture, separating the subject from the environment.
+If the background is distracting, add a second fill: a [Linear](202-linear.md) fill at a contrasting angle with a wide interval (5 mm) and its threshold narrowed to just the background tones. Mask it to exclude the face. The background gets a different texture, separating the subject from the environment.
 
 ---
 
@@ -113,7 +113,7 @@ Radial as background texture, not as the primary fill.
 - Use a very wide threshold (full range) with a muted colour (pale yellow, light gold).
 - Layer a different fill type (Linear, Trace, or Halftone) on top for the subject matter.
 
-The Radial rays become a subtle background pattern --- the classic "rising sun" behind a foreground illustration. Mask the Radial fill to exclude the subject area for clean separation.
+The Radial rays become a subtle background pattern, the classic "rising sun" behind a foreground illustration. Mask the Radial fill to exclude the subject area for clean separation.
 
 ### Spiderweb: Radial + Circular
 
@@ -122,7 +122,7 @@ Layer a Radial fill and a [Circular](204-circular.md) fill using the same center
 - Radial: default density, colour dark grey.
 - Circular: Interval 3 mm, colour black.
 
-The crossing of radial spokes and concentric rings creates a web-like lattice. Both fills respond to the source image's brightness, so the web is dense in dark areas and sparse in light areas. The visual metaphor is irresistible for photographs of insects, abandoned spaces, or anything tangled.
+The crossing of radial spokes and concentric rings creates a web-like lattice. Both fills respond to the source image's brightness, so the web is dense in dark areas and sparse in light areas. The metaphor suits photographs of insects, abandoned spaces, or anything tangled.
 
 ### Iris Close-Up
 
@@ -135,7 +135,7 @@ Apply Radial to a macro photograph of an eye, centered directly on the pupil. Th
 
 ### Explosive Burst
 
-Maximum energy. Randomization at 40%. Random Distance at 30. Multiplier at 2.5. Apply to a high-contrast action photograph. The rays scatter and vary wildly, creating an explosion of line emanating from the center. More expression than representation --- the image is there, encoded in the ray weights, but the dominant impression is kinetic energy.
+Maximum energy. Randomization at 40%. Random Distance at 30. Multiplier at 2.5. Apply to a high-contrast action photograph. The rays scatter and vary wildly, creating an explosion of line emanating from the center. More expression than representation: the image is there, encoded in the ray weights, but the dominant impression is kinetic energy.
 
 ---
 

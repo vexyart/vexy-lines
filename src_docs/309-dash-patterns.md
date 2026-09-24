@@ -1,6 +1,6 @@
 # Dashes, Gaps, and Overlap Cuts
 
-A continuous stroke is the default in Vexy Lines — an unbroken path from one side of the fill region to the other. But continuity is not always what you want. Dashed lines simulate stitching. Dotted lines suggest boundaries without asserting them. And when two fills interact through the Overlap Control system, dashes become the mechanism for cutting, weaving, and interleaving — turning flat layers into the illusion of interlocked fabric. This article covers dash patterns on their own and as the cutting tool within overlap interactions.
+A continuous stroke is the default in Vexy Lines: an unbroken path from one side of the fill region to the other. But continuity is not always what you want. Dashed lines simulate stitching. Dotted lines suggest boundaries without asserting them. And when two fills interact through the Overlap Control system, dashes become the mechanism for cutting, weaving, and interleaving, turning flat layers into the illusion of interlocked fabric. This article covers dash patterns on their own and as the cutting tool within overlap interactions.
 
 ## Basic Dash Patterns
 
@@ -33,15 +33,15 @@ Dashes interact with [Stroke Thickness](303-stroke-thickness.md) in a visually i
 
 ### Dashes and Dynamic Colour
 
-When [Dynamic Colour](302-colour.md) is enabled, each dash segment samples colour from the source image at its position. Short dashes with short segment lengths produce a confetti of coloured marks. Long dashes with long segment lengths produce coloured strokes that happen to have gaps in them. The gap itself carries no colour — it is empty space — so the colour of the underlying background or lower fill shows through.
+When [Dynamic Colour](302-colour.md) is enabled, each dash segment samples colour from the source image at its position. Short dashes with short segment lengths produce a confetti of coloured marks. Long dashes with long segment lengths produce coloured strokes that happen to have gaps in them. The gap itself carries no colour (it is empty space), so the colour of the underlying background or lower fill shows through.
 
 ## Overlap Control: Where Dashes Become Architecture
 
-Dash patterns take on a completely different role when combined with the Overlap Control system. In the Overlap section of the Properties Panel, three checkboxes determine how fills interact:
+Dash patterns take on a different role when combined with the Overlap Control system. In the Overlap section of the Properties Panel, three checkboxes determine how fills interact:
 
-- **Can cut other fills** — this fill's strokes interrupt the strokes of fills beneath it.
-- **Can be cut by other fills** — other fills' strokes can interrupt this fill's strokes.
-- Both enabled — mutual cutting, the basis for weaving.
+- **Can cut other fills**: this fill's strokes interrupt the strokes of fills beneath it.
+- **Can be cut by other fills**: other fills' strokes can interrupt this fill's strokes.
+- Both enabled: mutual cutting, the basis for weaving.
 
 When cutting is active, the dash and gap values define where the cuts happen. The cutting fill's dash pattern determines which segments of the victim fill are removed and which survive.
 
@@ -54,7 +54,7 @@ Imagine two fills stacked:
 
 If Fill B has "Can cut other fills" enabled and Fill A has "Can be cut by other fills" enabled:
 
-1. Fill B's dashes are generated normally — 4 mm visible segments separated by 4 mm gaps.
+1. Fill B's dashes are generated normally: 4 mm visible segments separated by 4 mm gaps.
 2. Where Fill B's visible dash segments cross Fill A's strokes, Fill A's strokes are interrupted. The portions of Fill A that lie beneath Fill B's dashes are removed.
 3. Where Fill B's gaps fall, Fill A's strokes remain intact.
 
@@ -71,11 +71,11 @@ The **Cut Orientation** dropdown controls the direction in which cuts are applie
 | **Both** | Cuts are applied in both directions. Every crossing point creates a cut. |
 | **Auto** | Vexy Lines chooses the orientation based on the angle difference between the fills. This is the default and works well for most cross-hatching scenarios. |
 
-For simple two-fill interactions, Auto is usually correct. Switch to a specific orientation when the automatic choice produces unwanted cuts — for example, when two fills are at similar angles and Auto cannot determine a clean cut direction.
+For simple two-fill interactions, Auto is usually correct. Switch to a specific orientation when the automatic choice produces unwanted cuts, for example when two fills are at similar angles and Auto cannot determine a clean cut direction.
 
 ## Weaving: The Full Effect
 
-Weaving is the crown jewel of the overlap system. It creates the illusion that two fills physically interleave — one passing over, then under, then over the other — like threads in a fabric.
+Weaving is the most striking use of the overlap system. It creates the illusion that two fills physically interleave, one passing over, then under, then over the other, like threads in a fabric.
 
 ### How to Create a Weave
 
@@ -83,11 +83,11 @@ Weaving is the crown jewel of the overlap system. It creates the illusion that t
 
 2. **Fill B:** Linear, Angle 90°, Interval 2 mm. Dash length 4 mm, Gap length 4 mm. Enable "Can cut other fills" and "Can be cut by other fills." **Offset the dash pattern** using Shift so Fill B's dashes begin at a different point than Fill A's.
 
-3. The critical detail is the offset. If both fills start their dash patterns at the same position, the cuts align and you get a simple grid with holes. If Fill B's dashes are offset by half a period (shift by 4 mm — one dash length), the over-under pattern alternates at each intersection:
+3. The critical detail is the offset. If both fills start their dash patterns at the same position, the cuts align and you get a simple grid with holes. If Fill B's dashes are offset by half a period (shift by 4 mm, one dash length), the over-under pattern alternates at each intersection:
 
-   - At intersection 1: Fill A's dash is present, Fill B's gap falls here → Fill A is visible (appears "on top").
-   - At intersection 2: Fill A's gap falls here, Fill B's dash is present → Fill B is visible (appears "on top").
-   - At intersection 3: Fill A's dash is present again, Fill B's gap → Fill A on top.
+   - At intersection 1: Fill A's dash is present, Fill B's gap falls here, so Fill A is visible (appears "on top").
+   - At intersection 2: Fill A's gap falls here, Fill B's dash is present, so Fill B is visible (appears "on top").
+   - At intersection 3: Fill A's dash is present again, Fill B's gap falls here, so Fill A is on top.
 
    The alternation creates the illusion of weaving.
 
@@ -128,7 +128,7 @@ For die-cut or laser-perforation work, a dashed fill defines the perforation pat
 
 ### Laser Engraving Texture
 
-Dashed fills sent to a laser engraver produce a textured surface — short burns separated by untouched material. Varying the dash and gap lengths across different fills creates multiple texture zones on the same piece. Tight dashes (1 mm) in shadow areas and loose dashes (4 mm) in highlight areas add a tactile dimension that mirrors the visual tone.
+Dashed fills sent to a laser engraver produce a textured surface: short burns separated by untouched material. Varying the dash and gap lengths across different fills creates multiple texture zones on the same piece. Tight dashes (1 mm) in shadow areas and loose dashes (4 mm) in highlight areas add a tactile dimension that mirrors the visual tone.
 
 ## Step-by-Step: Creating a Basic Weave
 
@@ -137,14 +137,14 @@ Dashed fills sent to a laser engraver produce a textured surface — short burns
 3. Enable both "Can cut other fills" and "Can be cut by other fills."
 4. Clone the fill (see [Clones and Overlap Control](311-clones-overlap.md)). The clone inherits all parameters.
 5. Change the clone's Angle to 90°.
-6. Change the clone's Colour to a contrasting value — dark blue against the original's dark red, for example.
+6. Change the clone's Colour to a contrasting value, for example dark blue against the original's dark red, for example.
 7. Shift the clone's dash offset: set Shift X or Shift Y to 5 mm (one dash length). This creates the alternating over-under alignment.
-8. Refresh. The two fills should now weave visually — each appearing to pass over and under the other at alternating intersections.
+8. Refresh. The two fills should now weave visually, each appearing to pass over and under the other at alternating intersections.
 9. Fine-tune by adjusting Dash and Gap lengths. Shorter values produce a tighter weave. Longer values produce a looser, more open fabric.
 
 ## Further Reading
 
-- [Clones and Overlap Control](311-clones-overlap.md) — the full overlap system, including the three checkboxes and clone creation.
-- [Interval and Spacing: Density Control](305-interval-spacing.md) — interval determines thread spacing in woven effects.
-- [Angle and Rotation](306-angle-rotation.md) — the angle difference between two fills determines the weave geometry.
-- [The Control Surface](301-part3-tldr.md) — the full parameter map.
+- [Clones and Overlap Control](311-clones-overlap.md): the full overlap system, including the three checkboxes and clone creation.
+- [Interval and Spacing: Density Control](305-interval-spacing.md): interval determines thread spacing in woven effects.
+- [Angle and Rotation](306-angle-rotation.md): the angle difference between two fills determines the weave geometry.
+- [The Control Surface](301-part3-tldr.md): the full parameter map.

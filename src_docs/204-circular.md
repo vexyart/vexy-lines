@@ -1,6 +1,6 @@
 # Circular: Concentric Rings
 
-Drop a stone into still water. Watch the ripples expand outward in perfect circles, each ring carrying the energy of the impact. Circular fill does the same thing to your photograph: it reads pixel brightness and draws concentric rings radiating from a center point, with stroke thickness responding to the tones beneath. Dark regions produce thick, heavy rings. Light regions produce thin, delicate ones. The result looks like a topographic map, a cross-section of a tree trunk, or a vinyl record --- depending entirely on where you place the center and how tight you set the spacing.
+Drop a stone into still water. Watch the ripples expand outward in perfect circles, each ring carrying the energy of the impact. Circular fill does the same thing to your photograph: it reads pixel brightness and draws concentric rings radiating from a center point, with stroke thickness responding to the tones beneath. Dark regions produce thick, heavy rings. Light regions produce thin, delicate ones. The result looks like a topographic map, a cross-section of a tree trunk, or a vinyl record, depending on where you place the center and how tight you set the spacing.
 
 ---
 
@@ -8,18 +8,18 @@ Drop a stone into still water. Watch the ripples expand outward in perfect circl
 
 Imagine your photograph printed on the surface of a pond, then watching ripples expand across it from a single point. Each ring traces a full circle (or partial arc, if the center is near an edge), and the weight of each ring fluctuates as it passes through lighter and darker areas of the image. From a distance, the concentric pattern reconstructs the photograph's tonal range. Up close, each ring is an independent vector path with smoothly varying thickness.
 
-The visual effect is inherently focal. The viewer's eye is pulled toward the center point, then guided outward along the expanding rings. This makes Circular uniquely powerful for portraits, where the center sits on an eye, or for compositions where you want to emphasise a single point of interest.
+The visual effect is inherently focal. The viewer's eye is pulled toward the center point, then guided outward along the expanding rings. This makes Circular a strong choice for portraits, where the center sits on an eye, or for compositions where you want to emphasise a single point of interest.
 
 ---
 
 ## When to Use Circular
 
-- **Portraits with eye contact:** Place the center on an eye. The rings radiate outward from the pupil, creating an almost hypnotic focal pull.
-- **Ripple and water effects:** The concentric pattern inherently suggests water. Apply to water photography for doubled resonance.
+- **Portraits with eye contact:** Place the center on an eye. The rings radiate outward from the pupil and pull the viewer toward it.
+- **Ripple and water effects:** The concentric pattern inherently suggests water. Apply it to water photography and the pattern echoes the subject.
 - **Tree ring and wood grain aesthetics:** Off-center placement with tight interval mimics the natural growth rings in timber.
 - **Topographic map illustration:** Moderate interval, muted colours, applied to terrain photographs or elevation data.
 - **Vinyl record and retro music art:** Tight interval, center on a round subject, monochrome palette.
-- **Target and bullseye compositions:** The rings naturally suggest a target. Lean into it or subvert it.
+- **Target and bullseye compositions:** The rings suggest a target. Lean into it or subvert it.
 
 ---
 
@@ -45,11 +45,11 @@ This walkthrough creates a portrait where concentric rings emanate from the subj
 
 ### 1. Choose your image
 
-Select a portrait with direct eye contact. The subject should be looking at the camera. High contrast helps --- strong shadows around the eyes, clear separation between face and background. Black-and-white portraits are easiest for a first attempt.
+Select a portrait with direct eye contact. The subject should be looking at the camera. High contrast helps: strong shadows around the eyes, clear separation between face and background. Black-and-white portraits are easiest for a first attempt.
 
 ### 2. Add a Circular fill
 
-Click **+** in the Layers Panel. Select **Circular**. Concentric rings appear immediately, centred on the canvas midpoint by default.
+Click **+** in the Layers Panel. Select **Circular**. Vexy Lines draws concentric rings at once, centred on the canvas midpoint by default.
 
 ### 3. Place the center on the eye
 
@@ -77,7 +77,7 @@ If the face lacks definition, tighten the interval to 0.7 mm. If individual ring
 
 ### 8. Optional: Enable Dynamic Color
 
-Turn on Dynamic Color. Set segment length to 4 mm. Each ring now transitions through the skin tones, eye colour, and hair as it sweeps across the face. The effect is subtle but adds warmth and lifelike quality.
+Turn on Dynamic Color. Set segment length to 4 mm. Each ring now transitions through the skin tones, eye colour, and hair as it sweeps across the face. The effect is subtle but adds warmth.
 
 ---
 
@@ -90,11 +90,11 @@ Place a Circular fill centered on each eye. Use two separate fills on two separa
 - Fill 1: Center on the left eye. Interval 1.2 mm.
 - Fill 2: Center on the right eye. Interval 1.2 mm.
 
-Mask each fill so it covers only its half of the face --- paint a vertical dividing line down the bridge of the nose. The rings from each eye radiate outward and meet at the center of the face, creating a symmetrical composition with dual focal points. Where the ring patterns overlap at the nose bridge, the density doubles, naturally emphasising the center of the face.
+Mask each fill so it covers only its half of the face: paint a vertical dividing line down the bridge of the nose. The rings from each eye radiate outward and meet at the center of the face, creating a symmetrical composition with dual focal points. Where the ring patterns overlap at the nose bridge, the density doubles, naturally emphasising the center of the face.
 
 ### Off-Canvas Partial Arcs
 
-Move the center point outside the canvas boundaries entirely --- 200 pixels above the top edge, for instance. The rings become partial arcs that sweep across the canvas in gentle curves, resembling contour lines on a topographic map rather than bullseye circles. The further off-canvas the center, the more the arcs flatten toward straight lines (at extreme distances, they approach Linear fill behaviour).
+Move the center point outside the canvas boundaries entirely, 200 pixels above the top edge for instance. The rings become partial arcs that sweep across the canvas in gentle curves, resembling contour lines on a topographic map rather than bullseye circles. The further off-canvas the center, the more the arcs flatten toward straight lines (at extreme distances, they approach Linear fill behaviour).
 
 - Center X: canvas width / 2 (centred horizontally)
 - Center Y: -300 (above the canvas)
@@ -108,21 +108,21 @@ Apply to a macro photograph of wood grain or a tree cross-section. Place the cen
 
 ### Ripple Portrait
 
-Same as the eye-centered portrait, but with wide interval (4--6 mm) and Randomization at 15--20%. The rings become loose, wobbly ripples --- as if the portrait were a reflection in disturbed water. The face is recognisable but dreamlike. Add a second fill (Linear, angle 0°, interval 3 mm, threshold narrowed to highlights only) as a subtle horizontal texture in the light areas, suggesting the flat surface of the water between ripples.
+Same as the eye-centered portrait, but with wide interval (4--6 mm) and Randomization at 15--20%. The rings become loose, wobbly ripples, as if the portrait were a reflection in disturbed water. The face is recognisable but dreamlike. Add a second fill (Linear, angle 0°, interval 3 mm, threshold narrowed to highlights only) as a subtle horizontal texture in the light areas, suggesting the flat surface of the water between ripples.
 
 ### Dense Vinyl Record
 
-Interval at 0.3--0.5 mm. Center placed precisely on a round subject (a face, a clock, a ball). The rings pack so tightly that from normal viewing distance they merge into a smooth tonal reproduction --- but zoom in and every ring is a distinct vector path. Export at high resolution for large-format prints where viewers will approach closely and discover the concentric structure.
+Interval at 0.3--0.5 mm. Center placed precisely on a round subject (a face, a clock, a ball). The rings pack so tightly that from normal viewing distance they merge into a smooth tonal reproduction, but zoom in and every ring is a distinct vector path. Export at high resolution for large-format prints where viewers will approach closely and discover the concentric structure.
 
 ---
 
 ## Tips
 
-- **Center placement is everything.** More than any other fill, Circular's visual impact depends on where you put the center point. Spend time experimenting with placement before adjusting any other parameter. Move the center and the entire composition transforms.
+- **Center placement comes first.** More than any other fill, Circular depends on where you put the center point. Experiment with placement before adjusting any other parameter. Move the center and the whole composition changes.
 - **Off-center creates more interest than dead-center.** A center on the subject's eye is more engaging than a center in the middle of the canvas. Asymmetry generates visual tension.
 - **Tight intervals can choke.** Below 0.3 mm, the rings are so dense they blur into solid tone, defeating the purpose of vector line art. If you want that density, consider enabling it only in select areas via masking.
 - **Circular + Radial = spiderweb.** Layer a Circular fill (concentric rings) with a [Radial](206-radial.md) fill (outward rays) using the same center point. The two patterns intersect to form a web-like grid. See [Combining Fills](214-combining-fills.md) for the full technique.
-- **Circular works better than Linear for round subjects.** Faces, eyes, clocks, wheels, balls --- anything with circular geometry resonates with the concentric ring pattern. Linear would fight the subject's natural curves. Circular amplifies them.
+- **Circular works better than Linear for round subjects.** Faces, eyes, clocks, wheels, balls: anything with circular geometry suits the concentric ring pattern. Linear would fight the subject's natural curves. Circular follows them.
 - **The center does not have to be visible.** Place it behind a masked area, under another fill, or off-canvas. The rings still radiate from that hidden origin, creating structure without revealing the source.
 
 ---

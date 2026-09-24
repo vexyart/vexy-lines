@@ -20,7 +20,7 @@ Each tool has a single-letter shortcut. Press the key and the tool activates. No
 | **O** | Ellipse Mask | Draw elliptical mask areas |
 | **S** | Freeform Mask | Draw irregular mask boundaries point by point |
 
-**Tip:** The tool shortcuts spell out **V-P-K-B-I-O-S** along the top-left of a QWERTY keyboard. No mnemonics needed --- just remember the positions.
+**Tip:** The tool shortcuts spell out **V-P-K-B-I-O-S** along the top-left of a QWERTY keyboard. No mnemonics needed: just remember the positions.
 
 ---
 
@@ -160,15 +160,15 @@ Print this table and tape it to your monitor for the first week. After that, you
 
 ## Customisation
 
-Vexy Lines does not currently support custom keyboard shortcuts. The shortcuts listed here are fixed. If you are accustomed to different bindings from other applications, the adjustment period is short --- most tools are single-key shortcuts, and the modifier combinations follow standard macOS and Windows conventions.
+Vexy Lines does not currently support custom keyboard shortcuts. The shortcuts listed here are fixed. If you are accustomed to different bindings from other applications, the adjustment period is short: most tools are single-key shortcuts, and the modifier combinations follow standard macOS and Windows conventions.
 
 ---
 
 ## Further Reading
 
-- [The Workspace](103-workspace.md) --- where tools, panels, and canvas fit together.
-- [Zoom, Pan, and Navigate](104-navigating.md) --- navigation in depth.
-- [Hiding and Revealing](108-basic-masks.md) --- brush and mask tool usage.
+- [The Workspace](103-workspace.md): where tools, panels, and canvas fit together.
+- [Zoom, Pan, and Navigate](104-navigating.md): navigation in depth.
+- [Hiding and Revealing](108-basic-masks.md): brush and mask tool usage.
 
 ---
 

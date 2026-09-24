@@ -1,6 +1,6 @@
 # Halftone: Dots and Shapes
 
-Every newspaper photograph you have ever seen is a lie told in dots. Thousands of tiny circles --- large in the shadows, microscopic in the highlights --- arranged in a grid so precise that your brain merges them into continuous tone. Halftone fill recreates this mechanical printing process as vector art, then goes far beyond it. Swap circles for squares, diamonds, stars, or any SVG shape you import. Switch from grid to random scatter for pointillism. Enable morphing so shapes transform as brightness changes --- tiny circles in the highlights, fat stars in the shadows. What took a printing press and a screen, Vexy Lines does with parameters.
+Every newspaper photograph you have ever seen is a lie told in dots. Thousands of tiny circles, large in the shadows and microscopic in the highlights, arranged in a grid so precise that your brain merges them into continuous tone. Halftone fill recreates this printing process as vector art, then goes beyond it. Swap circles for squares, diamonds, stars, or any SVG shape you import. Switch from grid to random scatter for pointillism. Enable morphing so shapes change as brightness changes: tiny circles in the highlights, fat stars in the shadows. What took a printing press and a screen, Vexy Lines does with parameters.
 
 ---
 
@@ -20,7 +20,7 @@ The default shape is a circle, which matches traditional newspaper halftone. But
 - **Pop art and Lichtenstein-style illustration:** Large circles, bold primary colours, strong outlines via [Trace](208-trace.md).
 - **Pointillism:** Random mode, small circles, Dynamic Color enabled. Seurat in vectors.
 - **Stippling and etching:** Random mode, very small circles, high density. Builds up tone through pure dot accumulation.
-- **Themed and novelty artwork:** Import custom SVG shapes --- hearts, stars, skulls, logos --- and paint your image with them.
+- **Themed and novelty artwork:** Import custom SVG shapes (hearts, stars, skulls, logos) and paint your image with them.
 - **Screen-print preparation:** Each colour gets its own Halftone fill at a different angle, preventing moiré in multi-colour printing.
 
 ---
@@ -44,7 +44,7 @@ The default shape is a circle, which matches traditional newspaper halftone. But
 
 ## Step-by-Step: Three Styles from One Photograph
 
-This walkthrough demonstrates three distinct Halftone treatments of the same source image, showcasing the fill's range.
+This walkthrough demonstrates three distinct Halftone treatments of the same source image.
 
 ### Style 1: Classic Newspaper (Grid + Circles)
 
@@ -127,7 +127,7 @@ Big, bold, graphic. Start with a high-contrast, saturated colour photograph (or 
 - **Dynamic Color:** On.
 - **Stroke Thickness:** Bold outlines.
 
-Layer with a [Trace](208-trace.md) fill to add thick black outlines around major shapes. The combination of dot-filled areas and clean vector outlines produces the classic pop-art comic book look. Use bold, saturated source images --- primary colours work best.
+Layer with a [Trace](208-trace.md) fill to add thick black outlines around major shapes. The combination of dot-filled areas and clean vector outlines produces the classic pop-art comic book look. Use bold, saturated source images. Primary colours work best.
 
 ### Graded Morphing
 
@@ -148,7 +148,7 @@ Maximum density, minimum dot size, monochrome.
 - **Morphing:** Off.
 - **Dynamic Color:** Off. Static black.
 
-The result resembles hand-stippled illustration: thousands of tiny dots building up tone through sheer accumulation. Shadows become dense constellations. Highlights become sparse scatter. The organic randomness of Random mode prevents the mechanical grid artifact, making the result look hand-placed. Export at high resolution --- the detail rewards close inspection.
+The result resembles hand-stippled illustration: thousands of tiny dots building up tone through sheer accumulation. Shadows become dense constellations. Highlights become sparse scatter. The organic randomness of Random mode prevents the mechanical grid artifact, making the result look hand-placed. Export at high resolution, because the detail rewards close inspection.
 
 ### Multi-Angle Colour Separation
 
@@ -174,11 +174,11 @@ The halftone dots fade in only where the image is light (typically the backgroun
 
 ## Tips
 
-- **Grid angle matters for multi-colour work.** If you stack multiple Halftone fills for colour separation, use the traditional screen angles (0°, 15°, 45°, 75°) to minimise moiré. These angles are not arbitrary --- they are the result of decades of print industry experience.
+- **Grid angle matters for multi-colour work.** If you stack multiple Halftone fills for colour separation, use the traditional screen angles (0°, 15°, 45°, 75°) to minimise moiré. These angles are not arbitrary. They come from decades of print industry practice.
 - **Random mode is better for artistic work; Grid mode is better for technical reproduction.** Grid produces precise, predictable results suitable for print production. Random produces organic, artistic results suitable for illustration and fine art.
-- **Morphing creates visual surprise.** The transition from one shape to another across the tonal range adds a layer of visual interest that simple size variation cannot match. Experiment with unexpected shape pairs: circles morphing into triangles, squares morphing into stars.
-- **Custom SVG shapes must be simple.** Complex multi-path SVGs will not import cleanly as halftone shapes. Use a single closed path. Keep the design recognisable at small sizes --- the shapes in highlight areas are tiny.
-- **Halftone + Trace = comic book.** This combination is so effective it deserves its own recipe. See [Combining Fills](214-combining-fills.md) for the full technique.
+- **Morphing adds a second variable.** The transition from one shape to another across the tonal range adds a layer of change that size variation alone cannot give. Experiment with unexpected shape pairs: circles morphing into triangles, squares morphing into stars.
+- **Custom SVG shapes must be simple.** Complex multi-path SVGs will not import cleanly as halftone shapes. Use a single closed path. Keep the design recognisable at small sizes, because the shapes in highlight areas are tiny.
+- **Halftone + Trace = comic book.** This combination has its own recipe. See [Combining Fills](214-combining-fills.md) for the full technique.
 - **Interval determines viewing distance.** Tight interval (0.5--1 mm): dots merge at arm's length, creating photographic tone. Medium interval (2--4 mm): dots are visible, creating obvious halftone pattern. Wide interval (6+ mm): each dot is a deliberate graphic element. Choose based on how you want the viewer to experience the piece.
 
 ---

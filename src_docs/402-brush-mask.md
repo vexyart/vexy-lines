@@ -1,6 +1,6 @@
 # Painting Masks with the Brush
 
-The Brush tool turns your cursor into a can of spray paint — except instead of colour, you're spraying *permission*. White paint says "the fill is allowed here." Black paint says "the fill is forbidden here." Everything in between is a gradient of transparency.
+The Brush tool turns your cursor into a can of spray paint, except that instead of colour, you're spraying *permission*. White paint says "the fill is allowed here." Black paint says "the fill is forbidden here." Everything in between is a gradient of transparency.
 
 Press **B** and start painting. That's the entire learning curve. The nuance is in how you paint, what you paint over, and how you combine brushwork with other mask tools to carve out exactly the region your fill should occupy.
 
@@ -8,16 +8,16 @@ Press **B** and start painting. That's the entire learning curve. The nuance is 
 
 ## The Basics: White Reveals, Black Hides
 
-Every fill layer in Vexy Lines has a mask — a greyscale image the same size as your canvas. Where the mask is white (255), the fill renders at full strength. Where the mask is black (0), the fill vanishes completely. Grey values produce partial transparency: a mask value of 128 renders the fill at roughly 50% density.
+Every fill layer in Vexy Lines has a mask: a greyscale image the same size as your canvas. Where the mask is white (255), the fill renders at full strength. Where the mask is black (0), the fill vanishes completely. Grey values produce partial transparency: a mask value of 128 renders the fill at roughly 50% density.
 
 When you activate the Brush tool (**B**) and paint on a fill layer:
 
 - **Default stroke = white.** You're revealing the fill in the painted area.
-- **Alt+drag = black.** You're erasing — hiding the fill in the painted area.
+- **Alt+drag = black.** You're erasing: hiding the fill in the painted area.
 
 That's the two-mode system. Paint to show, Alt+paint to hide. Every mask interaction in Vexy Lines reduces to this binary.
 
-A brand-new fill starts with a *full white mask* — the fill renders everywhere. If you want the fill only in specific areas, you have two approaches:
+A brand-new fill starts with a *full white mask*, so the fill renders everywhere. If you want the fill only in specific areas, you have two approaches:
 
 1. **Additive:** Start with a black (empty) mask. Paint white where the fill should appear. To create a black mask, select the fill layer, then use Edit > Clear Mask (or right-click the layer and choose Clear Mask). Now the fill is invisible everywhere, and you paint it into existence.
 
@@ -39,21 +39,21 @@ With the Brush tool active, the toolbar shows several controls. Here's what each
 
 ### Size
 
-Small brushes (5–20 px) for detail work around edges. Large brushes (100–500 px) for broad regions. The resize shortcut — **Ctrl+drag horizontally** on the canvas — is the fastest way to adjust mid-stroke. Drag right to enlarge, left to shrink. The circle preview updates in real time.
+Small brushes (5–20 px) for detail work around edges. Large brushes (100–500 px) for broad regions. The resize shortcut (**Ctrl+drag horizontally** on the canvas) is the fastest way to adjust mid-stroke. Drag right to enlarge, left to shrink. The circle preview updates in real time.
 
 ### Hardness
 
 At 100% hardness, the brush has a knife-sharp boundary: inside the circle is fully painted, outside is untouched. This is good for geometric regions, text boundaries, and any mask edge that should look deliberate.
 
-At 0% hardness, the brush feathers from full opacity at the center to zero at the edge. This produces soft, blended transitions — useful for gradually revealing a fill, creating vignette effects, or blending two fill regions together without a visible seam.
+At 0% hardness, the brush feathers from full opacity at the center to zero at the edge. This produces soft, blended transitions, useful for gradually revealing a fill, creating vignette effects, or blending two fill regions together without a visible seam.
 
 A hardness of 50–70% is a versatile middle ground: edges are visible but not stark.
 
 ### Opacity
 
-Brush opacity controls the maximum density of a single stroke. At 100%, one pass of white paint creates a fully white mask region. At 30%, one pass creates a 30% grey region — the fill renders at 30% density there. Paint over the same area again and it builds to about 51%. A third pass reaches roughly 66%. This is how you build gradual masks.
+Brush opacity controls the maximum density of a single stroke. At 100%, one pass of white paint creates a fully white mask region. At 30%, one pass creates a 30% grey region, so the fill renders at 30% density there. Paint over the same area again and it builds to about 51%. A third pass reaches roughly 66%. This is how you build gradual masks.
 
-**Practical use:** Set opacity to 20–30% and make several passes over an area to gradually introduce a fill. The result is a smooth gradient of fill density that looks hand-crafted, not mechanically on-or-off.
+**Practical use:** Set opacity to 20–30% and make several passes over an area to gradually introduce a fill. The result is a smooth gradient of fill density rather than a mechanical on-or-off edge.
 
 ---
 
@@ -65,7 +65,7 @@ Here's the step-by-step process for masking a fill with the Brush:
 
 Click the fill layer in the Layers Panel. The Properties Panel shows that fill's parameters. Any mask painting you do now affects *this layer's mask only*. Other fills are untouched.
 
-This is a crucial point: **masks are per-layer.** Each fill has its own independent mask. Painting on one layer's mask has zero effect on any other layer.
+This point matters: **masks are per-layer.** Each fill has its own independent mask. Painting on one layer's mask has zero effect on any other layer.
 
 ### Step 2: Activate the Brush
 
@@ -73,7 +73,7 @@ Press **B** or click the Brush icon in the toolbar. Your cursor becomes a circle
 
 ### Step 3: Paint
 
-Click and drag on the canvas to paint white (reveal). The fill appears inside the painted region as you drag. If the fill was already visible everywhere (default white mask), you won't see a change — you're painting white on white.
+Click and drag on the canvas to paint white (reveal). The fill appears inside the painted region as you drag. If the fill was already visible everywhere (default white mask), you won't see a change, because you're painting white on white.
 
 To see the effect clearly, first clear the mask (Edit > Clear Mask), then paint. Now you're painting the fill into existence on a blank canvas.
 
@@ -102,7 +102,7 @@ This is far faster than trying to paint the whole region with a small brush, and
 
 ### Feathered Transitions
 
-Where two fills meet — say, a Linear fill for the face and a Scribble fill for the hair — a hard mask boundary creates an abrupt visual break. To soften it:
+Where two fills meet (say, a Linear fill for the face and a Scribble fill for the hair), a hard mask boundary creates an abrupt visual break. To soften it:
 
 1. Paint both masks with hardness 0% (fully feathered).
 2. Let the feathered edges overlap slightly.
@@ -114,7 +114,7 @@ Alternatively, paint hard masks for both fills, then go back with a large, soft 
 
 The single most important habit for good masks: **zoom in.** At 100% zoom, a face is a small region and it's nearly impossible to paint a precise mask around the nose, lips, or jawline. At 300–400% zoom, you can see individual stroke endpoints and paint around them.
 
-Use **Spacebar+drag** to pan while zoomed in. Paint a section of the mask edge, pan to the next section, paint again. It's methodical but the results are dramatically cleaner.
+Use **Spacebar+drag** to pan while zoomed in. Paint a section of the mask edge, pan to the next section, paint again. It's methodical, but the results are much cleaner.
 
 ### Building Density Gradually
 
@@ -126,15 +126,15 @@ Instead of painting at 100% opacity and hoping for the best:
 4. Add another pass where you want more density.
 5. Leave areas with a single pass as subtle background texture.
 
-This technique is especially powerful with Dynamic Color enabled. A fill at 25% mask density with Dynamic Color produces watercolour-like washes of sampled source colour.
+This technique works especially well with Dynamic Color enabled. A fill at 25% mask density with Dynamic Color produces watercolour-like washes of sampled source colour.
 
 ---
 
 ## Mask Independence
 
-One of the least obvious but most powerful features of Vexy Lines masks: **the mask and the fill are completely independent.**
+One of the least obvious and most useful properties of Vexy Lines masks: **the mask and the fill are completely independent.**
 
-Change the fill type from Linear to Halftone — the mask stays. Change the Interval from 1 mm to 5 mm — the mask stays. Change the Angle, the Colour, the Randomization — the mask stays.
+Change the fill type from Linear to Halftone: the mask stays. Change the Interval from 1 mm to 5 mm: the mask stays. Change the Angle, the Colour, the Randomization: the mask stays.
 
 This means you can:
 
@@ -164,7 +164,7 @@ For more on combining mask tools, see [Rectangle, Ellipse, and Freeform Masks](4
 
 **Painting on the wrong layer.** Always check the Layers Panel before you start painting. It's easy to accidentally mask the wrong fill, especially in documents with many layers. The active layer is highlighted in the Layers Panel.
 
-**Forgetting Alt to erase.** If you paint too far, you don't need to undo — just hold Alt and paint the excess away. Undo works too (Cmd+Z), but erase-painting is often faster and more precise.
+**Forgetting Alt to erase.** If you paint too far, you don't need to undo: hold Alt and paint the excess away. Undo works too (Cmd+Z), but erase-painting is often faster and more precise.
 
 **Brush too large for the detail.** If you're fighting the mask edge, your brush is probably too big. Ctrl+drag left to shrink it. Precision always wins.
 

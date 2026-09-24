@@ -1,6 +1,6 @@
 # Performance and Troubleshooting
 
-Vexy Lines turns photographs into thousands of mathematically precise vector strokes. That is computationally expensive work, and at some point --- a dense fill on a large canvas, a complex multi-layer composition, a batch export of fifty files --- you will bump into the limits of your hardware. This article explains why things get slow, how to keep them fast, and what to do when something goes wrong.
+Vexy Lines turns photographs into thousands of mathematically precise vector strokes. That is computationally expensive work, and at some point (a dense fill on a large canvas, a complex multi-layer composition, a batch export of fifty files) you will bump into the limits of your hardware. This article explains why things get slow, how to keep them fast, and what to do when something goes wrong.
 
 ---
 
@@ -22,7 +22,7 @@ The single biggest performance factor. An interval of 2 mm on a 200 mm canvas pr
 
 ### 2. Source Image Resolution
 
-Every stroke samples the source image along its length. A 6000 x 4000 pixel source image contains 24 million pixels. A 1500 x 1000 image contains 1.5 million. The sampling is faster on the smaller image, and the visual difference is often negligible --- the source image determines tone, not export resolution.
+Every stroke samples the source image along its length. A 6000 x 4000 pixel source image contains 24 million pixels. A 1500 x 1000 image contains 1.5 million. The sampling is faster on the smaller image, and the visual difference is often negligible: the source image determines tone, not export resolution.
 
 ### 3. Number of Fills and Layers
 
@@ -38,7 +38,7 @@ Mesh warping deforms every stroke through a mathematical transformation. Hidden 
 
 ### Turn Off Auto Refresh
 
-This is the single most effective habit for working comfortably with complex documents. Auto Refresh recalculates every fill after every parameter change. When you are dragging a slider, that means dozens of recalculations per second --- each one potentially taking several seconds for dense fills.
+This is the single most effective habit for working comfortably with complex documents. Auto Refresh recalculates every fill after every parameter change. When you are dragging a slider, that means dozens of recalculations per second, each one potentially taking several seconds for dense fills.
 
 Turn it off in the toolbar. Make your adjustments. Then press **Refresh Fill** (for the current fill) or **Refresh All** (for every fill) when you are ready to see the result. You trade instant feedback for control over when the computer does its heavy work.
 
@@ -208,9 +208,9 @@ Before final export:
 
 ## Further Reading
 
-- [Controlling When Vexy Recalculates](112-refresh-controls.md) --- Auto Refresh, Refresh Fill, and Refresh All in detail.
-- [Video to Vector Video](607-video-processing.md) --- performance considerations specific to video processing.
-- [The Command Line Tool](602-cli-basics.md) --- `mcp-status` for connection diagnostics.
+- [Controlling When Vexy Recalculates](112-refresh-controls.md): Auto Refresh, Refresh Fill, and Refresh All in detail.
+- [Video to Vector Video](607-video-processing.md): performance considerations specific to video processing.
+- [The Command Line Tool](602-cli-basics.md): `mcp-status` for connection diagnostics.
 
 ---
 

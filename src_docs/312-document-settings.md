@@ -4,7 +4,7 @@ Before you touch a fill, before you choose an angle or drag a slider, your docum
 
 ## Accessing Document Settings
 
-Open Document Settings via **File > Document Settings** or the gear icon at the bottom of the Properties Panel. The panel opens as a modal dialog — you set values, confirm, and the document updates.
+Open Document Settings via **File > Document Settings** or the gear icon at the bottom of the Properties Panel. The panel opens as a modal dialog: you set values, confirm, and the document updates.
 
 Some settings (canvas size, DPI, background colour) can also be set during document creation in the **File > New** dialog. Changing them later in Document Settings is always possible, but changing canvas size after you have placed fills may shift fill positions relative to the source image.
 
@@ -35,7 +35,7 @@ To resize and rescale proportionally, use **Edit > Scale Document** (if availabl
 
 ## DPI (Dots Per Inch)
 
-DPI in Vexy Lines controls one thing: the resolution at which the source image is mapped onto the canvas. It does not affect the vector output — SVG and PDF are resolution-independent. It affects how many pixels of the source image correspond to each unit of canvas space.
+DPI in Vexy Lines controls one thing: the resolution at which the source image is mapped onto the canvas. It does not affect the vector output, because SVG and PDF are resolution-independent. It affects how many pixels of the source image correspond to each unit of canvas space.
 
 ### What DPI Changes
 
@@ -47,8 +47,8 @@ DPI in Vexy Lines controls one thing: the resolution at which the source image i
 
 ### What DPI Does Not Change
 
-- Vector output resolution. SVG and PDF are infinitely scalable regardless of DPI.
-- The physical size of the canvas. DPI does not resize the canvas — it changes the source image sampling resolution.
+- Vector output resolution. SVG and PDF scale without loss regardless of DPI.
+- The physical size of the canvas. DPI does not resize the canvas: it changes the source image sampling resolution.
 - Raster export resolution. When exporting to PNG or JPEG, you set the export resolution separately in the Export dialog.
 
 ### Recommended DPI by Workflow Stage
@@ -73,9 +73,9 @@ Vexy Lines supports four unit systems:
 
 ### Switching Units
 
-Change the unit in Document Settings and every parameter in the Properties Panel updates its displayed value. An interval of 2 mm becomes approximately 5.67 pt or 0.079 in. The actual physical spacing does not change — only the numeric representation.
+Change the unit in Document Settings and every parameter in the Properties Panel updates its displayed value. An interval of 2 mm becomes approximately 5.67 pt or 0.079 in. The actual physical spacing does not change: only the numeric representation.
 
-**Important:** When you change units, values may display with many decimal places (e.g., 0.07874 in instead of 2 mm). Vexy Lines preserves the exact value rather than rounding, which can look untidy but ensures precision. If you prefer round numbers, re-enter the values after switching units.
+**Important:** When you change units, values may display with many decimal places (e.g., 0.07874 in instead of 2 mm). Vexy Lines preserves the exact value rather than rounding, which can look untidy but keeps the precision. If you prefer round numbers, re-enter the values after switching units.
 
 ### Units and Collaboration
 
@@ -90,7 +90,7 @@ Document Settings includes minimum and maximum constraints for several parameter
 - **Global Thickness Minimum:** The lowest stroke weight any fill in the document can use. Default: 0.01 mm. Setting this to 0.1 mm prevents accidental hairlines that vanish in print or cause plotter problems.
 - **Global Thickness Maximum:** The highest stroke weight any fill can use. Default: 50 mm. Setting this to 5 mm prevents fills from producing strokes so wide they cover the entire canvas.
 
-If a fill's Thickness Min is set lower than the global minimum, the global minimum overrides. Same for the maximum. This is useful in complex documents with many fills — you can set sensible bounds once and trust that no fill will exceed them, even if you accidentally drag a slider too far.
+If a fill's Thickness Min is set lower than the global minimum, the global minimum overrides. Same for the maximum. This is useful in complex documents with many fills: you can set sensible bounds once and trust that no fill will exceed them, even if you accidentally drag a slider too far.
 
 ### Global Interval Limits
 
@@ -110,7 +110,7 @@ If a fill's Thickness Min is set lower than the global minimum, the global minim
 
 ## Background Colour
 
-The canvas background colour is the colour of "empty space" — areas where no fill generates strokes. By default, this is white (#FFFFFF).
+The canvas background colour is the colour of "empty space": areas where no fill generates strokes. By default, this is white (#FFFFFF).
 
 ### Changing the Background
 
@@ -148,7 +148,7 @@ If your working file becomes corrupted or you need to revert to an earlier state
 
 1. Open the backup folder next to your .lines file.
 2. Sort by date. Find the backup from before the problem occurred.
-3. Copy it to a new location and open it. Do not open backups in place — the auto-save might overwrite them.
+3. Copy it to a new location and open it. Do not open backups in place, because the auto-save might overwrite them.
 
 ## Rendering Quality
 
@@ -168,7 +168,7 @@ Some settings are document-specific (canvas size, DPI, units, background colour,
 
 Document settings travel with the .lines file. Preferences stay on your machine.
 
-If you find yourself changing the same document settings for every new file — always switching to millimetres, always setting interval minimum to 0.5 mm — configure those as application-level defaults in **Vexy Lines > Preferences** (macOS) or **Edit > Preferences** (Windows). New documents will inherit your preferred values.
+If you find yourself changing the same document settings for every new file (always switching to millimetres, always setting interval minimum to 0.5 mm), configure those as application-level defaults in **Vexy Lines > Preferences** (macOS) or **Edit > Preferences** (Windows). New documents will inherit your preferred values.
 
 ## Step-by-Step: Setting Up a New Document for Print
 
@@ -184,8 +184,8 @@ If you find yourself changing the same document settings for every new file — 
 
 ## Further Reading
 
-- [Interval and Spacing: Density Control](305-interval-spacing.md) — understanding why global interval limits matter.
-- [Stroke Thickness: Weight from Light](303-stroke-thickness.md) — understanding the thickness limits.
-- [Getting Your Art Out](110-exporting.md) — export settings that interact with document settings.
-- [Save, Backup, Recover](111-saving.md) — more detail on the .lines file format and backup strategies.
-- [The Control Surface](301-part3-tldr.md) — the full parameter map.
+- [Interval and Spacing: Density Control](305-interval-spacing.md): why global interval limits matter.
+- [Stroke Thickness: Weight from Light](303-stroke-thickness.md): the thickness limits.
+- [Getting Your Art Out](110-exporting.md): export settings that interact with document settings.
+- [Save, Backup, Recover](111-saving.md): more detail on the .lines file format and backup strategies.
+- [The Control Surface](301-part3-tldr.md): the full parameter map.

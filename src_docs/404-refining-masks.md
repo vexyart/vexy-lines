@@ -1,22 +1,22 @@
 # Editing Mask Paths
 
-Auto-detection got you 80% of the way. The Brush cleaned up another 15%. That last 5% — the clean curve around a jawline, the precise corner where a building meets the sky, the smooth arc of a wheel rim — requires node editing. This is where masks stop being approximate and start being surgical.
+Auto-detection got you 80% of the way. The Brush cleaned up another 15%. That last 5% (the clean curve around a jawline, the precise corner where a building meets the sky, the smooth arc of a wheel rim) requires node editing. This is where masks stop being approximate and start being exact.
 
 ---
 
 ## From Pixels to Paths
 
-Every mask in Vexy Lines exists in two forms simultaneously. At the rendering level, it's a greyscale bitmap: white pixels reveal, black pixels hide. But when you draw a mask with the shape tools (Rectangle, Ellipse, Freeform) or auto-detection, Vexy Lines also stores the *vector path* that defines the mask boundary. This path is made of nodes connected by straight or curved segments — the same building blocks as any vector illustration.
+Every mask in Vexy Lines exists in two forms simultaneously. At the rendering level, it's a greyscale bitmap: white pixels reveal, black pixels hide. But when you draw a mask with the shape tools (Rectangle, Ellipse, Freeform) or auto-detection, Vexy Lines also stores the *vector path* that defines the mask boundary. This path is made of nodes connected by straight or curved segments: the same building blocks as any vector illustration.
 
 The Editor tool (**V**) lets you manipulate these nodes directly. The Knife tool (**K**) lets you cut paths into pieces. Between them, you can reshape any mask boundary with complete precision.
 
-Brush-painted masks don't have a vector path — they're pure bitmap. If you need node-level control, start with a shape tool or auto-detection, then refine with the Editor. If you've already painted a mask with the Brush, you can convert it to a path (right-click the layer > Trace Mask Outline), though the result may have more nodes than a hand-drawn path.
+Brush-painted masks don't have a vector path; they're pure bitmap. If you need node-level control, start with a shape tool or auto-detection, then refine with the Editor. If you've already painted a mask with the Brush, you can convert it to a path (right-click the layer > Trace Mask Outline), though the result may have more nodes than a hand-drawn path.
 
 ---
 
 ## The Editor Tool (V)
 
-Press **V** to activate the Editor. Click on a mask boundary — the path highlights and nodes appear as small squares on the outline.
+Press **V** to activate the Editor. Click on a mask boundary: the path highlights and nodes appear as small squares on the outline.
 
 ### Selecting Nodes
 
@@ -33,7 +33,7 @@ Click a selected node and drag it to a new position. The mask boundary reshapes 
 
 ### Adding Nodes
 
-**Alt+click** on a segment (the line between two existing nodes) to insert a new node at that point. The path shape doesn't change — you've simply added a new control point that you can now drag independently.
+**Alt+click** on a segment (the line between two existing nodes) to insert a new node at that point. The path shape doesn't change; you've added a new control point that you can now drag independently.
 
 When to add nodes:
 
@@ -48,25 +48,25 @@ Select a node and press **Delete** (or Backspace). The node vanishes and the pat
 When to delete nodes:
 
 - Auto-detection or Trace Mask Outline produced too many nodes, making the path jittery.
-- You want to simplify a curve — fewer nodes mean smoother, more predictable segments.
+- You want to simplify a curve: fewer nodes mean smoother, more predictable segments.
 - A stray node is creating an unwanted bump.
 
 **Warning:** Deleting a node changes the path shape. The new segment between the remaining neighbours may not follow the same curve. Always check the result after deleting.
 
 ### Handles and Curves
 
-Some nodes have **handles** — small lines extending from the node that control the curvature of adjacent segments. Drag a handle to change the curve's shape without moving the node itself.
+Some nodes have **handles**: small lines extending from the node that control the curvature of adjacent segments. Drag a handle to change the curve's shape without moving the node itself.
 
 - **Symmetric handles:** Both handles are the same length and point in opposite directions. Moving one affects both. This creates smooth, flowing curves.
-- **Asymmetric handles:** Each handle moves independently. This creates cusps — smooth on one side, sharp on the other.
+- **Asymmetric handles:** Each handle moves independently. This creates cusps: smooth on one side, sharp on the other.
 - **No handles:** The node connects straight-line segments. The path has a sharp corner at that point.
 
 To convert between types:
 
 | From | To | How |
 |------|----|-----|
-| Corner (no handles) | Smooth curve | Alt+click the node and drag outward — handles appear |
-| Smooth curve | Corner | Alt+click the node — handles retract |
+| Corner (no handles) | Smooth curve | Alt+click the node and drag outward; handles appear |
+| Smooth curve | Corner | Alt+click the node; handles retract |
 | Symmetric | Asymmetric | Hold Cmd and drag one handle independently |
 
 ---
@@ -96,7 +96,7 @@ The mask now has an opening. The fill disappears in the area that was bounded by
 
 ## Smoothing Edges
 
-Rough mask edges — from auto-detection, hasty Brush painting, or too-few Freeform nodes — undermine even the best fill settings. Two approaches to clean them up:
+Rough mask edges (from auto-detection, hasty Brush painting, or too few Freeform nodes) undermine even the best fill settings. Two approaches to clean them up:
 
 ### Node-Level Smoothing
 
@@ -114,7 +114,7 @@ If the path has far too many nodes (common after auto-detection or Trace Mask Ou
 2. Use Edit > Simplify Path (or the toolbar simplification control).
 3. Adjust the tolerance: higher tolerance removes more nodes (smoother but less accurate), lower tolerance keeps more nodes (rougher but more faithful).
 
-For most masks, a tolerance that reduces node count by 50–70% produces visibly smoother edges without losing the shape's character. Always compare before and after — Cmd+Z to undo if the simplification went too far.
+For most masks, a tolerance that reduces node count by 50–70% produces visibly smoother edges without losing the shape's character. Always compare before and after: Cmd+Z undoes the simplification if it went too far.
 
 ### Post-Refinement with the Brush
 
@@ -155,15 +155,15 @@ If the mask boundary needs smooth, professional-quality edges:
 
 ### Step 5: Final Brush Pass
 
-Zoom to 400%+. Brush (**B**) with 5–10 px size. Clean up any last pixel-level irregularities. The combination of vector path editing and pixel-level brushwork produces masks that look hand-crafted.
+Zoom to 400%+. Brush (**B**) with 5–10 px size. Clean up any last pixel-level irregularities. The combination of vector path editing and pixel-level brushwork produces masks that look drawn by hand.
 
 ---
 
 ## Converting Corners to Curves (and Back)
 
-This conversion is worth emphasising because it transforms mask quality more than any other single operation.
+This conversion deserves its own section because it improves mask quality more than any other single operation.
 
-Auto-detected paths and Freeform polygons are made of straight segments with corner nodes. These produce mask boundaries with visible angles — a face mask looks like a polygon instead of a smooth silhouette.
+Auto-detected paths and Freeform polygons are made of straight segments with corner nodes. These produce mask boundaries with visible angles: a face mask looks like a polygon instead of a smooth silhouette.
 
 Converting key corners to curves fixes this:
 
@@ -175,7 +175,7 @@ Converting key corners to curves fixes this:
 
 Leave corners as corners where the subject actually has sharp angles (building edges, table corners, geometric objects). Convert to curves where the subject has organic contours (faces, bodies, natural forms, fabric folds).
 
-A 20-node polygon with 15 corners converted to curves looks dramatically better than the original. Spend two minutes on this step and your masks will look like they were drawn by an illustrator.
+A 20-node polygon with 15 corners converted to curves looks far better than the original. Spend two minutes on this step and your masks will look like they were drawn by an illustrator.
 
 ---
 

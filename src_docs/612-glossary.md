@@ -148,7 +148,7 @@ A Python function in `vexy-lines-apy` that blends two style objects at a given r
 A temporary directory created during batch operations (export, style transfer, video processing) to track progress. Enables resumption after interruption. See [Video to Vector Video](607-video-processing.md).
 
 **JSON-RPC 2.0**
-The protocol used by the Vexy Lines MCP server. A standard format for remote procedure calls encoded as JSON. You do not need to interact with it directly --- the Python packages and CLI handle it. See [Controlling Vexy Lines via API](605-mcp-api.md).
+The protocol used by the Vexy Lines MCP server. A standard format for remote procedure calls encoded as JSON. You do not need to interact with it directly: the Python packages and CLI handle it. See [Controlling Vexy Lines via API](605-mcp-api.md).
 
 ## K
 

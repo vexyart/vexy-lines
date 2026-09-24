@@ -16,7 +16,7 @@ Vexy Lines renders layers in the order they appear in the Layers Panel, from bot
 This is the same model used by Photoshop, Illustrator, and every other layer-based application. But in Vexy Lines, where every layer contains vector strokes rather than pixels, the stacking order has some specific implications:
 
 - **Strokes don't blend by default.** A thick Linear stroke on a higher layer simply obscures the stroke beneath it. There's no transparency blending unless you've used mask opacity or the fill's opacity parameter.
-- **Colour determines visual priority.** A black stroke on top of a white area is visible. A white stroke on top of a black area is also visible. But a black stroke on top of another black stroke — from a different fill — is invisible. Plan your colours with stacking in mind.
+- **Colour determines visual priority.** A black stroke on top of a white area is visible. A white stroke on top of a black area is also visible. But a black stroke from one fill on top of a black stroke from another fill is invisible. Plan your colours with stacking in mind.
 - **Overlap Control changes the interaction.** When two fills have overlap cutting enabled, the higher fill's strokes can slice through the lower fill's strokes, creating weave patterns. See [Cloning for Coordinated Systems](410-cloning-strategies.md) for details.
 
 ---
@@ -27,13 +27,13 @@ After working with hundreds of compositions, a consistent stacking pattern emerg
 
 ### Layer 1 (Bottom): Background Fill
 
-Wide interval (3–5 mm), low contrast, subtle. This fills the canvas with a gentle texture — Linear at a diagonal, Circular centred off-canvas, or Wave with low amplitude. It provides visual interest in areas not covered by more specific fills.
+Wide interval (3–5 mm), low contrast, subtle. This fills the canvas with a gentle texture: Linear at a diagonal, Circular centred off-canvas, or Wave with low amplitude. It provides visual interest in areas not covered by more specific fills.
 
 **Parameters:** Interval 3–5 mm, Randomization 10–20%, Thickness mode Linear, Threshold biased toward highlights (light areas generate strokes, dark areas are left for upper layers).
 
 ### Layer 2–3: Mid-Ground Fills
 
-Medium interval (1.5–2.5 mm), moderate contrast. These fills handle the bulk of the tonal rendering — the face in a portrait, the trees in a landscape, the product in a still life.
+Medium interval (1.5–2.5 mm), moderate contrast. These fills handle the bulk of the tonal rendering: the face in a portrait, the trees in a landscape, the product in a still life.
 
 **Parameters:** Interval 1.5–2.5 mm, Angle chosen for visual direction (15° and 75° for crosshatching), Thickness mode Thick for drama or Thin for delicacy.
 
@@ -41,7 +41,7 @@ Mask these fills to the mid-ground regions. Leave the background and foreground 
 
 ### Layer 4: Detail/Foreground Fill
 
-Tight interval (0.5–1.2 mm), high contrast, dense. This fill handles the areas with the most visual weight — deep shadows, focal-point details, close-up textures.
+Tight interval (0.5–1.2 mm), high contrast, dense. This fill handles the areas with the most visual weight: deep shadows, focal-point details, close-up textures.
 
 **Parameters:** Interval 0.5–1.2 mm, Threshold biased toward shadows (only dark pixels generate strokes), high smoothing (60–80) for clean curves.
 
@@ -91,9 +91,9 @@ Both checkboxes must participate for the interaction to occur. The visual result
 
 | Angle Difference | Visual Effect |
 |-----------------|---------------|
-| 0° (parallel) | Clean erasure — higher fill removes lower fill's strokes along parallel lines |
-| 45° | Diagonal cutting — creates diamond-shaped gaps |
-| 90° (perpendicular) | Crosshatch weave — one fill appears to pass over and under the other |
+| 0° (parallel) | Clean erasure: the higher fill removes lower fill's strokes along parallel lines |
+| 45° | Diagonal cutting: creates diamond-shaped gaps |
+| 90° (perpendicular) | Crosshatch weave: one fill appears to pass over and under the other |
 
 Play with the Dash and Gap parameters to control the cut pattern. Short dashes with short gaps create a woven fabric effect. Long dashes with short gaps create occasional interruptions.
 
@@ -106,7 +106,7 @@ See [Cloning for Coordinated Systems](410-cloning-strategies.md) for how clones 
 Each layer's mask is completely independent. A mask on Layer 3 has no effect on Layers 1, 2, 4, or 5. This means:
 
 - You can mask Layer 3 (mid-ground) to the portrait's face and mask Layer 2 (background) to everything *except* the face, and the two fills will tile the canvas without overlap.
-- You can intentionally overlap masks so two fills render in the same region — the stacking order determines which appears on top.
+- You can intentionally overlap masks so two fills render in the same region: the stacking order determines which appears on top.
 - You can leave some layers unmasked (full canvas) and mask others tightly. The unmasked layers provide a continuous background; the masked layers add targeted detail.
 
 **Inverted mask pairs:** A powerful technique for clean layer separation. Paint a mask on Layer A (say, the portrait subject). Copy the mask (right-click > Copy Mask). Paste it to Layer B (right-click > Paste Mask). Then invert Layer B's mask (Edit > Invert Mask). Now Layer A covers the subject and Layer B covers everything else. No gaps, no overlaps.
@@ -121,7 +121,7 @@ The difference between a mediocre composition and a great one is often the plan,
 
 2. **Assign fills to regions.** Which algorithm suits each region? Linear for structured areas, Scribble for chaotic textures, Halftone for graphic punch, Trace for outlines. Write it down if the composition is complex.
 
-3. **Decide on stacking order.** Which fills go on top? Usually: outlines on top, details above shading, shading above background. But creative inversions work too — a subtle Trace layer *behind* a bold Linear fill creates ghost outlines.
+3. **Decide on stacking order.** Which fills go on top? Usually: outlines on top, details above shading, shading above background. But creative inversions work too: a subtle Trace layer *behind* a bold Linear fill creates ghost outlines.
 
 4. **Estimate intervals.** Background: wide. Midground: medium. Foreground: tight. This prevents density competition between layers.
 
@@ -135,7 +135,7 @@ The difference between a mediocre composition and a great one is often the plan,
 
 **Outlines buried in the middle.** Trace fills belong on top. If a Trace fill is below shading layers, the outlines get covered by thick strokes and become invisible. Always drag Trace to the top.
 
-**All fills at the same interval.** If every fill has a 1.5 mm interval, the composition looks monotonous and dense. Vary intervals across the stack for visual depth — the eye reads wide intervals as "far" and tight intervals as "close."
+**All fills at the same interval.** If every fill has a 1.5 mm interval, the composition looks monotonous and dense. Vary intervals across the stack for visual depth: the eye reads wide intervals as "far" and tight intervals as "close."
 
 **Forgetting to mask.** An unmasked shading fill renders everywhere, including areas where another fill should dominate. If your foreground fill is fighting the background for visual space, one or both need masks.
 

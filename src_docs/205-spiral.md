@@ -2,13 +2,13 @@
 
 One line. Just one. It starts at a center point and winds outward in an ever-expanding spiral, never lifting, never breaking, never intersecting itself. That single continuous stroke traverses your entire image, thickening over dark regions, thinning over light ones, carrying the full tonal range of your photograph in a single unbroken path.
 
-Spiral is the most meditative fill in Vexy Lines. Where Linear is industrial and Circular is geometric, Spiral is organic --- closer to a fingerprint, a nautilus shell, or the grooves of a vinyl record.
+Spiral is the most meditative fill in Vexy Lines. Where Linear is industrial and Circular is geometric, Spiral is organic, closer to a fingerprint, a nautilus shell, or the grooves of a vinyl record.
 
 ---
 
 ## What It Looks Like
 
-A single line coils outward from a center point like a watchspring unwinding. The spacing between coils is governed by the Interval parameter. The weight of the line fluctuates as it crosses lighter and darker areas of your source image. From a distance, the spiral reconstructs the photograph's tones with remarkable fidelity. Up close, the single unbroken path is visible --- and its continuity is part of the aesthetic appeal.
+A single line coils outward from a center point like a watchspring unwinding. The spacing between coils is governed by the Interval parameter. The weight of the line fluctuates as it crosses lighter and darker areas of your source image. From a distance, the spiral reconstructs the photograph's tones. Up close, the single unbroken path is visible, and its continuity is part of the appeal.
 
 At tight intervals, the spiral fills the canvas so densely that the coils are barely distinguishable from concentric circles. At wide intervals, the spiral path is clearly visible and the gaps between coils become a design element.
 
@@ -18,9 +18,9 @@ At tight intervals, the spiral fills the canvas so densely that the coils are ba
 
 - **Vinyl record and turntable art:** The most literal visual match. Place the center, tighten the interval, monochrome.
 - **Fingerprint aesthetics:** Tight spiral on a portrait, centered on a fingertip or an eye. Forensic meets artistic.
-- **Hypnotic and psychedelic imagery:** The continuous winding path naturally draws the eye inward (or outward, depending on the viewer's state of mind).
-- **Single-stroke novelty:** The entire image rendered as one continuous line has an intrinsic wow factor. Useful for pen-plotter art, CNC engraving, and laser cutting where a single continuous path is mechanically advantageous.
-- **Meditative and contemplative compositions:** The spiral is ancient symbolism --- growth, journey, return. Use it when the subject matter warrants that resonance.
+- **Hypnotic and psychedelic imagery:** The continuous winding path draws the eye inward (or outward, depending on the viewer).
+- **Single-stroke novelty:** The entire image rendered as one continuous line makes a good story. It is useful for pen-plotter art, CNC engraving, and laser cutting where a single continuous path is mechanically advantageous.
+- **Meditative and contemplative compositions:** The spiral is ancient symbolism: growth, journey, return. Use it when the subject matter warrants that resonance.
 
 ---
 
@@ -47,11 +47,11 @@ This walkthrough transforms a close-up photograph of an eye into a single contin
 
 ### 1. Choose your image
 
-Select a tight close-up of an eye --- ideally filling most of the frame. The image should have strong contrast: a dark pupil, coloured iris, bright sclera, and defined eyelashes. Crop tightly if needed. The drama of this technique depends on the eye dominating the composition.
+Select a tight close-up of an eye, ideally one that fills most of the frame. The image should have strong contrast: a dark pupil, coloured iris, bright sclera, and defined eyelashes. Crop tightly if needed. The drama of this technique depends on the eye dominating the composition.
 
 ### 2. Add a Spiral fill
 
-Click **+** in the Layers Panel. Select **Spiral**. A spiral appears immediately, likely centered on the canvas midpoint.
+Click **+** in the Layers Panel. Select **Spiral**. Vexy Lines draws a spiral at once, centered on the canvas midpoint.
 
 ### 3. Place the center on the pupil
 
@@ -72,11 +72,11 @@ Click the **Center** target, then click directly on the center of the pupil. The
 
 ### 7. Adjust the threshold
 
-Keep the Image Threshold at full range. The eye's natural contrast --- black pupil, coloured iris, white sclera, dark eyelashes --- provides all the tonal information the spiral needs.
+Keep the Image Threshold at full range. The eye's natural contrast (black pupil, coloured iris, white sclera, dark eyelashes) provides all the tonal information the spiral needs.
 
 ### 8. Evaluate
 
-Zoom out. The spiral should render the eye recognisably: heavy coils through the pupil, medium weight through the iris, thin coils across the sclera, heavy again at the eyelashes. The continuous winding path creates a fingerprint-like quality that transforms the eye from a photograph into something almost forensic.
+Zoom out. The spiral should render the eye recognisably: heavy coils through the pupil, medium weight through the iris, thin coils across the sclera, heavy again at the eyelashes. The continuous winding path gives the eye a fingerprint-like quality, closer to a forensic record than a photograph.
 
 If the iris detail is muddy, tighten the interval to 0.5 mm. If the spiral looks too dense overall, widen to 1.2 mm.
 
@@ -107,11 +107,11 @@ The two spirals intersect, creating a lattice of diamond-shaped cells that shrin
 
 ### Offset Dual Spirals
 
-Two Spiral fills with *different* center points --- one on each eye of a portrait, for example. Each spiral claims its territory, and where they overlap, the density doubles. The composition suggests two competing forces, two gravitational wells, two focal points fighting for attention. Mask each to its respective half of the face for cleaner separation, or let them overlap for controlled chaos.
+Two Spiral fills with *different* center points, one on each eye of a portrait, for example. Each spiral claims its territory, and where they overlap, the density doubles. The composition suggests two competing forces, two gravitational wells, two focal points fighting for attention. Mask each to its respective half of the face for cleaner separation, or let them overlap for controlled chaos.
 
 ### Pen-Plotter Optimised
 
-Spiral is the ideal fill for pen-plotter output because it is a single continuous path. Set Interval to 1.0--1.5 mm (matching your pen tip width), disable Randomization (plotters prefer clean geometry), and export as SVG. The plotter draws the entire image without ever lifting the pen. Total draw time depends on canvas size and interval, but the continuous path eliminates the start-stop hesitation marks that multi-stroke fills produce on plotters.
+Spiral suits pen-plotter output because it is a single continuous path. Set Interval to 1.0--1.5 mm (matching your pen tip width), disable Randomization (plotters prefer clean geometry), and export as SVG. The plotter draws the entire image without ever lifting the pen. Total draw time depends on canvas size and interval, but the continuous path eliminates the start-stop hesitation marks that multi-stroke fills produce on plotters.
 
 ---
 
@@ -121,7 +121,7 @@ Spiral is the ideal fill for pen-plotter output because it is a single continuou
 - **Center placement determines density distribution.** Coils are tightest near the center and widest at the edges. If you place the center on the subject's eye, the eye gets the finest detail and the background gets the coarsest. If you place it in a corner, the opposite corner gets the least detail.
 - **Interval below 0.3 mm creates extremely long paths.** A spiral covering a 200x200 mm canvas at 0.2 mm interval produces a single path that is kilometres long. This can slow rendering and choke SVG editors. If you need extreme density, consider Circular instead (which produces separate rings and handles better in downstream tools).
 - **Direction is subtle but real.** Most viewers cannot consciously distinguish CW from CCW spirals, but the choice affects how the stroke weight pattern aligns with the image. Try both directions and compare. One will usually "fit" the image's tonal gradients better.
-- **Spiral + Circular combines beautifully.** A Spiral fill for the main image with a [Circular](204-circular.md) fill (same center, wider interval, different colour) adding emphasis creates depth. The spiral provides continuous flow; the circles provide periodic punctuation.
+- **Spiral + Circular combine well.** A Spiral fill for the main image with a [Circular](204-circular.md) fill (same center, wider interval, different colour) adding emphasis creates depth. The spiral provides continuous flow; the circles provide periodic punctuation.
 - **Export considerations:** Because the spiral is one continuous path, some vector editors may display it as a single selectable object. This is usually an advantage (easy to recolour, scale, or move) but can be surprising if you expect per-ring editing like Circular provides.
 
 ---

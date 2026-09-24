@@ -6,11 +6,11 @@ If you already have Vexy Lines installed, skip to step 2. If you don't, step 1 t
 
 ## Step 1: Install Vexy Lines
 
-Go to [vexy.art](https://vexy.art) and download the installer for your platform (macOS or Windows). Run it. Enter your license key when prompted, or click **Demo** to start the free trial — every feature works except export. For full installation details, see [Download, Install, Activate](102-installing.md).
+Go to [vexy.art](https://vexy.art) and download the installer for your platform (macOS or Windows). Run it. Enter your license key when prompted, or click **Demo** to start the free trial. Every feature works except export. For full installation details, see [Download, Install, Activate](102-installing.md).
 
 ## Step 2: Open a Photo
 
-Launch Vexy Lines. Choose **File > New**. Drag a photo onto the canvas — a portrait with strong contrast works best for your first experiment. JPEG, PNG, TIFF, and BMP all work.
+Launch Vexy Lines. Choose **File > New**. Drag a photo onto the canvas. A portrait with strong contrast works best for your first experiment. JPEG, PNG, TIFF, and BMP all work.
 
 The photo appears on the canvas. This is your **source image**: the brightness map that fills will read. It will *not* appear in your final export. Think of it as the blueprint, not the building.
 
@@ -22,17 +22,17 @@ In the **Layers Panel** (bottom-right), click the **+** button and select **Line
 
 Parallel lines appear over your image, their thickness varying with the brightness of the photo beneath. Dark areas get thick strokes; bright areas get thin ones or none at all. You're looking at a vector engraving of your photograph.
 
-This is the moment. If it doesn't make you grin, drag the **Interval** slider in the Properties Panel to the left (finer lines) and watch the detail sharpen.
+If the result looks too coarse, drag the **Interval** slider in the Properties Panel to the left (finer lines) and watch the detail sharpen.
 
 ## Step 4: Drag Two Sliders
 
 In the **Properties Panel** on the right:
 
-1. **Interval** — Drag left for finer detail (try 0.5 mm), right for bolder strokes (try 3 mm). This single parameter has more visual impact than any other control in the application.
+1. **Interval**: Drag left for finer detail (try 0.5 mm), right for bolder strokes (try 3 mm). This single parameter changes the picture more than any other control in the application.
 
-2. **Angle** — Rotate the line pattern. 0 is horizontal, 45 gives a classic diagonal engraving look, 90 is vertical. Try different values and watch the character of the image change completely.
+2. **Angle**: Rotate the line pattern. 0 is horizontal, 45 gives a classic diagonal engraving look, 90 is vertical. Try different values and watch the character of the image change completely.
 
-That's two sliders. You've already made something worth printing.
+That's two sliders, and you already have something worth printing.
 
 For a full tour of every Properties Panel control, see [Tuning Your Artwork](107-adjusting-fills.md).
 
@@ -51,8 +51,8 @@ You've completed the core workflow: load, fill, adjust, export. Everything else 
 - [The Workspace](103-workspace.md) maps every panel, toolbar, and control so you know what's where.
 - [Your First Fill](106-first-fill.md) goes deeper into the Linear fill and its parameters.
 - [Tuning Your Artwork](107-adjusting-fills.md) covers every slider in the Properties Panel.
-- [Hiding and Revealing](108-basic-masks.md) teaches masks — apply different fills to different areas.
+- [Hiding and Revealing](108-basic-masks.md) teaches masks, so you can apply different fills to different areas.
 - [Organising Your Work](109-layers-groups.md) explains layers and groups for complex compositions.
 - [Getting Your Art Out](110-exporting.md) covers every export format in detail.
 
-Five minutes in, and you've already made the leap from pixels to vectors. Everything from here is control, nuance, and creative range.
+Five minutes in, and you've already made the leap from pixels to vectors. Everything from here is control, subtlety, and creative range.

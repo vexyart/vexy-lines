@@ -2,7 +2,7 @@
 
 Knowing what every slider does is not the same as knowing what to make. Parts 1–4 gave you the instrument. Part 5 is where you play actual songs.
 
-Every article in this chapter follows a real project from concept to export — with specific parameter values, specific stacking orders, and specific reasons for every choice. These are not theoretical explorations. They are tested recipes that produce finished artwork, and each one exists because someone actually needed to make the thing described.
+Every article in this chapter follows a real project from concept to export, with specific parameter values, specific stacking orders, and specific reasons for every choice. These are not theoretical explorations. They are tested recipes that produce finished artwork, and each one exists because someone actually needed to make the thing described.
 
 ---
 
@@ -30,7 +30,7 @@ Every article in this chapter follows a real project from concept to export — 
 
 **If you want to build range:** Read them in order. Each article introduces techniques and parameter combinations that appear in later articles. Portrait Engraving establishes crosshatching. Landscape builds on atmospheric layering. Screen Printing introduces colour separation. Each adds a tool to your repertoire.
 
-**If you need something fast:** Skip to [Gallery of Techniques](512-gallery-recipes.md) at the end. It contains twelve recipe cards — name, layer stack, key parameters, export format — each designed to be reproducible in ten minutes or less.
+**If you need something fast:** Skip to [Gallery of Techniques](512-gallery-recipes.md) at the end. It contains twelve recipe cards (name, layer stack, key parameters, export format), each designed to be reproducible in ten minutes or less.
 
 ---
 
@@ -56,13 +56,13 @@ SVG for anything that will be further edited, scaled, or machine-processed. PDF 
 
 ### Parameters are recipes, not laws
 
-Every value in these articles — "interval 1.5 mm, angle 15°, smoothing 70" — is a starting point tested on representative source images. Your photo is different. Your taste is different. Use the given values for your first attempt, then adjust. The articles explain *why* each value was chosen so you can reason about changes rather than guessing.
+Every value in these articles, such as "interval 1.5 mm, angle 15°, smoothing 70", is a starting point tested on representative source images. Your photo is different. Your taste is different. Use the given values for your first attempt, then adjust. The articles explain *why* each value was chosen so you can reason about changes rather than guessing.
 
 ---
 
 ## What You Need Before Starting
 
-- **Vexy Lines installed and licensed** (or in demo mode — you can build everything except export).
+- **Vexy Lines installed and licensed** (or in demo mode, where you can build everything except export).
 - **Source photos** for the project type. Several articles suggest specific photo characteristics. A high-contrast portrait for engraving, a layered landscape for nature illustration, a product photo for screen printing.
 - **An idea of the output.** Where is this going? A gallery wall? A screen-print studio? A laser cutter? A tattoo parlour? A certificate printer? The destination shapes every parameter choice.
 - **Parts 1–4 in your head** (or bookmarked). These articles reference specific techniques and tools without re-explaining them. If you encounter a term you don't recognise, check [The One-Page Manual](002-tldr.md) for a quick refresher or the relevant Part 1–4 article for depth.
@@ -79,11 +79,11 @@ Each project type demands different source characteristics. Portraits need direc
 
 ### 2. Plan the Layer Stack
 
-Before adding the first fill, decide how many layers you need, what fill type each gets, and what mask confines it. The articles provide complete layer-stack tables — fill type, interval, angle, threshold, and mask for every layer. Copy the table into your planning notes (or just keep the article open) and build from the bottom up.
+Before adding the first fill, decide how many layers you need, what fill type each gets, and what mask confines it. The articles provide complete layer-stack tables: fill type, interval, angle, threshold, and mask for every layer. Copy the table into your planning notes (or just keep the article open) and build from the bottom up.
 
 ### 3. Build Bottom-to-Top
 
-Start with the widest, subtlest fill at the bottom of the Layers Panel. Add increasingly detailed fills above it. Put outlines on top. This order ensures that each layer is evaluated in the context of everything below it — you can see immediately whether a new fill adds value or creates visual noise.
+Start with the widest, subtlest fill at the bottom of the Layers Panel. Add increasingly detailed fills above it. Put outlines on top. This order ensures that each layer is evaluated in the context of everything below it, so you can see immediately whether a new fill adds value or creates visual noise.
 
 ### 4. Mask Each Layer
 
@@ -95,7 +95,7 @@ Zoom to 100% (actual print size if the piece is headed for print). Check stroke 
 
 ### 6. Export
 
-Choose the format that matches the destination. The articles recommend specific export settings for each project type — format, resolution, colour mode, and any special considerations for the output medium.
+Choose the format that matches the destination. The articles recommend specific export settings for each project type: format, resolution, colour mode, and any special considerations for the output medium.
 
 ---
 
@@ -103,7 +103,7 @@ Choose the format that matches the destination. The articles recommend specific 
 
 The first time you follow a recipe from this chapter, you're learning a technique. The second time, you're practising it. The third time, you're adapting it. By the fifth time, you've internalised the parameter relationships and can build similar compositions from scratch without consulting the article.
 
-That's the trajectory these articles are designed to accelerate. Each one is a shortcut through the experimentation phase — the phase where you'd otherwise spend hours trying random parameter combinations, most of which don't work. The recipes narrow the search space to the combinations that *do* work, and explain why, so you can extrapolate confidently.
+That's the trajectory these articles are designed to accelerate. Each one is a shortcut through the experimentation phase, the phase where you'd otherwise spend hours trying random parameter combinations, most of which don't work. The recipes narrow the search space to the combinations that *do* work, and explain why, so you can extrapolate confidently.
 
 ---
 
@@ -111,4 +111,4 @@ That's the trajectory these articles are designed to accelerate. Each one is a s
 
 The articles in Part 5 are opinionated. They recommend specific angles, specific intervals, specific fill combinations. This is intentional. Opinions are faster than options when you're learning. Follow the recipe once, understand why it works, then develop your own opinions. The best Vexy Lines artists all started by copying someone else's settings and ended by inventing their own.
 
-*Start with [Portrait Engraving](502-portrait-engraving.md) — the project that best showcases what Vexy Lines was built to do.*
+*Start with [Portrait Engraving](502-portrait-engraving.md): the project that best shows what Vexy Lines was built to do.*

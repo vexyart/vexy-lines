@@ -1,8 +1,8 @@
 # Guilloche and Ornamental Patterns
 
-Before software, guilloche patterns were cut by rose engine lathes — mechanical devices that translated hand-cranked rotation into precise, spiralling cuts on metal plates. The operator controlled the amplitude, frequency, and offset of the cutting head, producing interlocking waves, rosettes, and ribbon patterns of extraordinary complexity. These patterns were then used to print banknotes, stock certificates, government bonds, and official seals — documents where beauty was also security, because no forger could replicate the patterns without the same machine.
+Before software, guilloche patterns were cut by rose engine lathes: mechanical devices that translated hand-cranked rotation into precise, spiralling cuts on metal plates. The operator controlled the amplitude, frequency, and offset of the cutting head, producing interlocking waves, rosettes, and ribbon patterns of great complexity. Printers then used these patterns on banknotes, stock certificates, government bonds, and official seals: documents where beauty was also security, because no forger could reproduce the patterns without the same machine.
 
-Vexy Lines includes a Guilloche plugin that generates these ornamental patterns algorithmically. The lathes weighed hundreds of kilograms. The plugin weighs a few megabytes. The output is remarkably similar.
+Vexy Lines includes a Guilloche plugin that generates these ornamental patterns algorithmically. The lathes weighed hundreds of kilograms. The plugin weighs a few megabytes. The output follows the same geometry.
 
 ---
 
@@ -12,7 +12,7 @@ The plugin generates three types of ornamental elements:
 
 ### Ribbons
 
-A ribbon is a band of parallel wavy lines that undulates across the design. The lines within the ribbon maintain constant spacing but bend together, creating a snake-like band of pattern. Ribbons are the fundamental building block — the "strands" that weave, overlap, and frame other elements.
+A ribbon is a band of parallel wavy lines that undulates across the design. The lines within the ribbon keep constant spacing but bend together, creating a snake-like band of pattern. Ribbons are the fundamental building block: the "strands" that weave, overlap, and frame other elements.
 
 Parameters control:
 
@@ -20,15 +20,15 @@ Parameters control:
 - **Frequency:** How many waves per unit length (higher = tighter oscillation).
 - **Width:** How many parallel lines the ribbon contains.
 - **Line count:** The number of parallel strokes within the ribbon.
-- **Phase:** Shifts the wave pattern left or right — critical for creating overlapping ribbons that weave in and out of phase.
+- **Phase:** Shifts the wave pattern left or right. This matters when you create overlapping ribbons that weave in and out of phase.
 
 ### Stripes
 
-A stripe is a filled band — not individual lines, but a solid or near-solid region bounded by wavy edges. Stripes function as backgrounds, borders, or contrasting elements between ribbons.
+A stripe is a filled band: not individual lines, but a solid or near-solid region bounded by wavy edges. Stripes function as backgrounds, borders, or contrasting elements between ribbons.
 
 ### Components
 
-Components are the decorative elements placed at intersections, corners, or focal points: rosettes, medallions, corner ornaments, and geometric motifs. They can be built from the same wavy-line parameters as ribbons but arranged in circular or radial patterns.
+Components are the decorative elements placed at intersections, corners, or focal points: rosettes, medallions, corner ornaments, and geometric motifs. You can build them from the same wavy-line parameters as ribbons but arranged in circular or radial patterns.
 
 ---
 
@@ -38,7 +38,7 @@ The classic use case: an ornamental border for a certificate, diploma, or award.
 
 ### Step 1: Set Up the Document
 
-Create a new document at your certificate size — A4 landscape (297 × 210 mm) is standard. No source image needed — guilloche patterns are generated mathematically, not from photographs.
+Create a new document at your certificate size. A4 landscape (297 × 210 mm) is standard. No source image needed: the plugin generates guilloche patterns mathematically, not from photographs.
 
 ### Step 2: Outer Border Ribbon
 
@@ -57,16 +57,16 @@ Route this ribbon around the perimeter of the certificate, following a rectangul
 Create a second ribbon, slightly narrower:
 
 - **Amplitude:** 5 mm
-- **Frequency:** 18 waves (higher frequency — tighter pattern)
+- **Frequency:** 18 waves (higher frequency, tighter pattern)
 - **Width:** 8 mm
 - **Line count:** 12
 - **Colour:** Medium blue (lighter than the outer ribbon)
 
-Route this ribbon inside the first, offset inward by 20 mm. The two ribbons run parallel but at different frequencies, creating visual depth through their phase differences.
+Route this ribbon inside the first, offset inward by 20 mm. The two ribbons run parallel but at different frequencies, so their phase differences create visual depth.
 
 ### Step 4: Corner Rosettes
 
-At each corner where the border ribbons turn, place a **component** — a circular rosette built from radial lines:
+At each corner where the border ribbons turn, place a **component**: a circular rosette built from radial lines.
 
 - **Type:** Rosette
 - **Diameter:** 25 mm
@@ -93,9 +93,9 @@ For an anti-counterfeiting background texture, add a very subtle ribbon pattern 
 - **Amplitude:** 3 mm
 - **Frequency:** 30+ waves
 - **Line count:** 8
-- **Colour:** Extremely light — 10% tint of the border colour
+- **Colour:** Extremely light, a 10% tint of the border colour
 
-This background pattern is nearly invisible in normal viewing but becomes apparent when photocopied (the copier either drops it or moirés it, both of which indicate reproduction).
+This background pattern is nearly invisible in normal viewing but becomes apparent when photocopied (the copier either drops it or moirés it, and both indicate reproduction).
 
 ---
 
@@ -103,13 +103,13 @@ This background pattern is nearly invisible in normal viewing but becomes appare
 
 Guilloche patterns on banknotes and official documents serve as anti-counterfeiting measures because:
 
-1. **Complexity.** The interlocking wave patterns are extremely difficult to reproduce by hand or with standard design software. Each parameter combination produces a unique pattern — changing the frequency by 0.1 creates a visibly different design.
+1. **Complexity.** The interlocking wave patterns are extremely difficult to reproduce by hand or with standard design software. Each parameter combination produces a unique pattern: changing the frequency by 0.1 creates a visibly different design.
 
-2. **Line precision.** The lines within a ribbon must maintain perfectly even spacing along their entire length. Any variation reveals a forgery.
+2. **Line precision.** The lines within a ribbon must keep perfectly even spacing along their entire length. Any variation reveals a forgery.
 
 3. **Overlap weaving.** When two ribbons cross, one passes in front of the other. Getting this overlap correct requires exact phase alignment. The Guilloche plugin handles this automatically; a forger must reproduce it manually.
 
-4. **Micro-text integration.** Ribbons can contain micro-text — words readable only under magnification — woven into the wave pattern. Vexy Lines' Text fill can approximate this when combined with guilloche ribbons.
+4. **Micro-text integration.** Ribbons can contain micro-text, words readable only under magnification, woven into the wave pattern. The Vexy Lines Text fill can approximate this when combined with guilloche ribbons.
 
 ---
 
@@ -125,29 +125,29 @@ The difference between "decorative border" and "this looks like it belongs on mo
 | Rosette | — | — | 30–50 radial lines | Match primary |
 | Fine detail ribbon | 2–4 mm | 30–50 waves/100 mm | 20–30 | Darkest value in the palette |
 
-The key insight: **more lines per ribbon and higher frequency create the "money" look.** Twenty-five parallel wavy lines at high frequency produce the characteristic dense, almost hypnotic quality of banknote engraving. Ten lines at low frequency look more like a decorative border — pleasant, but not security-grade.
+The key insight: **more lines per ribbon and higher frequency create the "money" look.** Twenty-five parallel wavy lines at high frequency produce the dense, almost hypnotic quality of banknote engraving. Ten lines at low frequency look more like a decorative border: pleasant, but not security-grade.
 
 ---
 
 ## Overlap: Weaving Ribbons
 
-When two ribbons cross, the visual question is: which one is in front? The Guilloche plugin handles this through overlap control — the same system described in [Cloning for Coordinated Systems](410-cloning-strategies.md) but applied to guilloche elements.
+When two ribbons cross, the visual question is: which one is in front? The Guilloche plugin handles this through overlap control, the same system described in [Cloning for Coordinated Systems](410-cloning-strategies.md) but applied to guilloche elements.
 
 ### Basic Weave
 
 1. Create Ribbon A running horizontally.
 2. Create Ribbon B running diagonally across Ribbon A.
-3. At the intersection, set Ribbon A to pass in front (its lines render on top, Ribbon B's lines are hidden behind).
+3. At the intersection, set Ribbon A to pass in front (its lines render on top, and Ribbon B's lines are hidden behind).
 
 ### Alternating Weave
 
-For a more complex effect — Ribbon A in front at the first crossing, Ribbon B in front at the second:
+For a more complex effect, with Ribbon A in front at the first crossing and Ribbon B in front at the second:
 
 1. Split each ribbon into segments at each crossing point.
 2. Alternate which ribbon is on top at each crossing.
 3. The result is a genuine over-under weave, like woven fabric.
 
-The plugin can automate alternating weaves for ribbons that cross multiple times. The visual effect is strikingly three-dimensional — ribbons that appear to thread through each other.
+The plugin can automate alternating weaves for ribbons that cross multiple times. The ribbons appear to thread through each other, which reads as three-dimensional.
 
 ---
 
@@ -171,13 +171,13 @@ The guilloche plugin generates vector paths just like any fill. They stack, mask
 
 ## Historical Context
 
-The rose engine lathe dates to the 16th century, originally used for ornamental turning of decorative objects — snuff boxes, watch cases, medallions. By the 18th century, its precise geometric output had been adopted for engraving printing plates, particularly for financial documents.
+The rose engine lathe dates to the 16th century, originally used for ornamental turning of decorative objects: snuff boxes, watch cases, medallions. By the 18th century, engravers had adopted its precise geometric output for printing plates, particularly for financial documents.
 
-Jacob Perkins, an American inventor, brought the rose engine lathe to the Bank of England in 1819, revolutionising banknote security. His machine could produce patterns so complex and precise that they were considered impossible to forge by hand. The technology remained the gold standard for security printing for nearly two centuries.
+Jacob Perkins, an American inventor, brought the rose engine lathe to the Bank of England in 1819 and changed banknote security. His machine could produce patterns so complex and precise that they were considered impossible to forge by hand. The technology remained the standard for security printing for nearly two centuries.
 
-Today, computerised guilloche has largely replaced mechanical lathes, but the aesthetic — interlocking waves, precise line spacing, radial rosettes — remains unchanged. Vexy Lines' Guilloche plugin generates patterns that are algorithmically identical to those produced by modern security-printing software, though obviously intended for decorative rather than counterfeit-resistant use.
+Today, computerised guilloche has largely replaced mechanical lathes, but the aesthetic remains unchanged: interlocking waves, precise line spacing, radial rosettes. The Vexy Lines Guilloche plugin generates patterns from the same wave mathematics, though it is intended for decorative rather than counterfeit-resistant use.
 
-That said: if you design a certificate border in Vexy Lines, don't be surprised when people assume it was produced by professional security-printing software. The patterns are that convincing.
+That said: if you design a certificate border in Vexy Lines, don't be surprised when people assume it came from professional security-printing software.
 
 ---
 

@@ -10,7 +10,7 @@ Scribble is the anti-Linear. Where Linear is ordered and dignified, Scribble is 
 
 Short, irregular strokes scattered across the canvas, denser where the image is dark and sparser where it is light. Each stroke has its own angle, its own length, its own slight curvature. The cumulative effect resembles charcoal on paper, aggressive pencil sketching, or the tangled marks of a pen testing on scrap paper.
 
-At low density, individual strokes are clearly visible --- like a sparse gesture drawing. At high density, the strokes merge into a dark, textured mass in the shadows while remaining loose and airy in the highlights. The randomness is controlled: it responds to brightness faithfully, building tone through accumulated chaotic marks rather than through orderly line spacing.
+At low density, individual strokes are clearly visible, like a sparse gesture drawing. At high density, the strokes merge into a dark, textured mass in the shadows while remaining loose and airy in the highlights. The randomness is controlled: it responds to brightness faithfully, building tone through accumulated chaotic marks rather than through orderly line spacing.
 
 ---
 
@@ -18,9 +18,9 @@ At low density, individual strokes are clearly visible --- like a sparse gesture
 
 - **Charcoal and conte crayon effects:** Dense Scribble on textured subjects (bark, stone, fabric) produces a convincing charcoal sketch.
 - **Gesture and figure drawing:** Sparse Scribble on a nude or action figure captures the energy of quick life-drawing sessions.
-- **Expressive textures:** Fur, hair, grass, rough surfaces --- anything that benefits from chaotic stroke direction.
+- **Expressive textures:** Fur, hair, grass, rough surfaces: anything that benefits from chaotic stroke direction.
 - **Emotional and psychological subjects:** The agitated quality of Scribble conveys tension, anxiety, urgency. Use it when the subject matter demands emotional weight.
-- **Mixed-media compositions:** Scribble for textured areas (hair, clothing) combined with [Linear](202-linear.md) or [Trace](208-trace.md) for structured areas (skin, eyes). The contrast between chaos and order creates visual richness.
+- **Mixed-media compositions:** Scribble for textured areas (hair, clothing) combined with [Linear](202-linear.md) or [Trace](208-trace.md) for structured areas (skin, eyes). The two registers set each other off.
 - **Abstract and non-representational art:** At extreme settings, Scribble produces pure texture that barely references the source image.
 
 ---
@@ -48,7 +48,7 @@ This walkthrough transforms a photograph with rich surface texture (bark, fur, s
 
 ### 1. Choose your image
 
-Select a photograph with strong surface texture. A close-up of tree bark, an animal portrait with visible fur, a weathered stone wall, or a heavily textured fabric. The texture gives Scribble something to work with --- the brightness variations in the surface create natural density variations in the scribble marks.
+Select a photograph with strong surface texture. A close-up of tree bark, an animal portrait with visible fur, a weathered stone wall, or a heavily textured fabric. The texture gives Scribble something to work with: the brightness variations in the surface create natural density variations in the scribble marks.
 
 ### 2. Add a Scribble fill
 
@@ -66,7 +66,7 @@ Click **+** in the Layers Panel. Select **Scribble**. Chaotic strokes appear imm
 
 ### 5. Shape the strokes
 
-- **Smoothing:** 25. Low enough to preserve angular, scratchy character. Charcoal marks are not smooth --- they catch on the paper grain.
+- **Smoothing:** 25. Low enough to preserve angular, scratchy character. Charcoal marks are not smooth: they catch on the paper grain.
 - **Stroke Thickness:** Thick mode. Charcoal deposits more material in the shadows.
 - **Multiplier:** 1.5. Bold strokes for a heavy-handed charcoal effect.
 
@@ -82,7 +82,7 @@ If the marks feel too uniform, increase Randomization. If the density is too eve
 
 ### 8. Optional: Add a warm undertone
 
-Duplicate the fill. Set the copy's colour to a warm brown or ochre. Reduce its Multiplier to 0.7 (thinner strokes). Offset its Angle by 30° from the first fill. The two overlapping scribble layers in different colours create the impression of a charcoal sketch with a warm-toned underpainting --- a classic fine-art technique.
+Duplicate the fill. Set the copy's colour to a warm brown or ochre. Reduce its Multiplier to 0.7 (thinner strokes). Offset its Angle by 30° from the first fill. The two overlapping scribble layers in different colours create the impression of a charcoal sketch with a warm-toned underpainting, a classic fine-art technique.
 
 ---
 
@@ -112,7 +112,7 @@ The opposite extreme: shadows become nearly solid with accumulated scribble mark
 - **Multiplier:** 1.0.
 - **Image Threshold:** Full range.
 
-The dark areas become a heavy, opaque charcoal mass. The light areas remain loose and airy. The contrast between solid shadows and scattered highlights creates powerful chiaroscuro. Works best on dramatically lit portraits --- Rembrandt lighting, Caravaggio subjects.
+The dark areas become a heavy, opaque charcoal mass. The light areas remain loose and airy. The contrast between solid shadows and scattered highlights creates strong chiaroscuro. Works best on dramatically lit portraits: Rembrandt lighting, Caravaggio subjects.
 
 ### Scribble + Mask for Selective Chaos
 
@@ -136,7 +136,7 @@ The strokes lean uniformly to one side while maintaining their chaotic character
 
 ### Coloured Scribble Pointillism
 
-Dynamic Color on, short segment length (1--2 mm), dense interval (0.6 mm). Each scribble mark picks up the source colour beneath it. The result is a frenetic, Fauvist pointillism --- thousands of coloured marks that build into a representational image. Looser and more energetic than [Halftone](207-halftone.md) pointillism, with more personality than [Linear](202-linear.md) Dynamic Color.
+Dynamic Color on, short segment length (1--2 mm), dense interval (0.6 mm). Each scribble mark picks up the source colour beneath it. The result is a frenetic, Fauvist pointillism: thousands of coloured marks that build into a representational image. Looser and more energetic than [Halftone](207-halftone.md) pointillism, with more personality than [Linear](202-linear.md) Dynamic Color.
 
 ---
 
@@ -144,7 +144,7 @@ Dynamic Color on, short segment length (1--2 mm), dense interval (0.6 mm). Each 
 
 - **Scribble needs contrast.** If your source image is low-contrast, Scribble produces a uniform scatter of marks with little tonal variation. Increase your source image's contrast before importing, or use the Image Threshold aggressively to create contrast.
 - **Randomization below 20% defeats the purpose.** Scribble with low randomization is just a messy version of Linear. If you want controlled parallel strokes, use Linear with a small randomization value. Scribble should scribble.
-- **Scribble is the best fill for organic textures.** Fur, hair, grass, bark, rough stone, crumpled fabric --- anything with natural irregularity aligns with Scribble's chaotic stroke patterns. Smooth, geometric subjects (architecture, product photography) usually look better with Linear, Circular, or Halftone.
+- **Scribble is the best fill for organic textures.** Fur, hair, grass, bark, rough stone, crumpled fabric: anything with natural irregularity aligns with Scribble's chaotic stroke patterns. Smooth, geometric subjects (architecture, product photography) usually look better with Linear, Circular, or Halftone.
 - **Two Scribble fills at different angles create crosshatch chaos.** The result is denser and more layered than a single fill, resembling the build-up of repeated charcoal passes. Use different colours (black and dark brown, for example) for a rich, multi-toned sketch.
 - **Scribble exports as many short paths.** Unlike Spiral (one path) or Linear (few long paths), Scribble generates a large number of short, individual strokes. This can make SVG files larger and slower in downstream vector editors. If file size matters, increase Interval to reduce total stroke count.
 - **Scribble is the most "human" fill.** It is the one that most convincingly suggests a hand was involved. If your goal is to produce art that looks hand-made rather than computer-generated, Scribble (alone or combined with Handmade) is your strongest tool.

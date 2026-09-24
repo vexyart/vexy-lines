@@ -1,6 +1,6 @@
 # Preparing for Screen Printing
 
-Screen printing doesn't care about your gradients. It doesn't understand "50% opacity" or "feathered edges." Each colour is a separate screen, each screen holds ink or doesn't, and the press lays one colour on top of another in sequence. The beauty of Vexy Lines for screen printing is that it already thinks this way — every stroke is a vector path with a single colour, and every layer is independent. You just need to organise the output so the printer can work with it.
+Screen printing doesn't care about your gradients. It doesn't understand "50% opacity" or "feathered edges." Each colour is a separate screen, each screen holds ink or doesn't, and the press lays one colour on top of another in sequence. The beauty of Vexy Lines for screen printing is that it already thinks this way: every stroke is a vector path with a single colour, and every layer is independent. You just need to organise the output so the printer can work with it.
 
 ---
 
@@ -32,7 +32,7 @@ Before touching Vexy Lines, decide:
 
 Create one fill layer per colour. Each layer gets:
 
-- A flat colour matching your ink colour (or a standard spot-colour reference — Pantone, etc.).
+- A flat colour matching your ink colour (or a standard spot-colour reference such as Pantone).
 - A mask confining it to the areas where that colour should print.
 - A fill type and parameters appropriate for the ink and mesh count.
 
@@ -112,10 +112,10 @@ Trapping is the intentional slight overlap between two adjacent colour regions t
 To trap in Vexy Lines:
 
 1. Expand each colour's mask slightly (1–2 pixels) beyond its intended boundary.
-2. The overlapping area prints both colours — a narrow strip of overprint that's invisible at normal viewing distance.
+2. The overlapping area prints both colours: a narrow strip of overprint that's invisible at normal viewing distance.
 3. The darker colour should expand *into* the lighter colour's region (not the other way around), so the overlap reads as a shadow rather than a highlight.
 
-Alternatively, use a black outline layer (Trace fill) that covers the boundaries between colours. The outline hides any registration gaps beneath it — this is the simplest and most common trapping strategy for hand-printed screen work.
+Alternatively, use a black outline layer (Trace fill) that covers the boundaries between colours. The outline hides any registration gaps beneath it. This is the simplest and most common trapping strategy for hand-printed screen work.
 
 ---
 
@@ -123,7 +123,7 @@ Alternatively, use a black outline layer (Trace fill) that covers the boundaries
 
 If printing on non-white paper (kraft, coloured stock, black paper):
 
-- **The paper colour shows through everywhere ink isn't.** Design with this in mind — your "white" is actually the paper colour.
+- **The paper colour shows through everywhere ink isn't.** Design with this in mind: your "white" is actually the paper colour.
 - **White ink is opaque** and can be printed as an underbase beneath other colours on dark paper.
 - **Layer order matters more.** On dark paper, print white first, then lighter colours, then darker colours.
 - In Vexy Lines, set the canvas background colour to match your paper colour. This gives you an accurate preview of how the final print will look.
@@ -135,8 +135,8 @@ If printing on non-white paper (kraft, coloured stock, black paper):
 Risograph printing is a form of screen printing with specific constraints:
 
 - **Two drums maximum** on most machines (some have one). Each drum holds one ink colour.
-- **Registration is imprecise** — expect 1–3 mm of drift between colours. Use generous trapping and avoid designs that require tight alignment.
-- **Ink is semi-transparent.** Overlapping areas create third colours (red + blue = purple). This can be a feature, not a bug — design for it.
+- **Registration is imprecise.** Expect 1–3 mm of drift between colours. Use generous trapping and avoid designs that require tight alignment.
+- **Ink is semi-transparent.** Overlapping areas create third colours (red + blue = purple). This can be a feature, not a bug. Design for it.
 - **Grain texture** is inherent in riso printing. It adds character, so don't over-smooth your fills. A little randomization (10–20%) complements the riso aesthetic.
 
 ### Riso-Friendly Parameters

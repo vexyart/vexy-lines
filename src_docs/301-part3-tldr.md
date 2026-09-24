@@ -1,26 +1,26 @@
 # The Control Surface
 
-Every fill in Vexy Lines is born equal — a blank algorithm waiting for instructions. The Properties Panel is where you give those instructions. It is a single vertical column on the right side of the workspace, and it changes its contents depending on what you have selected. Select a Linear fill and you see Interval, Angle, Stroke Thickness, Image Threshold, Smoothing, Randomization, Shift, Colour, Dashes, Emboss, Clones, and Overlap Control. Select a Halftone fill and you see all of those plus Shape and Shape Rotation. Select nothing and the panel goes quiet.
+Every fill in Vexy Lines starts the same way: a blank algorithm waiting for instructions. The Properties Panel is where you give those instructions. It is a single vertical column on the right side of the workspace, and it changes its contents depending on what you have selected. Select a Linear fill and you see Interval, Angle, Stroke Thickness, Image Threshold, Smoothing, Randomization, Shift, Colour, Dashes, Emboss, Clones, and Overlap Control. Select a Halftone fill and you see all of those plus Shape and Shape Rotation. Select nothing and the panel goes quiet.
 
-This article maps every control in the Properties Panel so you know what lives where, what it does, and which fills it applies to. Think of it as the legend for a control-room dashboard — once you know where each dial sits, you can stop hunting and start creating.
+This article maps every control in the Properties Panel so you know what lives where, what it does, and which fills it applies to. Think of it as the legend for a control-room dashboard: once you know where each dial sits, you can stop hunting and start creating.
 
 ## The Layout
 
 The Properties Panel is divided into collapsible sections. From top to bottom, the default order is:
 
-1. **Fill Type indicator** — shows the algorithm name and icon for the selected fill.
-2. **Colour** — static colour picker or dynamic colour toggle.
-3. **Stroke Thickness** — brightness-to-weight mapping with mode selector.
-4. **Image Threshold** — histogram with draggable shadow and highlight handles.
-5. **Interval** — distance between repeating elements.
-6. **Angle** — rotation of the fill pattern.
-7. **Randomization** — controlled chaos percentage.
-8. **Smoothing** — curve quality versus detail trade-off.
-9. **Shift** — pattern origin offset.
-10. **Dash Patterns** — dash length and gap length for dashed strokes.
-11. **Emboss / Bas-Relief** — 3D appearance through paired offset strokes.
-12. **Clones** — linked copies inheriting parent parameters.
-13. **Overlap Control** — inter-fill cutting and weaving choreography.
+1. **Fill Type indicator:** shows the algorithm name and icon for the selected fill.
+2. **Colour:** static colour picker or dynamic colour toggle.
+3. **Stroke Thickness:** brightness-to-weight mapping with mode selector.
+4. **Image Threshold:** histogram with draggable shadow and highlight handles.
+5. **Interval:** distance between repeating elements.
+6. **Angle:** rotation of the fill pattern.
+7. **Randomization:** controlled chaos percentage.
+8. **Smoothing:** curve quality versus detail trade-off.
+9. **Shift:** pattern origin offset.
+10. **Dash Patterns:** dash length and gap length for dashed strokes.
+11. **Emboss / Bas-Relief:** 3D appearance through paired offset strokes.
+12. **Clones:** linked copies inheriting parent parameters.
+13. **Overlap Control:** inter-fill cutting and weaving between fills.
 
 Some sections appear only when relevant. You will not see Shape unless a Halftone fill is selected. You will not see Wave Height unless a Wave fill is selected. You will not see Center controls unless a Circular, Spiral, or Radial fill is selected.
 
@@ -66,17 +66,17 @@ The table below lists every parameter in the Properties Panel, what it does, its
 
 ## How Parameters Interact
 
-No parameter works alone. Understanding their interactions is half the craft:
+No parameter works alone. Understanding how they interact is half the craft:
 
 - **Interval + Thickness**: Set interval to 2 mm and thickness max to 2 mm and the darkest areas of your image will produce solid black with no visible gap between strokes. Set interval to 2 mm and thickness max to 0.5 mm and even the darkest regions will have visible white space. This pair is the primary density control.
 
-- **Threshold + Interval**: Narrowing the threshold range (say, keeping only midtones from 80 to 180) means fewer pixels generate strokes, so even a tight interval produces sparser output. Use this to target specific tonal bands — see [Image Threshold: Choosing What Matters](304-image-threshold.md).
+- **Threshold + Interval**: Narrowing the threshold range (say, keeping only midtones from 80 to 180) means fewer pixels generate strokes, so even a tight interval produces sparser output. Use this to target specific tonal bands: see [Image Threshold: Choosing What Matters](304-image-threshold.md).
 
-- **Randomization + Smoothing**: High randomization with low smoothing produces jagged, electric noise. High randomization with high smoothing produces organic drift — like hand-drawn lines that wander but never break. Pair them together, not in isolation.
+- **Randomization + Smoothing**: High randomization with low smoothing produces jagged, electric noise. High randomization with high smoothing produces organic drift, like hand-drawn lines that wander but never break. Pair them together, not in isolation.
 
 - **Dynamic Colour + Segment Length**: Short segment length means the colour changes rapidly along each stroke, producing a confetti-like effect. Long segment length means each stroke holds its sampled colour for longer stretches, producing a painterly wash. See [Colour: Static and Dynamic](302-colour.md) for the full picture.
 
-- **Angle + Overlap Control**: When two fills cut each other at different angles, the cuts create a weave — one fill passes over, then under, then over the other. The visual effect depends entirely on the angle difference between the two fills. See [Clones and Overlap Control](311-clones-overlap.md).
+- **Angle + Overlap Control**: When two fills cut each other at different angles, the cuts create a weave: one fill passes over, then under, then over the other. The visual effect depends entirely on the angle difference between the two fills. See [Clones and Overlap Control](311-clones-overlap.md).
 
 ## Fills and Their Unique Parameters
 
@@ -84,7 +84,7 @@ Most parameters are shared across all fills. Here is what makes each fill specia
 
 | Fill | Unique Parameters |
 |------|-------------------|
-| **Linear** | (none — all shared parameters) |
+| **Linear** | (none: all shared parameters) |
 | **Wave** | Wave Height, Wave Length |
 | **Circular** | Center X, Center Y |
 | **Spiral** | Center X, Center Y |
@@ -113,4 +113,4 @@ Each section of the Properties Panel has its own article with practical values, 
 - [Clones and Overlap Control](311-clones-overlap.md)
 - [Document and Canvas Settings](312-document-settings.md)
 
-Or, if you prefer to learn by doing, go back to [Your First Fill](106-first-fill.md) and follow along — every parameter mentioned there links back here.
+Or, if you prefer to learn by doing, go back to [Your First Fill](106-first-fill.md) and follow along. Every parameter mentioned there links back here.

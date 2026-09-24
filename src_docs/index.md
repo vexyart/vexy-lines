@@ -5,11 +5,11 @@
 
 # The Book of Vexy
 
-The complete guide to [Vexy Lines](https://vexy.art/lines/) — the desktop app that transforms raster images into expressive, scalable vector artwork.
+The complete guide to [Vexy Lines](https://vexy.art/lines/): the desktop app that turns raster images into expressive, scalable vector artwork.
 
 ## Who this is for
 
-Graphic designers, illustrators, printmakers, tattoo artists, laser-cutter operators — anyone who turns photographs into vector line art. No programming knowledge needed through Part 5. Part 6 introduces automation tools gently.
+Graphic designers, illustrators, printmakers, tattoo artists, laser-cutter operators: anyone who turns photographs into vector line art. No programming knowledge needed through Part 5. Part 6 introduces the automation tools step by step.
 
 ## Quick paths
 
@@ -39,16 +39,16 @@ Graphic designers, illustrators, printmakers, tattoo artists, laser-cutter opera
 
 ## Related documentation
 
-- [.lines File Format](https://vexy.dev/vexy-lines-py/) — parse `.lines` files in Python
-- [MCP API & Style Engine](https://vexy.dev/vexy-lines-apy/) — programmatic control and style transfer
-- [CLI & MCP Bridge](https://vexy.dev/vexy-lines-cli/) — command-line tools and AI assistant integration
-- [Batch GUI](https://vexy.dev/vexy-lines-run/) — desktop app for batch and video processing
+- [.lines File Format](https://vexy.dev/vexy-lines-py/): parse `.lines` files in Python
+- [MCP API & Style Engine](https://vexy.dev/vexy-lines-apy/): programmatic control and style transfer
+- [CLI & MCP Bridge](https://vexy.dev/vexy-lines-cli/): command-line tools and AI assistant integration
+- [Batch GUI](https://vexy.dev/vexy-lines-run/): desktop app for batch and video processing
 
 ## About Vexy Lines
 
-In 2007, Dmitry Apanovich released Strokes Maker — a focused tool that helped designers build engraving-style drawings from everyday images. A few years later, Dmitry joined FontLab to work on font-editing tools, while he supported Strokes Maker and explored new ideas.
+In 2007, Dmitry Apanovich released Strokes Maker, a focused tool that helped designers build engraving-style drawings from everyday images. A few years later, Dmitry joined FontLab to work on font-editing tools, while he supported Strokes Maker and explored new ideas.
 
-Vexy Lines is the result: a careful rewrite combining Strokes Maker's proven approach with FontLab's product craft — with a calmer UI and a dependable desktop foundation.
+Vexy Lines is the result: a careful rewrite combining Strokes Maker's proven approach with FontLab's product craft, a calmer UI, and a dependable desktop foundation.
 
 - [Download for Mac or Windows](https://www.vexy.art/lines/#buy)
 - [Buy Vexy Lines](https://www.vexy.art/lines/#buy)
@@ -57,13 +57,13 @@ Vexy Lines is the result: a careful rewrite combining Strokes Maker's proven app
 
 A desktop batch GUI for style transfer. Export multiple `.lines` files, apply styles to images or video.
 
-**macOS** — Open Terminal, paste, press Enter:
+**macOS**: Open Terminal, paste, press Enter:
 
 ```sh
 curl -LsSf https://astral.sh/uv/install.sh | sh && "$HOME/.local/bin/uvx" --python 3.12 vexy-lines-run@latest
 ```
 
-**Windows** — Open Command Prompt, paste, press Enter:
+**Windows**: Open Command Prompt, paste, press Enter:
 
 ```bat
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex; $env:Path = \"$HOME\.local\bin;$HOME\AppData\Roaming\uv;$env:Path\"; uvx --python 3.12 vexy-lines-run@latest"

@@ -1,6 +1,6 @@
 # Composition Recipes
 
-Theory is useful. Recipes are faster. Here are five complete layer-stack blueprints — each with specific parameter values, mask instructions, and stacking order — that you can build in fifteen minutes and tweak for the rest of the afternoon.
+Theory is useful. Recipes are faster. Here are five complete layer-stack blueprints, each with specific parameter values, mask instructions, and stacking order, that you can build in fifteen minutes and tweak for the rest of the afternoon.
 
 Every recipe starts with a source photo, ends with an export-ready composition, and uses only techniques covered in Parts 1–4 of this manual. Think of them as templates: follow them exactly once, then break every rule the second time.
 
@@ -12,7 +12,7 @@ The look: a copper-plate engraving of a human face. Dense crosshatching in the s
 
 ### Source Photo
 
-A well-lit portrait with strong contrast. Front or three-quarter lighting. Avoid flat lighting — you need distinct shadow and highlight regions for the crosshatch to read.
+A well-lit portrait with strong contrast. Front or three-quarter lighting. Avoid flat lighting: you need distinct shadow and highlight regions for the crosshatch to read.
 
 ### Layer Stack (Bottom to Top)
 
@@ -30,7 +30,7 @@ A well-lit portrait with strong contrast. Front or three-quarter lighting. Avoid
 
 2. Add Layer 2 (Linear, 1.5 mm, 15°, Thick mode). This is the primary shading layer. Mask it to the face and neck using auto-detection or the Brush. The Thick mode means dark areas get heavy strokes.
 
-3. Add Layer 3 (Linear, 1.5 mm, 75°, Thin mode). Set threshold to shadows only (right handle to 100). Mask to the same face region. This creates crosshatching — Layer 2's strokes at 15° and Layer 3's strokes at 75° cross each other only in the darkest areas.
+3. Add Layer 3 (Linear, 1.5 mm, 75°, Thin mode). Set threshold to shadows only (right handle to 100). Mask to the same face region. This creates crosshatching: Layer 2's strokes at 15° and Layer 3's strokes at 75° cross each other only in the darkest areas.
 
 4. Add Layer 4 (Scribble, 1.8 mm). Mask to the hair. The chaotic strokes give hair an organic texture that straight lines can't match.
 
@@ -48,7 +48,7 @@ A well-lit portrait with strong contrast. Front or three-quarter lighting. Avoid
 
 ## Recipe 2: Landscape with Atmospheric Depth
 
-The look: a sweeping landscape where the background is soft and sparse, the midground is moderate, and the foreground is dense and detailed. The fill density creates the illusion of atmospheric perspective — distant objects rendered with less contrast and wider spacing.
+The look: a sweeping landscape where the background is soft and sparse, the midground is moderate, and the foreground is dense and detailed. The fill density creates the illusion of atmospheric perspective: distant objects are rendered with less contrast and wider spacing.
 
 ### Source Photo
 
@@ -68,7 +68,7 @@ A landscape with clear foreground, midground, and background separation. A mount
 
 1. **Sky and background** (Layer 1): Wave fill, wide interval, gentle amplitude. The flowing curves evoke clouds and atmospheric haze. Mask to the sky and any distant terrain. The wide spacing reads as "far away."
 
-2. **Midground** (Layer 2): Linear fill at 10° (nearly horizontal — echoing the horizon line). Moderate interval. 15% randomization softens the mechanical precision. Mask to the midground band.
+2. **Midground** (Layer 2): Linear fill at 10° (nearly horizontal, echoing the horizon line). Moderate interval. 15% randomization softens the mechanical precision. Mask to the midground band.
 
 3. **Foreground vegetation** (Layer 3): Fractal fill at 1.5 mm. The space-filling Peano curves create organic complexity that mimics foliage, grass, or rocky texture. Mask to the foreground.
 
@@ -91,7 +91,7 @@ The look: Roy Lichtenstein meets Andy Warhol. Bold halftone dots, thick outlines
 
 ### Source Photo
 
-A close-up face or a single bold object. Simple composition with strong shapes — a face in profile, a soda can, a shoe. Complex scenes with many small elements don't pop-art well.
+A close-up face or a single bold object. Simple composition with strong shapes: a face in profile, a soda can, a shoe. Complex scenes with many small elements don't pop-art well.
 
 ### Layer Stack (Bottom to Top)
 
@@ -103,21 +103,21 @@ A close-up face or a single bold object. Simple composition with strong shapes �
 
 ### Building It
 
-1. **Halftone base** (Layer 1): Grid mode, circle shape, 3.0 mm interval. Enable **Dynamic Color** — the dots sample colours directly from the source photo, producing the characteristic pop-art dot-colour effect. The dots are large enough to be individually visible, creating the newsprint aesthetic.
+1. **Halftone base** (Layer 1): Grid mode, circle shape, 3.0 mm interval. Enable **Dynamic Color**: the dots sample colours directly from the source photo, producing the characteristic pop-art dot-colour effect. The dots are large enough to be individually visible, creating the newsprint aesthetic.
 
 2. **Shadow blocks** (Layer 2): Linear fill at tight interval, set to a bold flat colour (magenta, cyan, or black). Threshold locked to deep shadows. Mask to the darkest areas of the face (under the chin, beside the nose, in the hair). This creates the flat shadow blocks that define pop art's graphic punch.
 
-3. **Bold outlines** (Layer 3): Trace fill at 1.5 mm thickness, smoothing reduced to 40 for slightly angular edges (pop art outlines aren't perfectly smooth — they have a printed, imperfect quality). Colour: pure black.
+3. **Bold outlines** (Layer 3): Trace fill at 1.5 mm thickness, smoothing reduced to 40 for slightly angular edges (pop art outlines aren't perfectly smooth; they have a printed, imperfect quality). Colour: pure black.
 
 ### Key Move
 
-The entire pop-art look depends on the Halftone fill's Dynamic Color being enabled. Without it, you get monochrome dots. With it, each dot picks up the source photo's colour at that point — red dots on lips, blue dots on a denim jacket, skin-tone dots on the face. That colour sampling, at dot-grid resolution, *is* the pop-art effect.
+The entire pop-art look depends on the Halftone fill's Dynamic Color being enabled. Without it, you get monochrome dots. With it, each dot picks up the source photo's colour at that point: red dots on lips, blue dots on a denim jacket, skin-tone dots on the face. That colour sampling, at dot-grid resolution, *is* the pop-art effect.
 
 ---
 
 ## Recipe 4: Technical Drawing
 
-The look: clean, precise, mechanical. No randomisation, no expressive texture — just disciplined parallel lines at exact intervals, masked to precise geometric regions. The visual language of architectural rendering, patent illustrations, and engineering diagrams.
+The look: clean, precise, mechanical. No randomisation, no expressive texture: just disciplined parallel lines at exact intervals, masked to precise geometric regions. The visual language of architectural rendering, patent illustrations, and engineering diagrams.
 
 ### Source Photo
 
@@ -140,9 +140,9 @@ The discipline here is in the masking. Each surface of the object gets a Linear 
 - Vertical surfaces → 90° lines
 - Angled surfaces → 45° (or match the surface angle)
 
-All fills share the same interval (1.2 mm) and zero randomisation. The result is a drawing where line direction communicates surface orientation — a convention from technical illustration that viewers understand instinctively.
+All fills share the same interval (1.2 mm) and zero randomisation. The result is a drawing where line direction communicates surface orientation, a convention from technical illustration that viewers understand instinctively.
 
-Mask each fill carefully with the Freeform tool (**S**) — technical illustrations demand clean geometric mask boundaries, not freehand brush painting. Use the Editor (**V**) to ensure corners are sharp.
+Mask each fill carefully with the Freeform tool (**S**): technical illustrations demand clean geometric mask boundaries, not freehand brush painting. Use the Editor (**V**) to ensure corners are sharp.
 
 The Trace fill on top provides clean outlines at the boundaries of every surface.
 
@@ -154,7 +154,7 @@ Export as SVG with high smoothing. Technical drawings are often used in document
 
 ## Recipe 5: Mixed Media Collage
 
-The look: multiple visual textures colliding — scribbled backgrounds, hand-drawn details, typographic elements, and geometric halftone blocks. Controlled chaos that looks effortlessly artistic.
+The look: multiple visual textures colliding: scribbled backgrounds, hand-drawn details, typographic elements, and geometric halftone blocks. Controlled chaos.
 
 ### Source Photo
 
@@ -173,17 +173,17 @@ Anything with strong shapes and varied tonal areas. A street scene, a still life
 
 ### Building It
 
-The magic of mixed media is the *contrast between techniques*. Each fill type has its own visual vocabulary, and slamming them together creates tension and interest:
+The point of mixed media is the *contrast between techniques*. Each fill type has its own visual vocabulary, and slamming them together creates tension and interest:
 
 1. **Scribble background** (Layer 1): Loose, chaotic, warm. Dynamic Color samples the source so the scribbles carry the image's colour palette. This establishes the emotional tone.
 
 2. **Linear subject** (Layer 2): Disciplined parallel lines on the main subject. The contrast between the chaotic background and the structured subject draws the eye to the subject.
 
-3. **Halftone accent** (Layer 3): Diamond-shaped halftone dots on a specific area — a jacket, a building facade, a piece of furniture. This adds graphic punch in a localised region.
+3. **Halftone accent** (Layer 3): Diamond-shaped halftone dots on a specific area: a jacket, a building facade, a piece of furniture. This adds graphic punch in a localised region.
 
 4. **Handmade detail** (Layer 4): If you've drawn custom strokes with the Handmade fill, apply them to a small detail area. Balanced mode repeats your strokes across the masked region with algorithmic modulation.
 
-5. **Text layer** (Layer 5): Words related to the image — the subject's name, a location, descriptive adjectives, a poem. Masked to a flat area (sky, wall) so the text is legible against a simple background.
+5. **Text layer** (Layer 5): Words related to the image: the subject's name, a location, descriptive adjectives, a poem. Masked to a flat area (sky, wall) so the text is legible against a simple background.
 
 6. **Trace outlines** (Layer 6): Ties everything together. The consistent outline weight across all areas creates visual unity despite the variety of fill techniques below.
 
@@ -205,7 +205,7 @@ Every recipe here is a starting point. The fastest way to make it your own:
 
 4. **Change the mask shapes.** Rectangle masks produce formal compositions. Freeform masks produce organic compositions. Brush-painted masks produce loose, editorial compositions.
 
-5. **Enable Dynamic Color on one layer.** Sampling source colours on even a single fill layer introduces colour variety that transforms a monochrome composition into something vibrant.
+5. **Enable Dynamic Color on one layer.** Sampling source colours on even a single fill layer introduces colour variety that transforms a monochrome composition into a coloured one.
 
 For more targeted workflows, see Part 5: [From Tool to Craft](501-part5-tldr.md).
 

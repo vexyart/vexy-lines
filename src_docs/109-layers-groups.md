@@ -4,7 +4,7 @@ A one-layer document is an experiment. A twenty-layer document is a project. The
 
 ## Layers: The Transparent Sheets
 
-Each layer in Vexy Lines contains exactly one fill — one algorithm generating one set of vector strokes. Layers stack vertically, like transparent sheets of acetate on an overhead projector (if you're old enough to remember those) or like layers in Photoshop, Illustrator, or any modern design application.
+Each layer in Vexy Lines contains exactly one fill: one algorithm generating one set of vector strokes. Layers stack vertically, like transparent sheets of acetate on an overhead projector (if you're old enough to remember those) or like layers in Photoshop, Illustrator, or any modern design application.
 
 The layer at the top of the Layers Panel draws on top of everything below it. The layer at the bottom draws first and gets covered by everything above. This stacking order determines how fills overlap, which matters when fills have masks that leave some areas transparent.
 
@@ -34,7 +34,7 @@ Good names cost five seconds and save five minutes of clicking through layers to
 
 ### Toggling Visibility
 
-Click the **eye icon** next to a layer to hide it without deleting it. The fill vanishes from the canvas but all its settings — parameters, mask, everything — remain intact. Click the eye again to bring it back.
+Click the **eye icon** next to a layer to hide it without deleting it. The fill vanishes from the canvas but all its settings (parameters, mask, everything) remain intact. Click the eye again to bring it back.
 
 Use visibility toggles to:
 - Compare the document with and without a specific fill.
@@ -43,7 +43,7 @@ Use visibility toggles to:
 
 ### Locking Layers
 
-Click the **lock icon** next to a layer to prevent accidental edits. A locked layer can't be moved, can't have its parameters changed, and can't have its mask painted on. It still renders normally — it's just protected from accidental changes.
+Click the **lock icon** next to a layer to prevent accidental edits. A locked layer can't be moved, can't have its parameters changed, and can't have its mask painted on. It still renders normally. It's just protected from accidental changes.
 
 Lock layers you're finished with. In a complex document, an accidental parameter drag on a finished layer is a frustrating setback, especially if you don't notice until later.
 
@@ -71,13 +71,13 @@ Groups serve three purposes:
 
 **2. Shared masking.** A group can have its own mask, separate from the masks on individual layers inside it. The group mask applies on top of layer masks: a pixel is only visible if *both* the layer mask and the group mask allow it.
 
-This is incredibly powerful. Put three fill layers inside a "Face" group, give the group a mask that shows only the face region, and all three fills are automatically restricted to the face — without each layer needing its own mask. Change the group mask once, and all three fills update.
+Put three fill layers inside a "Face" group, give the group a mask that shows only the face region, and all three fills are automatically restricted to the face, without each layer needing its own mask. Change the group mask once, and all three fills update.
 
 **3. Per-group source images.** This is the feature that makes complex compositions possible.
 
 ### Per-Group Source Images
 
-By default, all fills in a document read from the same source image — the one you loaded when you created the document. But each group can override this with its own source image.
+By default, all fills in a document read from the same source image: the one you loaded when you created the document. But each group can override this with its own source image.
 
 Right-click a group in the Layers Panel and look for the source image option (the exact UI varies by version). Assign a different image, and every fill inside that group reads brightness values from the new image instead of the document-level one.
 
@@ -117,7 +117,7 @@ Three source images, five fills, one document. Each fill reads the brightness va
 
 ### Expanding and Collapsing Groups
 
-Click the disclosure triangle next to a group name to expand (show contents) or collapse (hide contents). Collapsed groups still render normally — collapsing is purely a Layers Panel organisation feature.
+Click the disclosure triangle next to a group name to expand (show contents) or collapse (hide contents). Collapsed groups still render normally: collapsing is purely a Layers Panel organisation feature.
 
 Collapse groups you're not working on. A document with twenty layers in five groups is much easier to navigate when only the active group is expanded.
 
@@ -142,27 +142,27 @@ Shift-click to select a range of layers. Cmd-click (macOS) / Ctrl-click (Windows
 ### Strategy 1: By Subject
 
 Group layers by what they depict:
-- "Face" group — all fills covering the face
-- "Hair" group — fills covering the hair
-- "Background" group — fills covering the background
+- "Face" group: all fills covering the face
+- "Hair" group: fills covering the hair
+- "Background" group: fills covering the background
 
 This is intuitive for figurative work and makes per-group source images easy to manage.
 
 ### Strategy 2: By Fill Type
 
 Group layers by technique:
-- "Engraving" group — all Linear fills
-- "Textures" group — Scribble and Fractal fills
-- "Accents" group — Halftone and Radial fills
+- "Engraving" group: all Linear fills
+- "Textures" group: Scribble and Fractal fills
+- "Accents" group: Halftone and Radial fills
 
 This is useful when you want to toggle an entire technique on and off to see its contribution.
 
 ### Strategy 3: By Stage
 
 Group layers by refinement stage:
-- "Base tones" group — the first rough fills
-- "Detail" group — finer fills added later
-- "Experimental" group — fills you're trying out (hide this group to see the "safe" version)
+- "Base tones" group: the first rough fills
+- "Detail" group: finer fills added later
+- "Experimental" group: fills you're trying out (hide this group to see the "safe" version)
 
 This is useful during iterative development of a complex piece.
 

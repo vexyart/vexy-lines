@@ -1,10 +1,10 @@
 # Building a Style Library
 
-You just spent ninety minutes crafting a seven-layer composition with perfectly tuned crosshatch angles, carefully balanced thresholds, and a Trace outline layer with exactly the right smoothing value. It looks magnificent. Now you need to apply the same look to thirty more images for a client's annual report.
+You just spent ninety minutes on a seven-layer composition with tuned crosshatch angles, balanced thresholds, and a Trace outline layer with exactly the right smoothing value. It looks right. Now you need to apply the same look to thirty more images for a client's annual report.
 
 You could rebuild those seven layers from memory for each image. Or you could save the style once and transfer it to every image in seconds.
 
-A **style** in Vexy Lines is the complete set of fill layers, parameters, masks, and groups in a .lines document — everything except the source image. Swap the source image and the style reinterprets the new photograph through the same algorithmic lens. This is style transfer, and it's how you turn a one-off experiment into a repeatable creative tool.
+A **style** in Vexy Lines is the complete set of fill layers, parameters, masks, and groups in a .lines document: everything except the source image. Swap the source image and Vexy Lines reinterprets the new photograph through the same fill recipe. This is style transfer, and it's how you turn a one-off experiment into a repeatable tool.
 
 ---
 
@@ -23,7 +23,7 @@ When you save a .lines file, it stores:
 | Source image | Yes | Replaced during transfer |
 | Canvas size | Yes | Adjusted to match new source |
 
-The source image is the only element that changes during style transfer. Everything else — the fill recipe — stays intact.
+The source image is the only element that changes during style transfer. Everything else, the fill recipe, stays intact.
 
 ---
 
@@ -33,7 +33,7 @@ The source image is the only element that changes during style transfer. Everyth
 2. **File > Save As** with a descriptive name: `portrait-engraving-crosshatch.lines`, `landscape-atmospheric-depth.lines`, `pop-art-halftone-bold.lines`.
 3. Store the file in a dedicated folder: `~/Vexy Styles/` or whatever naming convention you prefer.
 
-That's it. The .lines file *is* the style template. No separate "style format" — the document itself carries all the information.
+That's it. The .lines file *is* the style template. There is no separate "style format": the document itself carries all the information.
 
 ### Naming Conventions
 
@@ -94,7 +94,7 @@ This takes 2–10 minutes per image depending on how much mask and threshold adj
 
 ## Style Transfer: The SDK/CLI Method
 
-For batch processing - applying the same style to dozens or hundreds of images - use the command-line tools. A `.lines` file is the style source; you do not need to export a separate JSON style file.
+For batch processing (applying the same style to dozens or hundreds of images), use the command-line tools. A `.lines` file is the style source; you do not need to export a separate JSON style file.
 
 ### Apply a Style
 
@@ -142,7 +142,7 @@ The interpolation blends **numeric parameters**: intervals, angles, thresholds, 
 
 - **Finding the sweet spot.** You built a bold engraving style and a delicate fine-line style. Neither is quite right. Interpolate at 0.3 (mostly bold with some delicacy) or 0.7 (mostly delicate with some weight) to find a hybrid that combines the best qualities.
 
-- **Animation.** For video style transfer, interpolate across frames to create evolving visual textures. The style shifts gradually over time, creating a living, breathing aesthetic. See the video documentation for details.
+- **Animation.** For video style transfer, interpolate across frames to create evolving visual textures. The style shifts gradually over time. See the video documentation for details.
 
 ---
 
@@ -168,7 +168,7 @@ Linear at 0° and 90° with zero randomization + Trace outlines at max smoothing
 
 ### 5. Organic Texture
 
-Scribble background + Handmade detail + Fractal midlayer. The all-organic style — no straight lines, no grid patterns, no mechanical precision. Works for natural subjects, abstracts, and textures.
+Scribble background + Handmade detail + Fractal midlayer. The all-organic style: no straight lines, no grid patterns, no mechanical precision. Works for natural subjects, abstracts, and textures.
 
 ---
 
@@ -180,7 +180,7 @@ A .lines file is a complete, self-contained style. To share:
 - **Publish to a shared folder** (Dropbox, Google Drive, network share). Team members pull templates as needed.
 - **Include in a project repository.** If your team uses version control, styles can be committed alongside other project assets.
 
-The only dependency is Vexy Lines itself. No plugins, no fonts, no external resources — everything is in the .lines file.
+The only dependency is Vexy Lines itself. No plugins, no fonts, no external resources: everything is in the .lines file.
 
 ---
 
@@ -200,7 +200,7 @@ As your library grows past twenty or thirty styles, maintenance matters:
 | Action | How |
 |--------|-----|
 | Save style | File > Save As (the .lines file *is* the style) |
-| Apply style manually | Open template → replace source image → adjust masks → Save As |
+| Apply style manually | Open template, replace source image, adjust masks, Save As |
 | Apply style via CLI | `vexy-lines-cli style-transfer --style template.lines --images photo.jpg --output-dir ./results` |
 | Batch apply | `vexy-lines-cli style-transfer --style template.lines --input-dir ./photos --output-dir ./results` |
 | Interpolate styles | `vexy-lines-cli style-transfer --style a.lines --end-style b.lines --input-dir ./frames --output-dir ./results` |

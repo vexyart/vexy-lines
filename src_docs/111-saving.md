@@ -1,6 +1,6 @@
 # Save, Backup, Recover
 
-You've spent an hour building a multi-layer composition with carefully tuned parameters and hand-painted masks. A crash, a power cut, or an overzealous Cmd+Z could wipe it out. This article is about making sure that never happens — and recovering gracefully when it does.
+You've spent an hour building a multi-layer composition with carefully tuned parameters and hand-painted masks. A crash, a power cut, or an overzealous Cmd+Z could wipe it out. This article is about making sure that never happens, and recovering when it does.
 
 ## The .lines File Format
 
@@ -8,7 +8,7 @@ Vexy Lines saves documents in its own format with the `.lines` extension. A `.li
 
 - **Document dimensions and resolution (DPI)**
 - **Every layer and group** with their names, stacking order, and visibility states
-- **Every fill's parameters** — Interval, Angle, Threshold settings, Stroke Thickness mode, Smoothing, Randomization, Shift, Dynamic Color, and all fill-type-specific parameters
+- **Every fill's parameters**: Interval, Angle, Threshold settings, Stroke Thickness mode, Smoothing, Randomization, Shift, Dynamic Color, and all fill-type-specific parameters
 - **Every mask** as embedded pixel data
 - **Every source image** as base64-encoded data embedded in the XML
 - **Mesh warp settings** if you've applied any
@@ -29,7 +29,7 @@ Typical file sizes:
 | Very complex (high-resolution sources, dozens of fills) | 200 MB+ |
 
 If file size becomes a concern:
-- **Reduce source image resolution** before importing. Vexy Lines doesn't need a 50-megapixel photo — a 3000-pixel-wide image provides plenty of detail for most projects.
+- **Reduce source image resolution** before importing. Vexy Lines doesn't need a 50-megapixel photo: a 3000-pixel-wide image provides plenty of detail for most projects.
 - **Remove unused source images** from groups that no longer need them.
 - **Avoid unnecessarily high-resolution mask painting.** A mask that's 90% solid white with a small painted region doesn't need to be painted at maximum zoom.
 
@@ -43,9 +43,9 @@ If file size becomes a concern:
 
 ### Auto Save
 
-Vexy Lines includes an Auto Save feature that periodically saves your document without manual intervention. When enabled, the application saves at a configurable interval — typically every few minutes.
+Vexy Lines includes an Auto Save feature that periodically saves your document without manual intervention. When enabled, the application saves at a configurable interval, typically every few minutes.
 
-Auto Save writes to the same `.lines` file you're working on. It's a safety net against crashes, not a versioning system. If you make changes you don't like, Auto Save won't help you get back to a previous state — that's what manual saves and backups are for.
+Auto Save writes to the same `.lines` file you're working on. It's a safety net against crashes, not a versioning system. If you make changes you don't like, Auto Save won't help you get back to a previous state. That's what manual saves and backups are for.
 
 **To configure Auto Save:** Check the application preferences (Vexy Lines > Preferences on macOS, or Edit > Preferences / Tools > Options on Windows). You can enable or disable Auto Save and adjust the interval.
 
@@ -55,14 +55,14 @@ Auto Save writes to the same `.lines` file you're working on. It's a safety net 
 
 Vexy Lines creates backup copies of your document with the extension `.~lines` (note the tilde prefix). These backups are written to the same directory as your main `.lines` file.
 
-The `.~lines` backup contains the previous saved state of your document — the version before the most recent save. If you save, realise you've lost something, and can't undo far enough, the `.~lines` file may still contain the version you want.
+The `.~lines` backup contains the previous saved state of your document: the version before the most recent save. If you save, realise you've lost something, and can't undo far enough, the `.~lines` file may still contain the version you want.
 
 **To recover from a backup:**
 
 1. Close the current document (or quit Vexy Lines).
 2. In Finder (macOS) or File Explorer (Windows), navigate to your document's directory.
 3. The `.~lines` file may be hidden (files starting with `.` or `~` are sometimes hidden by default). Show hidden files if necessary.
-4. Rename the `.~lines` file to give it a `.lines` extension — for example, rename `portrait.~lines` to `portrait-recovered.lines`.
+4. Rename the `.~lines` file to give it a `.lines` extension. For example, rename `portrait.~lines` to `portrait-recovered.lines`.
 5. Open the renamed file in Vexy Lines.
 
 **Important:** The `.~lines` backup is overwritten each time you save. It contains only the *previous* save state, not a full history. If you save twice in quick succession, the backup reflects the state before the first save, not the state before the second.
@@ -71,7 +71,7 @@ The `.~lines` backup contains the previous saved state of your document — the 
 
 **Cmd+Z** (macOS) / **Ctrl+Z** (Windows) undoes the most recent action. **Cmd+Shift+Z** / **Ctrl+Shift+Z** redoes it.
 
-Vexy Lines maintains an undo history during your session. You can step backward through multiple actions — parameter changes, mask painting strokes, layer additions, layer deletions, and more.
+Vexy Lines maintains an undo history during your session. You can step backward through multiple actions: parameter changes, mask painting strokes, layer additions, layer deletions, and more.
 
 **The undo history is session-only.** When you close the document or quit the application, the undo history is lost. You cannot reopen a document and undo changes from a previous session. This is why saving and backups matter.
 
@@ -81,7 +81,7 @@ Vexy Lines maintains an undo history during your session. You can step backward 
 
 **File > Recent Files** (or **Open Recent**) shows a list of recently opened `.lines` documents. This is the fastest way to get back to a project you were working on yesterday.
 
-The recent files list persists across application sessions — quitting and relaunching Vexy Lines doesn't clear it.
+The recent files list persists across application sessions: quitting and relaunching Vexy Lines doesn't clear it.
 
 ## Versioning Strategies
 
@@ -121,7 +121,7 @@ For a more practical approach, store your `.lines` files in a cloud-synced folde
 
 ### Strategy 4: Export Milestones
 
-Export a PNG or SVG at each significant stage, alongside the `.lines` save. The exports serve as visual bookmarks — you can see what each version looked like without opening the `.lines` file. Name them to match:
+Export a PNG or SVG at each significant stage, alongside the `.lines` save. The exports serve as visual bookmarks: you can see what each version looked like without opening the `.lines` file. Name them to match:
 
 ```
 portrait-v1.lines     +  portrait-v1-preview.png
@@ -160,13 +160,13 @@ This structure keeps everything findable and separates works-in-progress from fi
 |-----------|----------|
 | Changed a parameter and hate it | **Cmd+Z** / **Ctrl+Z** to undo |
 | Saved over a version you wanted to keep | Check the `.~lines` backup file |
-| Application crashed before saving | Check Auto Save — the document may have been saved recently |
+| Application crashed before saving | Check Auto Save: the document may have been saved recently |
 | Deleted a layer by accident | **Cmd+Z** to undo (if same session) |
 | Need to return to a much earlier state | Restore from a versioned copy or cloud service history |
 | .lines file won't open (corrupt) | Try the `.~lines` backup. If that fails, contact support. |
 
 ## The Golden Rule
 
-**Save before experimenting.** When you're about to try something radical — a new fill type, a major mask change, a parameter you've never touched — save first. Then experiment freely. If it doesn't work, close without saving and reopen. The saved version is exactly where you left it.
+**Save before experimenting.** When you're about to try something radical (a new fill type, a major mask change, a parameter you've never touched), save first. Then experiment freely. If it doesn't work, close without saving and reopen. The saved version is exactly where you left it.
 
 This is unglamorous advice. It is also the advice that saves projects. See [Controlling When Vexy Recalculates](112-refresh-controls.md) for the next article, or return to the [Table of Contents](001-toc.md).
