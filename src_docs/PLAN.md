@@ -14,7 +14,7 @@ The manual covers the desktop application (macOS 12+ / Windows 10+), the `.lines
 
 **Secondary audience:** Developers and technical artists who want to automate Vexy Lines workflows via CLI, Python SDK, or MCP API.
 
-**Deliverable:** 60 Markdown files (`.md`), each 800-2500 words, numbered `001` through `612`, ready for static-site generation (MkDocs or similar).
+**Deliverable:** 60 Markdown files (`.md`), each 800-2500 words, numbered `001` through `612`. Run `./build.sh` to generate the site with MkDocs and the fly-january theme.
 
 ---
 

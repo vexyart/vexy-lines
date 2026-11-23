@@ -6,10 +6,7 @@ cd "$(dirname "$0")"
 source "../scripts/release-common.sh"
 
 release_info "Publishing documentation package: vexy-lines"
-release_clean_generated_dirt "$PWD" "vexy-lines"
-
-release_step "Building documentation..."
-python -m mkdocs build
+./build.sh
 
 release_run_gitnextver "$PWD" "vexy-lines"
 
