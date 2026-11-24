@@ -1,7 +1,7 @@
 site_name: "Vexy Lines Manual"
 site_description: "The complete guide to Vexy Lines vector art"
 theme:
-  name: fly-january
+  name: fly-january-remote
   features:
     - content.code.copy
     - navigation.sections
